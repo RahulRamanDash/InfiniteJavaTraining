@@ -27,6 +27,21 @@ public class LeaveBAL {
 		}
 		throw new LeaveException(sb.toString());
 	}
+//	public String updateAgentBal(LeaveDetails leaveUpdated) throws Exception{
+//		if(validateLeave(leaveUpdated)==true){
+//			return dao.updateLeaveDao(leaveUpdated);
+//		}
+//		//check Leter
+//		throw new LeaveException(sb.toString());
+//	}
+	public LeaveDetails searchLeaveBal(int leaveid){
+		return dao.searchLeaveDao(leaveid);
+		}
+	public String ApproveDenyLeaveBal(int leaveid, String mgcomm, String leavestatus) {
+		return dao.ApproveDenyLeaveDao(leaveid,mgcomm,leavestatus);
+	}
+	
+
 	public String ReadLeaveFileBal() throws IOException, ClassNotFoundException{
 		return dao.ReadLeaveFileDao();
 	}
@@ -73,6 +88,11 @@ public class LeaveBAL {
 		return flag;
 		
 	}
+
+
+
+
+	
 
 
 

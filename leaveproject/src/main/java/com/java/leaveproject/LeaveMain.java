@@ -27,10 +27,11 @@ public class LeaveMain {
 		
 		int val;
 		do {
+		System.out.println("L E A V E - A P P L I C A T I O N");
 		System.out.println("O P T I O N S");
 		System.out.println("-------------");
 		System.out.println("1. Login as User");
-		System.out.println("2. Login as Admin");
+		System.out.println("2. Login as Manager");
 		System.out.println("3. Exit");
 		System.out.println("Enter Your Choice  ");
 		val = sc.nextInt();
@@ -44,11 +45,11 @@ public class LeaveMain {
 				System.out.println("2. Show Leave Application");
 				System.out.println("3. Search Leave Application");
 				System.out.println("4. Delete Leave Application");
-				System.out.println("5. Update Leave Application");
-				System.out.println("6. write Leave Data In File");
-				System.out.println("7. Read Leave Data From File");
-				System.out.println("8. Exit");
+				System.out.println("5. write Leave Data In File");
+				System.out.println("6. Read Leave Data From File");
+				System.out.println("7. Exit");
 				System.out.println("Enter Your Choice  ");
+				System.out.println();
 				choice = sc.nextInt();
 				
 				switch (choice) {
@@ -59,17 +60,25 @@ public class LeaveMain {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
+					break;
 				case 2:
 					showLeaveMain();
 					break;
-				case 6:
+				case 3:
+					searchLeaveMain();
+					break;
+				case 4:
+					//deleteLeaveMain();
+					System.out.println("Work in Progress...");
+					break;
+				case 5:
 					try {
 						writeLeaveFileMain();
 					} catch (IOException e) {
 						e.printStackTrace();
 					}
 					break;
-				case 7:
+				case 6:
 					
 					try {
 						ReadLeaveFileMain();
@@ -79,62 +88,72 @@ public class LeaveMain {
 						e.printStackTrace();
 					}
 					break;
-				case 8:
-					return;
+				case 7:
+					break;
 				default : 
-					System.out.println("Invalid chocie (1 to 8 only)");
+					System.out.println("Invalid chocie (1 to 7 only)");
 					break;
 				}
-				}while(choice!=8);
+				}while(choice!=7);
 			break;
 		case 2:
 			int adminval;
 			do {
 				System.out.println("A D M I N - O P T I O N S");
-				System.out.println("-------------");
-				System.out.println("1. Add Leave Application");
-				System.out.println("2. Show Leave Application");
-				System.out.println("3. Search Leave Application");
-				System.out.println("4. Delete Leave Application");
-				System.out.println("5. Update Leave Application");
-				System.out.println("8. Exit");
+				System.out.println("-------------------------");
+				System.out.println("1. Show Leave Application");
+				System.out.println("2. Update Leave Status");
+				System.out.println("3. Delete Leave Application");
+				System.out.println("4. Exit");
 				System.out.println("Enter Your Choice  ");
 				adminval = sc.nextInt();
 				
 				switch (adminval) {
 				case 1:
-					System.out.println("Welcome To Admin DashBoard");
-					System.out.println("Work in progress");
+					showLeaveMain();
 					break;
 				case 2:
-					System.out.println("Welcome To Admin DashBoard");
-					System.out.println("Work in progress");
+					try {
+						ApproveDenyLeaveMain();
+					} catch (Exception e) {
+						e.printStackTrace();
+					}
 					break;
 				case 3:
 					System.out.println("Welcome To Admin DashBoard");
 					System.out.println("Work in progress");
 					break;
 				case 4:
-					System.out.println("Welcome To Admin DashBoard");
-					System.out.println("Work in progress");
 					break;
-				case 5:
-					System.out.println("Welcome To Admin DashBoard");
-					System.out.println("Work in progress");
-					break;
-				case 6:
-					return;
 					
-				default:
+				default : 
+					System.out.println("Invalid chocie (1 to 4 only)");
 					break;
 				}
-			}while(adminval !=6);
+			}while(adminval !=4);
+			break;
 		case 3:
+			System.out.println("Exiting the program");
 			return;
+		default : 
+			System.out.println("Invalid chocie (1 to 3 only)");
+			break;
 	
 		}
 		}while(val !=3);
 }
+	public static void searchLeaveMain(){
+		int leaveid;
+		System.out.println("Enter LeaveID : ");
+		leaveid = sc.nextInt();
+		LeaveDetails leave = bal.searchLeaveBal(leaveid);
+		if(leave!=null){
+			System.out.println(leave);
+		}
+		else{
+			System.out.println("Record Not Found...");
+		}
+	}
 	public static void ReadLeaveFileMain() throws FileNotFoundException, IOException, ClassNotFoundException{
 		System.out.println(bal.ReadLeaveFileBal());
 	}
@@ -148,6 +167,16 @@ public class LeaveMain {
 			System.out.println(leavedata);
 		}
 	}
+//	private static void updateAgentMain() throws Exception{
+//		int leaveidup;
+//		System.out.println("Enter LeaveID : ");
+//		leaveidup = sc.nextInt();
+//		LeaveDetails leaveUpdated = new LeaveDetails();
+//		
+//		System.out.println("Enter the Leave status ");
+//		leaveUpdated.setLeaveStatus(LeaveStatus.valueOf(sc.next()));
+//		System.out.println(bal.updateAgentBal(leaveUpdated));
+//	}
 	
 	public static void addLeaveMain() throws LeaveException, ParseException {
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
@@ -175,6 +204,17 @@ public class LeaveMain {
 		System.out.println(bal.addLeaveBal(leavedata));
 		
 	}
+	private static void ApproveDenyLeaveMain() throws Exception{
+		int leaveid;
+		System.out.println("Enter LeaveID : ");
+		leaveid = sc.nextInt();
+		
+		
+		System.out.println("Enter Manager's comment  ");
+		String mgcomm = sc.next();
+		System.out.println("Enter Leave Status  ");
+		String leavestatus=sc.next();
+		System.out.println(bal.ApproveDenyLeaveBal(leaveid,mgcomm,leavestatus));
 	
-	
+	}
 }

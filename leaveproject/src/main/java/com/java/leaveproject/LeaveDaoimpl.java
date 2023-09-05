@@ -62,9 +62,10 @@ public class LeaveDaoimpl implements LeaveDAO{
 		leavedata.setLeaveAppliedOn(ondate);
 		return "Leave Applied";
 	}
+	
 	@Override
 	public String writeLeaveFileDao() throws IOException {
-		FileOutputStream fout = new FileOutputStream("E:/workspace/InfiniteJava/leaveproject/src/main/java/com/java/leaveproject/files/LeaveData.txt");
+		FileOutputStream fout = new FileOutputStream("C:/Users/rahulr/Downloads/InfiniteJavaTraining-main/InfiniteJavaTraining-main/leaveproject/src/main/java/com/java/leaveproject/files/LeaveData.txt");
 		ObjectOutputStream objout = new ObjectOutputStream(fout);
 		objout.writeObject(leaveList);
 		objout.close();
@@ -75,13 +76,55 @@ public class LeaveDaoimpl implements LeaveDAO{
 
 	@Override
 	public String ReadLeaveFileDao() throws IOException, ClassNotFoundException{
-		FileInputStream fin = new FileInputStream("E:/workspace/InfiniteJava/leaveproject/src/main/java/com/java/leaveproject/files/LeaveData.txt");
+		FileInputStream fin = new FileInputStream("C:/Users/rahulr/Downloads/InfiniteJavaTraining-main/InfiniteJavaTraining-main/leaveproject/src/main/java/com/java/leaveproject/files/LeaveData.txt");
 		ObjectInputStream objin = new ObjectInputStream(fin);
 		leaveList = (List<LeaveDetails>) objin.readObject();
 		
 		objin.close();
 		fin.close();
 		return "Data Retracted From File";
+}
+//		@Override
+//		public String updateLeaveDao(LeaveDetails leaveUpdated) {
+//		LeaveDetails leaveFound = searchLeaveDao(leaveUpdated.getLeaveId());
+//			
+//			if(leaveFound != null){
+//				for (LeaveDetails leave : leaveList) {
+//					if(leave.getLeaveId()==leaveUpdated.getLeaveId()){
+//						leave.setLeaveStatus(leaveUpdated.getLeaveStatus());
+//						break;
+//					}
+//				}
+//				return "Leave Status Record Updated";
+//			}
+//			
+//			return "Agent Record Not Found";
+//		}
+	@Override
+	public LeaveDetails searchLeaveDao(int leaveid) {
+		LeaveDetails leaveFound = null;
+		for(LeaveDetails leave : leaveList){
+			if(leave.getLeaveId()==leaveid){
+			leaveFound=leave;
+			break;
+		}
 	}
+		return leaveFound;
+	}
+	@Override
+	public String ApproveDenyLeaveDao(int leaveid, String mgcomm, String leavestatus) {
+			
+			
+				for (LeaveDetails leave : leaveList) {
+					if(leave.getLeaveId()==leaveid){
+						leave.setLeaveStatus(LeaveStatus.valueOf(leavestatus));
+						leave.setManagerComments(mgcomm);
+						break;
+					}
+				}
+				return "Leave Status Updated";
+			}
+
+
 	
 }

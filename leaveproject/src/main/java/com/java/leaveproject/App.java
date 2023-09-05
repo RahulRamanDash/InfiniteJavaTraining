@@ -1,4 +1,4 @@
-ackage com.java.leaveproject;
+package com.java.leaveproject;
 
 public class App {
 
