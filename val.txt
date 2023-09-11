@@ -1,0 +1,28 @@
+boolean validateLeave(LeaveDetails leavedetails){
+			boolean flag = true;
+			SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+			 // Get yesterday's date
+            Calendar cal = Calendar.getInstance();
+            cal.add(Calendar.DATE, -1);
+            java.util.Date yesterday = cal.getTime();
+
+            // Format yesterday's date in the same format
+            String startDateStr = sdf.format(leavedetails.getLeaveStartDate());
+            String EndDateStr = sdf.format(leavedetails.getLeaveEndDate());
+            String yesterdayStr = sdf.format(yesterday);
+            
+            if (startDateStr.equals(yesterdayStr) || EndDateStr.equals(yesterdayStr)) {
+            	flag = false;
+            }
+            if(leavedetails.getLeaveEndDate().before(leavedetails.getLeaveStartDate())) {
+            	flag=false;
+            }
+            
+            if(leavedetails.getNoOfDays() >= leavedetails.getNoOfDays()) {
+            	flag=false;
+            }
+            
+            
+            return flag;
+		
+	}
