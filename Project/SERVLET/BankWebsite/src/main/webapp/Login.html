@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="ISO-8859-1" />
+    <title>Login Page</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+      }
+
+      form {
+        width: 300px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+      }
+
+      table {
+        width: 100%;
+      }
+
+      th {
+        text-align: left;
+      }
+
+      input[type="text"],
+      input[type="password"] {
+        width: 100%;
+        padding: 8px; /* Adjust padding */
+        margin-bottom: 10px; /* Adjust margin */
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        font-size: 16px;
+      }
+
+      input[type="reset"],
+      input[type="submit"] {
+        width: 48%;
+        padding: 10px;
+        background-color: #007BFF;
+        color: #fff;
+        border: none;
+        border-radius: 3px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      input[type="reset"] {
+        background-color: #ccc;
+        color: #333;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #0056b3;
+      }
+
+      th[colspan="2"] {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="LoginServlet" name="formData" method="post">
+      <table align="center">
+        <tr>
+          <th colspan="2">Bank Login</th>
+        </tr>
+        <tr>
+          <th>Username</th>
+          <td><input type="text" name="username" /></td>
+        </tr>
+        <tr>
+          <th>Password</th>
+          <td><input type="password" name="password" /></td>
+        </tr>
+        <tr>
+          <th colspan="2">
+            <input type="reset" name="reset" value="Reset" />
+            <input type="submit" name="submit" value="Login" /><br>
+            <a href="CreateAccount.html">Dont have a account?<br>
+            Create Account
+            </a>
+          </th>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>
