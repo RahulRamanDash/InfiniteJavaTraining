@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function login(){
+            var user,pass;
+            user = formData.username.value;
+            pass = formData.password.value;
+            if(user=="infinite" && pass =="infinite"){
+                window.open("https://www.google.com")
+            }
+            else{
+                alert("Invalid Credentials...")
+            }
+        }
+    </script>
+</head>
+<body bgcolor="" text="darkblue">
+        <form action="form data" name="formData">
+            <table  align="center" border="3px">
+                <tr>
+            <th colspan="2">
+                Login Page
+            </th>
+        </tr>
+        <tr>
+            <th>Username</th>
+            <td><input type="text" name="username"></td>
+        </tr>
+        <tr>
+            <th>Password</th>
+            <td><input type="password" name="password"></td>
+        </tr>
+        <tr>
+            <th colspan="2">
+                <input type="reset" name="reset">
+                <input type="button" name="submit" value="login" onclick="login()">
+            </th>
+        </tr> 
+    </table>
+</form>
+</body>
+</html>

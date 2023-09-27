@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leave Application Form</title>
+    <script>
+
+        function showdate(){
+            var currentDate = new Date();
+            var formattedDate = currentDate.toLocaleDateString();
+            document.getElementById("lao").innerHTML = formattedDate;
+        }
+        function calculateLeaveInfo() {
+            var startDate = new Date(formData.start_date.value);
+            var endDate = new Date(formData.end_date.value);
+            var timeDiff = endDate - startDate;
+            var daysDiff = Math.ceil(timeDiff / (1000 * 3600 * 24));
+            document.getElementById("nod").innerHTML = daysDiff + 1;
+        }
+
+        function validate(){
+            var startDate = new Date(formData.start_date.value);
+            var endDate = new Date(formData.end_date.value);
+            var timeDiff = endDate - startDate;
+            var daysDiff = Math.ceil(timeDiff / (1000 * 3600 * 24));
+            document.getElementById("nod").innerHTML ="";
+            let dateObj = new Date();
+            let today = dateObj.getDate();
+            let yesterday = dateObj.getDate() - 1;
+            if(startDate.getDate()<today){
+                document.getElementById("error").innerHTML = "Start Date Must Not Be Past Date";
+            }
+            else if(endDate.getDate()<today){
+                document.getElementById("error").innerHTML = "End Date Must Not Be Past Date";
+            }
+            else if(daysDiff<0){
+                document.getElementById("error").innerHTML = "End Date Must Be After Start Date";
+            }
+            else{
+                calculateLeaveInfo();
+            }
+            
+        }
+        
+    </script>
+</head>
+<body onload="showdate()">
+    <form name="formData">
+        <center>
+            <table border="2px">
+                <tr>
+                    <th colspan="2">
+                        Leave Application Form
+                    </th>
+                </tr>
+                <tr>
+                    <th>LeaveID</th>
+                    <td><select name="leaveid" value="LeaveID">
+                        <option value="1033220">1033220</option>
+                        <option value="1033221">1033221</option>
+                        <option value="1033222">1033222</option>
+                        <option value="1033223">1033223</option>
+                    </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Manager Name</th>
+                    <td>
+                        <select name="manager">
+                            <option value="Sagar">Sagar</option>
+                            <option value="Abhishek">Abhishek</option>
+                            <option value="Rahul">Rahul</option>
+                            <option value="Rohan">Rohan</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Leave Start Date</th>
+                    <td><input type="date" name="start_date" id="start_date" onblur="validate()"></td>
+                </tr>
+                <tr>
+                    <th>Leave End Date</th>
+                    <td><input type="date" name="end_date" id="end_date" onblur="validate()"></td>
+                </tr>
+                <tr>
+                    <th>No Of Days</th>
+                    <td><span id="nod"></span></td>
+                </tr>
+                <tr>
+                    <th>Leave Type</th>
+                    <td>
+                        <select name="leave_type">
+                            <option value="EL">EL</option>
+                            <option value="PL">PL</option>
+                            <option value="ML">ML</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Leave Status</th>
+                    <td>
+                        <select name="leave_status">
+                            <option value="ACCEPTED">ACCEPTED</option>
+                            <option value="PENDING">PENDING</option>
+                            <option value="REJECTED">REJECTED</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Leave Applied On</th>
+                    <td><span id="lao"></span></td>
+                </tr>
+                <tr>
+                    <th>Manager Comments</th>
+                    <td><input type="text" name="mgc" id="mgc"></td>
+                </tr>
+                <tr>
+                    <th colspan="2">
+                        <input type="reset" name="Reset">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="button" value="Submit" onclick="validate()">
+                        <br><br>
+                        <span id="error" style="color: red;"></span>
+                    </th>
+                </tr>
+            </table>
+        </center>
+    </form>
+</body>
+</html>

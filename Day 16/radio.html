@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function show(){
+            var res = formData.gender.value;
+            document.getElementById("result").innerHTML=res;
+        }
+    </script>
+</head>
+<body>
+    <form name="formData">
+        <center>
+            <input type="radio" name="gender" value="Male" onchange="show()">Male
+            <input type="radio" name="gender" value="Female" onchange="show()">Female
+            <br><br>
+            <span id="result"></span>
+        </center>
+    </form>
+</body>
+</html>

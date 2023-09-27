@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <script>
+        function show(){
+            if(formData.firstName.value==""){
+			      document.getElementById("err1").innerHTML="Enter First Name";
+            return;
+		    }
+		    else{
+			document.getElementById("err1").innerHTML="";
+		    }
+		    if(formData.lastName.value==""){
+			document.getElementById("err2").innerHTML="Enter Last Name";
+            return;
+		    }
+		    else{
+			document.getElementById("err2").innerHTML="";
+		    }
+            var var1 = formData.firstName.value;
+            var var2 = formData.lastName.value;
+            var fullName = var1+" "+var2;
+            formData.fullName.value = fullName;
+        }
+    </script>
+
+    <meta charset="ISO-8859-1" />
+
+    <title>Name Form</title>
+  </head>
+
+  <body>
+    <form name="formData">
+      <table border="3" align="center">
+        <tr>
+          <th colspan="2">Name Form</th>
+        </tr>
+
+        <tr>
+          <th>First Name</th>
+
+          <td>
+            <input type="text" name="firstName" autofocus="autofocus" onblur="show()"/>
+            <span id="err1" style="color: red;"></span>
+
+          </td>
+        </tr>
+        <tr>
+          <th>Last Name</th>
+          <td>
+            <input type="text" name="lastName" onblur="show()"/>
+            <span id="err2" style="color: red;"></span>
+          </td>
+        </tr>
+        <tr>
+          <th>Result</th>
+          <td>
+            <input type="text" name="fullName" />
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>

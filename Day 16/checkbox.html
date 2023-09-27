@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function show(){
+            var res1 = formData.student1.value;
+            var res2 = formData.student2.value;
+            var res3 = formData.student3.value;
+            if(formData.student1.checked==true){
+                document.getElementById("result1").innerHTML=res1+" is Present Today";
+            }
+            else{
+                document.getElementById("result1").innerHTML="";
+            }
+            if(formData.student2.checked==true){
+                document.getElementById("result2").innerHTML=res2+" is Present Today";
+            }
+            else{
+                document.getElementById("result2").innerHTML="";
+            }
+            if(formData.student3.checked==true){
+                document.getElementById("result3").innerHTML=res3+" is Present Today";
+            }
+            else{
+                document.getElementById("result3").innerHTML="";
+            }
+        }
+    </script>
+</head>
+<body>
+    <form name="formData">
+        <center>
+            <input type="checkbox" name="student1" value="Rahul" onchange="show()">Rahul
+            <br>
+            <input type="checkbox" name="student2" value="Ganesh" onchange="show()">Ganesh
+            <br>
+            <input type="checkbox" name="student3" value="Ayush" onchange="show()">Ayush
+            <br><br>
+            <span id="result1"></span> <br>
+            <span id="result2"></span> <br>
+            <span id="result3"></span>
+        </center>
+    </form>
+</body>
+</html>

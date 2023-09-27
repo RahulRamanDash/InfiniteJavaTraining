@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function show(){
+            var res = formData.student.value;
+            document.getElementById("result").innerHTML=res;
+        }
+    </script>
+</head>
+<body>
+    <form name="formData">
+        <center>
+            Student Name :
+            <select name="student" onchange="show()">
+                <option value="Sagar">Sagar</option>
+                <option value="Abhishek">Abhishek</option>
+                <option value="Rahul">Rahul</option>
+                <option value="Rohan">Rohan</option>
+            </select>
+            <br><br>
+            <span id="result"></span>
+        </center>
+    </form>
+</body>
+</html>
