@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function show(){
+            if(formData.chkStatus.checked==true){
+                document.getElementById("msg").innerHTML="Present";
+            }
+            else{
+                document.getElementById("msg").innerHTML="Absent";
+            }
+        }
+    </script>
+</head>
+<body>
+    <form name="formData">
+        Status : 
+        <input type="checkbox" name="chkStatus" onchange="show()">
+        <br>
+        <span id="msg"></span>
+    </form>
+</body>
+</html>
