@@ -8,10 +8,10 @@ public class ShowMain {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		System.out.print("Enter Complaint_ID : ");
-		int ComplaintID = scanner.nextInt();
-		ComplaintDAO dao = new ComplaintsDaoImpl();
+		String ComplaintID = scanner.nextLine();
+		ComplaintDAO dao = new ComplaintDAOImpl();
 		try {
-			System.out.println(dao.searchComplaints(ComplaintID));
+			System.out.println(dao.searchComplaintDao(ComplaintID));
 		} catch (ClassNotFoundException | SQLException e) {
 			e.printStackTrace();
 		}

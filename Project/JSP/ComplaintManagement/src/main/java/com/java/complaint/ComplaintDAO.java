@@ -4,7 +4,10 @@ import java.sql.SQLException;
 import java.util.List;
 
 public interface ComplaintDAO {
-	public List<Complaints> showComplaintsDao() throws ClassNotFoundException, SQLException;
-	public String addComplaintDao();
-	Complaints searchComplaints(int Complaint_ID) throws ClassNotFoundException, SQLException;
+
+	List<Complaint> showComplaintDao() throws ClassNotFoundException, SQLException;
+	Complaint searchComplaintDao(String ComplaintID) throws ClassNotFoundException,SQLException;
+	String addComplaintDao(Complaint complaint) throws ClassNotFoundException,SQLException;
+	String resolveComplaintDao(Resolve resolve) throws ClassNotFoundException, SQLException;
+	String complaintHistoryDao();
 }
