@@ -1,0 +1,7 @@
+package com.java.hms;
+
+public class RoomMaster {
+	private String roomNo;
+	private String roomType;
+	private String status;
+}

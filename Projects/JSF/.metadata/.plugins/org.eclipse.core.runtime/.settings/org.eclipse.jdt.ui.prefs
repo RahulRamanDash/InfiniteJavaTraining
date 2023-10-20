@@ -1,0 +1,12 @@
+content_assist_autoactivation_triggers_java=.abcdefghijklmnopqrstuvwxyz
+content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="com.java.rms.CustomerDAO"><rhs name\="com.java.rms.CustomerDaoImpl"/></lhs><lhs name\="com.java.rms.CustomerDaoImpl"><rhs name\="com.java.rms.CustomerDaoImpl"/></lhs><lhs name\="java.util.Collection"><rhs name\="java.util.ArrayList"/></lhs><lhs name\="java.lang.Iterable"><rhs name\="java.util.ArrayList"/></lhs><lhs name\="java.util.List"><rhs name\="java.util.ArrayList"/></lhs><lhs name\="java.util.Map"><rhs name\="java.util.HashMap"/></lhs><lhs name\="java.lang.Enum"><rhs name\="com.java.rms.WalletSource"/><rhs name\="com.java.rms.Ordstatus"/></lhs><lhs name\="java.lang.constant.Constable"><rhs name\="com.java.rms.WalletSource"/><rhs name\="com.java.rms.Ordstatus"/></lhs><lhs name\="com.java.rms.Ordstatus"><rhs name\="com.java.rms.Ordstatus"/></lhs><lhs name\="java.util.Date"><rhs name\="java.sql.Date"/></lhs><lhs name\="java.lang.Cloneable"><rhs name\="java.sql.Date"/></lhs><lhs name\="java.sql.Date"><rhs name\="java.sql.Date"/></lhs><lhs name\="com.java.rms.WalletSource"><rhs name\="com.java.rms.WalletSource"/></lhs><lhs name\="com.java.rms.Wallet"><rhs name\="com.java.rms.Wallet"/></lhs><lhs name\="com.java.rms.RestaurantDAO"><rhs name\="com.java.rms.RestaurantDaoImpl"/></lhs><lhs name\="com.java.rms.RestaurantDaoImpl"><rhs name\="com.java.rms.RestaurantDaoImpl"/></lhs><lhs name\="com.java.rms.Orders"><rhs name\="com.java.rms.Orders"/></lhs><lhs name\="java.lang.CharSequence"><rhs name\="java.lang.String"/></lhs><lhs name\="com.java.hms.PatientMasterDAO"><rhs name\="com.java.hms.PatientMasterDaoImpl"/></lhs><lhs name\="com.java.hms.PatientMasterDaoImpl"><rhs name\="com.java.hms.PatientMasterDaoImpl"/></lhs></history>
+content_assist_number_of_computers=22
+eclipse.preferences.version=1
+org.eclipse.jdt.internal.ui.navigator.layout=2
+org.eclipse.jdt.internal.ui.navigator.librariesnode=true
+org.eclipse.jdt.ui.formatterprofiles.version=23
+sourceHoverBackgroundColor=47,47,47
+spelling_locale_initialized=true
+typefilter_migrated_2=true
+useAnnotationsPrefPage=true
+useQuickDiffPrefPage=true

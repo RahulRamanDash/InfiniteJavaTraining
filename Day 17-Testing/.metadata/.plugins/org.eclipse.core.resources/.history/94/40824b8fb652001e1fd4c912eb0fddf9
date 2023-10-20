@@ -1,0 +1,14 @@
+package com.java.test;
+
+import static org.junit.Assert.assertEquals;
+
+import org.junit.Test;
+
+public class DtataTest {
+
+	@Test
+	public void testSayHello() {
+		Data obj = new Data();
+		assertEquals("Welcome to Junit Programming...", obj.sayHello());
+	}
+}

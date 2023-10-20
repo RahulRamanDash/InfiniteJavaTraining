@@ -1,0 +1,48 @@
+package com.java.inf;
+
+public class Address {
+	private int addressId;
+	private String addressLimit1;
+	private String city;
+	private String country;
+	private int pincode;
+	private Employee employee;
+	public int getAddressId() {
+		return addressId;
+	}
+	public void setAddressId(int addressId) {
+		this.addressId = addressId;
+	}
+	public String getAddressLimit1() {
+		return addressLimit1;
+	}
+	public void setAddressLimit1(String addressLimit1) {
+		this.addressLimit1 = addressLimit1;
+	}
+	public String getCity() {
+		return city;
+	}
+	public void setCity(String city) {
+		this.city = city;
+	}
+	public String getCountry() {
+		return country;
+	}
+	public void setCountry(String country) {
+		this.country = country;
+	}
+	public int getPincode() {
+		return pincode;
+	}
+	public void setPincode(int pincode) {
+		this.pincode = pincode;
+	}
+	public Employee getEmployee() {
+		return employee;
+	}
+	public void setEmployee(Employee employee) {
+		this.employee = employee;
+	}
+	
+	
+}

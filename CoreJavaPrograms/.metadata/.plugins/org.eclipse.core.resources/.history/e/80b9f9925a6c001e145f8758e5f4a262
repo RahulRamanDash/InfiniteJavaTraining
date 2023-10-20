@@ -1,0 +1,22 @@
+package com.java.day4;
+
+import java.util.ArrayList;
+
+public class Prog5 {
+    public static void main(String[] args) {
+        ArrayList<Double> numbers = new ArrayList<>();
+        numbers.add(10.5);
+        numbers.add(15.3);
+        numbers.add(20.1);
+        double average = calculateAverage(numbers);
+        System.out.println("Average of elements in the ArrayList: " + average);
+    }
+
+    static double calculateAverage(ArrayList<Double> list) {
+        double sum = 0;
+        for (double num : list) {
+            sum += num;
+        }
+        return sum / list.size();
+    }
+}

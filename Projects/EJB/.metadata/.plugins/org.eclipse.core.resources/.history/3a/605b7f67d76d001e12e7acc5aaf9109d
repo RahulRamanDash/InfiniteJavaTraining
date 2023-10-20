@@ -1,0 +1,10 @@
+package com.java.ejb;
+
+import java.sql.Date;
+
+public class RoomAllocation {
+		private String roomNo;
+	    private String pid;
+	    private Date admissionDate;
+	    private Date releaseDate;
+}

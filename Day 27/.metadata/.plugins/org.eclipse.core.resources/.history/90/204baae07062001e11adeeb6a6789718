@@ -1,0 +1,26 @@
+package com.java.jsf;
+
+import java.util.List;
+
+import org.hibernate.Criteria;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.criterion.Projection;
+import org.hibernate.criterion.Projections;
+
+public class EmployDAOImpl {
+	
+	SessionFactory sf;
+	Session session;
+	
+	public List<String> getNames(){
+		sf = SessionHelper.getConnection();
+		session = sf.openSession();
+		Criteria cr = session.createCriteria(Employ.class);
+		Projection projection = Projections.property("name");
+		cr.setProjection(projection);
+		List<String> list = cr.list();
+		return list;
+	}
+
+}

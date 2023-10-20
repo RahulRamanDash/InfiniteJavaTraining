@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <style>
+        /* Reset some default styles */
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Style the navigation bar */
+        .navbar {
+            background-color: #333; /* Background color of the navbar */
+            overflow: hidden; /* To clear floats */
+        }
+
+        /* Style the logo */
+        .navbar .logo {
+            color: white; /* Text color */
+            padding: 10px; /* Add some padding to the logo */
+            font-size: 24px; /* Font size of the logo */
+        }
+
+        /* Style the navigation menu items */
+        .menu-items {
+            list-style-type: none; /* Remove list bullets */
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+        }
+
+        /* Style individual menu items */
+        .menu-items li {
+            float: left; /* Make the menu items float next to each other */
+        }
+
+        /* Style the links inside the menu items */
+        .menu-items li a {
+            display: block; /* Make links full width of the menu item */
+            color: white; /* Text color of the links */
+            text-align: center; /* Center-align the text */
+            padding: 14px 16px; /* Add padding to the links */
+            text-decoration: none; /* Remove underlines from links */
+        }
+
+        /* Change link color on hover */
+        .menu-items li a:hover {
+            background-color: #555; /* Background color on hover */
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <ul class="menu-items">
+        	<h1 class="logo">Navbar</h1>
+            <li><a href="#">Show Complaint</a></li>
+            <li><a href="#">Add Complaint</a></li>
+            <li><a href="#">Show Complaint History</a></li>
+        </ul>
+    </nav>
+</body>
+</html>

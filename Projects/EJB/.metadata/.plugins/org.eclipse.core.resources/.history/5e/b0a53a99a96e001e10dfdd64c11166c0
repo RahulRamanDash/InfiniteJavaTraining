@@ -1,0 +1,20 @@
+package com.java.ejb;
+
+import java.sql.SQLException;
+import java.util.Map;
+
+import javax.faces.context.FacesContext;
+import javax.naming.NamingException;
+
+public class RoomAllocationEjbImpl {
+	public String allocateRoomEjb(RoomAllocation room) throws NamingException, ClassNotFoundException, SQLException {
+		Map<String, Object> sessionMap =
+				FacesContext.getCurrentInstance().getExternalContext().getSessionMap();
+		RoomAllocationBeanRemote remote = RoomAllocationHelper.lookupRemoteStatelessEmploy();
+		patient.setDoctorId(doctorId);
+		remote.allocateRoom(room);
+		String patientId = remote.getpatientId();
+		sessionMap.put("patientId", patientId);
+		return "admitPatient.jsp?faces-redirect=true";
+	}
+}

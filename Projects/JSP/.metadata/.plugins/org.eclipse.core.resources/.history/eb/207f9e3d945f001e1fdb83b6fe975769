@@ -1,0 +1,93 @@
+<%@page import="com.java.complaint.Complaint"%>
+<%@page import="com.java.complaint.ComplaintDAOImpl"%>
+<%@page import="com.java.complaint.Complaint"%>
+<%@page import="java.util.List"%>
+<%@page import="com.java.complaint.ComplaintDAO"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Manage Complaints</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+        }
+
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: #fff;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #333;
+            color: #fff;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+<jsp:include page="NavBar.jsp"/>
+<%
+	ComplaintDAO dao = new ComplaintDAOImpl();
+	ComplaintDAOImpl impl = new ComplaintDAOImpl();
+	List<Complaint> complaintList = dao.showComplaintDao();
+%>
+	<table border="3px">
+		<tr>
+			<th>Complaint ID</th>
+            <th>Complaint Type</th>
+            <th>Description</th>
+            <th>Complaint Date</th>
+            <th>Severity</th>
+            <th>Status</th>
+			<th>Resolve</th>
+		</tr>
+		<%
+		for(Complaint complaint : complaintList){
+			%>
+		<tr>
+			<td><%= complaint.getComplaintID() %></td>
+            <td><%= complaint.getComplaintType() %></td>
+            <td><%= complaint.getCDescription() %></td>
+			<td><%= complaint.getComplaintDate() %></td>
+			<td><%= complaint.getSeverity() %></td>
+            <td><%= complaint.getStatus() %></td>
+            <td><a href="Resolve.jsp?ComplaintID=<%= complaint.getComplaintID() %>">Resolve</a></td>
+		</tr>
+		<% 
+		}
+		%>
+			
+	</table>
+	    
+    <a href="searchcomplaint.jsp">Search Complaint</a>
+    <br><br>
+    <a href="addcomplaint.jsp">Raise a Complaint</a>
+</body>
+</html>

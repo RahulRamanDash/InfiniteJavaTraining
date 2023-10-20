@@ -1,0 +1,11 @@
+package com.java.hms;
+
+public class RoomMasterDaoImpl implements RoomMasterDAO{
+
+	@Override
+	public String showRooms() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

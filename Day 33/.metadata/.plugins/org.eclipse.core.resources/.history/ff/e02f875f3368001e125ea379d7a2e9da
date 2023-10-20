@@ -1,0 +1,15 @@
+
+public class StaticFinal {
+	
+	static int var;
+	final int score = 10;
+	public static void main(String[] args) {
+		
+		static int score1 = 20;
+		
+		
+		
+
+	}
+
+}

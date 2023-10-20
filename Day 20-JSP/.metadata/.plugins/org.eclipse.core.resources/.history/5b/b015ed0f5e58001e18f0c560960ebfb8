@@ -1,0 +1,60 @@
+
+<%@page import="com.java.agentdashboard.Agent"%>
+<%@page import="com.java.agentdashboard.AgentDAOImpl"%>
+<%@page import="com.java.agentdashboard.AgentDAO"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+    <form action="AddAgent.jsp" method="post">
+       <center>
+		Agent No : 
+		<input type="number" name="empno" /> <br/><br/>
+		Agent Name : 
+		<input type="text" name="name" /> <br/><br/>
+		Gender : 
+		<select name="gender">
+			<option value="male">Male</option>
+			<option value="female">Female</option>
+		</select> <br/><br/>
+		Department : 
+		<select name="dept">
+			<option value="Java">Java</option>
+			<option value="Dotnet">Dotnet</option>
+			<option value="Oracle">Oracle</option>
+		</select> <br/><br/>
+		Designation : 
+		<select name="desig">
+			<option value="Programmer">Programmer</option>
+			<option value="TeamLead">TeamLead</option>
+			<option value="Manager">Manager</option>
+		</select> <br/><br/>
+		Basic : 
+		<input type="number" name="basic" />
+		<br/><br/>
+		<input type="submit" value="Add Agent" />
+	</center>
+    </form>
+<%
+	if(request.getParameter("empno")!=null && request.getParameter("basic")!=null){
+		AgentDAO dao = new AgentDAOImpl();
+		Agent agent = new Agent();
+		agent.setEmpno(Integer.parseInt(request.getParameter("empno")));
+		agent.setName(request.getParameter("name"));
+		agent.setGender(Gender.valueOf(request.getParameter("gender")));
+		agent.setDept(request.getParameter("dept"));
+		agent.setDesig(request.getParameter("desig"));
+		agent.setBasic(Double.parseDouble(request.getParameter("basic")));
+		dao.addAgentDao(agent);
+%>
+<jsp:forward page="ShowAgentDetails.jsp"/>
+<%
+	}
+%>
+</body>
+</html>

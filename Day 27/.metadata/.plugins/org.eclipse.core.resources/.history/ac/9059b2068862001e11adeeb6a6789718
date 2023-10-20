@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+
+<h:head></h:head> 
+<body> 
+	<h:form>
+	<center>
+	<h2>
+	<h:outputText value="Employ Records" />
+	</h2>
+	<h:dataTable value="#{impl.showEmploy()}" var="e" border="3" align="center">
+	<h:column>
+	<f:facet name="header">Agent ID : </f:facet>
+	<h:outputText value="#{e.agentid}" />
+	</h:column>
+	<h:column>
+	<f:facet name="header">Agent Name</f:facet>
+	<h:outputText value="#{e.name}" />
+	</h:column>
+	<h:column>
+	<f:facet name="header">City</f:facet>
+	<h:outputText value="#{e.city}" />
+	</h:column>
+	<h:column>	
+	<f:facet name="header">Gender</f:facet>
+	<h:outputText value="#{e.gender}" />
+	</h:column>
+	<h:column>
+	<f:facet name="header">MaritalStatus</f:facet>
+	<h:outputText value="#{e.maritalstatus}" />
+	</h:column>
+	<h:column>
+	<f:facet name="header">Premium</f:facet>
+	<h:outputText value="#{e.premium}" />
+	</h:column>
+	</h:dataTable>
+	</center>
+</body> 
+</html>

@@ -1,0 +1,14 @@
+package com.java.hib;
+
+import java.util.Scanner;
+
+public class Login {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Username : ");
+		String UserName = sc.next();
+		System.out.println("Password : ");
+		String passWord = sc.next();
+	}
+
+}

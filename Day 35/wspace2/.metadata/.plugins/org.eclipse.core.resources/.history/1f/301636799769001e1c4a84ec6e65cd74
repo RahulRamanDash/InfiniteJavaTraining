@@ -1,0 +1,20 @@
+package com.java.emplyrealtime;
+
+import javax.ejb.LocalBean;
+import javax.ejb.Stateless;
+
+/**
+ * Session Bean implementation class EmployCrudRemote
+ */
+@Stateless
+@LocalBean
+public class EmployCrudRemote {
+
+    /**
+     * Default constructor. 
+     */
+    public EmployCrudRemote() {
+        // TODO Auto-generated constructor stub
+    }
+
+}

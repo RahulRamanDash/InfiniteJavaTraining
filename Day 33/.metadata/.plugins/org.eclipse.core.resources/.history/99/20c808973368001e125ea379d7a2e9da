@@ -1,0 +1,22 @@
+
+public class StaticFinal {
+	
+	static int score;
+	final int finalScore = 10;
+	
+	public void calculateScore(int run) {
+		if(run==4) {
+			score+=run;
+		}
+	}
+	public static void main(String[] args) {
+		StaticFinal obj = new StaticFinal();
+		obj.calculateScore(4);
+		
+		
+		
+		
+
+	}
+
+}

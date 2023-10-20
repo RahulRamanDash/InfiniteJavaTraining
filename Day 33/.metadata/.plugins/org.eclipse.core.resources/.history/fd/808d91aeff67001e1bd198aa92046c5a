@@ -1,0 +1,15 @@
+import java.rmi.RemoteException;
+import java.rmi.server.UnicastRemoteObject;
+
+public class CalcImpl extends UnicastRemoteObject implements Hello{
+	protected CalcImpl() throws RemoteException {
+		super();
+	}
+	
+	@Override
+	public String sayHello() throws RemoteException {
+		// TODO Auto-generated method stub
+		return "Welcome to RMI programming...Infinite...";
+	}
+	
+}

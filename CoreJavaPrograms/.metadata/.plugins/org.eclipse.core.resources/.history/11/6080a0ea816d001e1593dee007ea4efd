@@ -1,0 +1,20 @@
+package com.java.day6;
+class Animal {
+    void speak() {
+        System.out.println("Animal speaks.");
+    }
+}
+
+class Dog extends Animal {
+    void speak() {
+        System.out.println("Dog barks.");
+    }
+
+    public static void main(String[] args) {
+        Animal[] animals = {new Animal(), new Dog()};
+
+        for (Animal animal : animals) {
+            animal.speak();
+        }
+    }
+}

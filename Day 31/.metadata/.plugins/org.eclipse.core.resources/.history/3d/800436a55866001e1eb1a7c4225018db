@@ -1,0 +1,8 @@
+package com.java.inf;
+
+public class Employee {
+	private int employeeId;
+	private String name;
+	private String email;
+	
+}

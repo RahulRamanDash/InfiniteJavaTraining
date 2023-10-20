@@ -1,0 +1,9 @@
+package com.java.jsf;
+
+public class RadioBean {
+	private String radiovalue;
+	private String radioText;
+	private String gen;
+	
+
+}

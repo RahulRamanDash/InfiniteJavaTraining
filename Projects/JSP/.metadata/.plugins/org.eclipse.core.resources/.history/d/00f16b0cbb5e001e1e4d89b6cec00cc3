@@ -1,0 +1,12 @@
+package com.java.complaint;
+
+import java.sql.Timestamp;
+
+public class Resolve {
+	private String ResolveID;
+	private String ComplaintID;
+	private Timestamp ComplaintDate;
+	private Timestamp ResolveDate;
+	private String ResolvedBy;
+	private String Comments;
+}

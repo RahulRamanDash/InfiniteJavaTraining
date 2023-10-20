@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+
+<h:head></h:head> 
+<body>
+	<h2>
+	<h:outputText value="Update Employ" />
+	</h2>
+	<h:form>
+	<h:outputText value="EmpNo" />
+	<h:inputText value="#{editEmploy.empno}" /><br/>
+	<h:outputText value="Employ Name" />
+	<h:inputText value="#{editEmploy.name}" /><br/>
+	<h:outputText value="Gender" />
+	<h:inputText value="#{editEmploy.gender}" /><br/>
+	<h:outputText value="Dept" />
+	<h:inputText value="#{editEmploy.dept}" /><br/>
+	<h:outputText value="Desig" />
+	<h:inputText value="#{editEmploy.desig}" /><br/>
+	<h:outputText value="Basic" />
+	<h:inputText value="#{editEmploy.basic}" /><br/>
+	<h:commandButton action="#{eDao.updateEmployDao(editEmploy)}" value="Update" />
+	</h:form>
+
+</body> 
+</html>

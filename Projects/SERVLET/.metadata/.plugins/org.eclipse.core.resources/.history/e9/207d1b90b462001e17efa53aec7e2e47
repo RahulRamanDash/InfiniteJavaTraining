@@ -1,0 +1,21 @@
+package infinite.OtpApp;
+
+import java.util.*;
+
+public class ArrIterate {
+
+	public static void main(String[] args) {
+		List arr = new ArrayList();
+		arr.add(1,"rahul");
+		arr.add(2,"Ayush");
+		arr.add(3,"Ganesh");
+		
+		System.out.println(arr.size());
+		for (int i=1; i< arr.size();i++) {
+			System.out.println(arr.indexOf(i));
+		}
+		
+
+	}
+
+}

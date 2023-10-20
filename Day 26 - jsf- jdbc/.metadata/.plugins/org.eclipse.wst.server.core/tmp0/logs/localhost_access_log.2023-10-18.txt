@@ -1,0 +1,9 @@
+127.0.0.1 - - [18/Oct/2023:09:29:39 +0530] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [18/Oct/2023:09:29:40 +0530] "GET /AgentDashboard/AgentShow.xhtml HTTP/1.1" 404 1047
+127.0.0.1 - - [18/Oct/2023:09:29:58 +0530] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [18/Oct/2023:09:29:58 +0530] "GET /AgentDashboard/AgentShow.xhtml HTTP/1.1" 404 1047
+0:0:0:0:0:0:0:1 - - [18/Oct/2023:09:30:03 +0530] "GET /AgentDashboard/AgentShow.xhtml HTTP/1.1" 404 1047
+0:0:0:0:0:0:0:1 - - [18/Oct/2023:09:30:03 +0530] "GET /favicon.ico HTTP/1.1" 404 1085
+127.0.0.1 - - [18/Oct/2023:09:30:37 +0530] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [18/Oct/2023:09:30:38 +0530] "GET /AgentDashboard/faces/AgentShow.xhtml HTTP/1.1" 500 28434
+0:0:0:0:0:0:0:1 - - [18/Oct/2023:09:31:14 +0530] "GET /AgentDashboard/faces/AgentShow.xhtml HTTP/1.1" 500 29017

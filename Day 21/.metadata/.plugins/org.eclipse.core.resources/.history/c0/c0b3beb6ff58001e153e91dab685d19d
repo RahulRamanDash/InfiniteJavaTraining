@@ -1,0 +1,8 @@
+package com.java.beeans;
+
+public class Greeting {
+	public String beenGreeting() {
+		return "Good Morning";
+	}
+
+}

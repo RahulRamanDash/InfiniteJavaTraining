@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;HelloWorldRemote.java&apos; to &apos;EJBHelloWorldClient/src/main/java/com.java.ejb&apos;&#x0D;&#x0A;- Original project: &apos;EJBHelloWorld&apos;&#x0D;&#x0A;- Destination element: &apos;EJBHelloWorldClient/src/main/java/com.java.ejb&apos;&#x0D;&#x0A;- Original element: &apos;com.java.ejb.HelloWorldRemote.java&apos;" description="Copy compilation unit" destination="=EJBHelloWorldClient/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.java.ejb" element1="/ejbModule&lt;com.java.ejb{HelloWorldRemote.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1697090775971" units="1" version="1.0"/>
+</session>

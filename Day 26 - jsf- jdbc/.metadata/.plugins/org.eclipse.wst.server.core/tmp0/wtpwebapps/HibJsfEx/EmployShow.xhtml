@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+<body>
+	<h:form>
+	<center>
+	<h2>
+	<h:outputText value="Employ Records" />
+	</h2>
+	<h:dataTable value="#{eDao.showEmployDao()}" var="e" border="3" align="center">
+	<h:column>
+	<f:facet name="header">Employ No : </f:facet>
+	<h:outputText value="#{e.empno}" />
+	</h:column>
+	<h:column>
+	<f:facet name="header">Employ Name</f:facet>
+	<h:outputText value="#{e.name}" />
+	</h:column>
+	<h:column>
+	<f:facet name="header">Gender</f:facet>
+	<h:outputText value="#{e.gender}" />
+	</h:column>
+	<h:column>
+	<f:facet name="header">Department</f:facet>
+	<h:outputText value="#{e.dept}" />
+	</h:column>
+	<h:column>
+	<f:facet name="header">Designation</f:facet>
+	<h:outputText value="#{e.desig}" />
+	</h:column>
+	<h:column>
+	<f:facet name="header">Basic</f:facet>
+	<h:outputText value="#{e.basic}" />
+	</h:column>
+	<h:column>
+	<f:facet name="header">Update</f:facet>
+	<h:commandButton action="#{eDao.searchEmployDao(e.empno)}" value="Update" />
+	</h:column>
+	<h:column>
+	<f:facet name="header">Delete</f:facet>
+	<h:commandButton action="#{eDao.deleteEmployDao(e.empno)}" value="Delete" />
+	</h:column>
+	</h:dataTable>
+	</center>
+	<center>
+	<h:commandButton action="addEmploy.xhtml?faces-redirect=true" value="Add Employ" />
+	</center>
+	</h:form>
+</body>
+</html>

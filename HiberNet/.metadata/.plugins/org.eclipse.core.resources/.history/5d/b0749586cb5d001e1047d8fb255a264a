@@ -1,0 +1,21 @@
+package com.java.jsf;
+
+public class Calculation {
+	private int firstNo;
+	private int secondNO;
+	public int getFirstNo() {
+		return firstNo;
+	}
+	public void setFirstNo(int firstNo) {
+		this.firstNo = firstNo;
+	}
+	public int getSecondNO() {
+		return secondNO;
+	}
+	public void setSecondNO(int secondNO) {
+		this.secondNO = secondNO;
+	}
+	
+	
+
+}

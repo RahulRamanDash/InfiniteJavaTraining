@@ -1,0 +1,39 @@
+package com.java.hms;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+
+public class PatientMasterDaoImpl implements PatientMasterDAO{
+
+	SessionFactory sf;
+	Session session;
+	
+	public String incrimentpatientId() throws ClassNotFoundException, SQLException{
+		connection = ConnectionHelper.getConnection();
+		String cmd = "select max(stockid) as sid from stock";
+		pst = connection.prepareStatement(cmd);
+		ResultSet rs = pst.executeQuery();
+		if(rs.next()) {
+			String sid = rs.getString("sid");
+			String numstr = sid.substring(1);
+			int num = Integer.parseInt(numstr);
+			num+=1;
+			String stockid = String.format("S%03d", num);
+			return stockid;
+		}else {
+			return "S001";
+		}
+	
+	@Override
+	public String addPatient(PatientMaster patient) {
+		sf = SessionHelper.getConnection();
+		session = sf.openSession();
+		Transaction trans = session.beginTransaction();
+		session.save(patient);
+		trans.commit();
+		return "addSuccess.jsp?faces-redirect=true";
+	}
+	
+
+}

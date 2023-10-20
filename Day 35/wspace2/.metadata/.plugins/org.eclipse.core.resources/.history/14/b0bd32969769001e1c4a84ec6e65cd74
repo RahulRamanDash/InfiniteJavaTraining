@@ -1,0 +1,5 @@
+package com.java.emplyrealtime;
+
+public interface EmployCrudBeanRemote {
+	List<Employ> showEmployDao();
+}

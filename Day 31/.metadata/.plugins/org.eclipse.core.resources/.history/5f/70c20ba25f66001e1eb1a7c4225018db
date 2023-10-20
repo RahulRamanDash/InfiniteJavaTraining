@@ -1,0 +1,13 @@
+package com.java.inf;
+
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.AnnotationConfiguration;
+
+public class StoreDetails {
+
+	public static void main(String[] args) {
+		SessionFactory factory =  new AnnotationConfiguration().configure().buildSessionFactory();
+		
+	}
+
+}

@@ -1,0 +1,14 @@
+package com.java.jsf;
+
+import java.sql.Date;
+import java.time.DateTimeException;
+
+public class Greeting {
+	public String company() {
+		return "Company is Infinite";
+	}
+	public String saluation() {
+		Date obj = new Date();
+		
+	}
+}

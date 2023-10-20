@@ -1,0 +1,38 @@
+package com.java.infinite;
+
+import java.util.Date;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Scanner;
+
+import org.apache.el.parser.ParseException;
+
+public class TestWekand {
+    // Helper method to parse a date string in the format "yyyy-MM-dd"
+    public static void checkWekand(Date stdate, Date enddate) {
+		Calendar calendar = Calendar.getInstance();
+		boolean check = true;
+        while (!enddate.after(stdate)) {
+            int dayOfWeek = calendar.get(Calendar.DAY_OF_WEEK);
+            if (dayOfWeek == Calendar.SATURDAY || dayOfWeek == Calendar.SUNDAY) {
+                System.out.println("Wekand Found");
+                break;
+            }
+            calendar.add(Calendar.DAY_OF_MONTH, 1);
+        }
+	}
+      public static void main(String[] args) throws ParseException, java.text.ParseException {
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter Start Date");
+        Date stdate = sdf.parse(sc.next());
+        System.out.println("Enter End Date");
+        Date enddate = sdf.parse(sc.next());
+        if(checkWekand(stdate,enddate)){
+            System.out.println("No Wekands");
+        }else{
+            System.out.println("Wekands");
+        }
+       
+    }
+}

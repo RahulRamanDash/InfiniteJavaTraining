@@ -1,0 +1,19 @@
+package com.java.hms;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+
+public class DoctorMasterDaoImpl implements DoctorMasterDAO{
+	
+	SessionFactory sf;
+	Session session;
+	
+	
+	@Override
+	public String showDoctorDao() {
+		sf = SessionHelper.getConnection();
+		session = sf.openSession();
+		
+	}
+
+}

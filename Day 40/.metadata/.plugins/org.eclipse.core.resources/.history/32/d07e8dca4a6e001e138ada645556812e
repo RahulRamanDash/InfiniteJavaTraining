@@ -1,0 +1,13 @@
+package com.java.ejb;
+
+import java.util.List;
+
+import javax.naming.NamingException;
+
+public class EmployEjbImpl {
+	public List<Employ> showEmployEjb() {
+		EmployBeanRemote remote = RemoteHelper.lookupRemoteStatelessEmploy();
+		return remote.showEmploy();
+		}
+	
+}

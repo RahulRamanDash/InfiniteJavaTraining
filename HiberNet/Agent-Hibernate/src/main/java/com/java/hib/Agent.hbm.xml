@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Sep 27, 2023, 12:40:21 PM by Hibernate Tools 3.6.2.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class dynamic-insert="false" dynamic-update="false" mutable="true" name="com.java.hib.Agent" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="AGENT">
+        <id name="AgentID" type="int">
+            <column name="AGENTID"/>
+            <generator class="assigned"/>
+        </id>
+        <property generated="never" lazy="false" name="Name" optimistic-lock="true" type="java.lang.String" unique="false">
+            <column name="NAME"/>
+        </property>
+        <property generated="never" lazy="false" name="City" optimistic-lock="true" type="java.lang.String" unique="false">
+            <column name="CITY"/>
+        </property>
+        <property generated="never" lazy="false" name="GENDER" optimistic-lock="true" unique="false">
+            <column name="GENDER"/>
+            <type name="org.hibernate.type.EnumType">
+                <param name="enumClass">com.java.hib.GENDER</param>
+                <param name="type">12</param>
+            </type>
+        </property>
+        <property generated="never" lazy="false" name="MaritalStatus" optimistic-lock="true" type="int" unique="false">
+            <column name="MARITALSTATUS"/>
+        </property>
+        <property generated="never" lazy="false" name="Premium" optimistic-lock="true" type="double" unique="false">
+            <column name="PREMIUM"/>
+        </property>
+    </class>
+</hibernate-mapping>

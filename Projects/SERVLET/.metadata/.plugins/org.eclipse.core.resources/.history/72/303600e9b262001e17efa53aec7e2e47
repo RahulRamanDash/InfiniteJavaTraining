@@ -1,0 +1,10 @@
+package infinite.OtpApp;
+
+public class ArrIterate {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

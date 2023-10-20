@@ -1,0 +1,13 @@
+package com.java.ejb;
+
+
+public class RoomAllocationDaoImpl implements RoomAllocationDAO{
+
+	@Override
+	public String allocateRoomDao() {
+		
+		return null;
+	}
+
+
+}

@@ -1,0 +1,37 @@
+package com.java.test;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class EmployTest {
+	@Test
+	public void testGettersAndSetters() {
+		Employ employ = new Employ();
+		employ.setEmpno(1);
+		employ.setName("Rahul");
+		employ.setGender(Gender.MALE);
+		employ.setDept("java");
+		employ.setDesig("ASE");
+		employ.setBasic(99424);
+	}
+
+	@Test
+	public void testConstructor() {
+		Employ employ = new Employ();
+		assertNotNull(employ);
+		Employ emp = new Employ(1,"Rahul",Gender.MALE,"Java","ASE",99424);
+		assertEquals(1, emp.getEmpno());
+		assertEquals("Rahul", emp.getName());
+		assertEquals(Gender.MALE, emp.getGender());
+		assertEquals("Java", emp.getDept());
+		assertEquals("ASE", emp.getDesig());
+		assertEquals(99424,emp.getBasic(),0);
+	}
+	
+	@Test
+	public void testToString() {
+		
+	}
+
+}

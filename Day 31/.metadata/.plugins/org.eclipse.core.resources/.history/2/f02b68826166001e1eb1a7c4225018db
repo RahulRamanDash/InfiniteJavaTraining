@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Oct 9, 2023, 9:52:20 AM by Hibernate Tools 3.6.2.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class dynamic-insert="false" dynamic-update="false" mutable="true" name="com.java.inf.Employee" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="EMPLOYEE">
+        <id name="employeeId" type="int">
+            <column name="EMPLOYEEID"/>
+            <generator class="assigned"/>
+        </id>
+        <property generated="never" lazy="false" name="name" optimistic-lock="true" type="java.lang.String" unique="false">
+            <column name="NAME"/>
+        </property>
+        <property generated="never" lazy="false" name="email" optimistic-lock="true" type="java.lang.String" unique="false">
+            <column name="EMAIL"/>
+        </property>
+        <one-to-one class="com.java.inf.Address" constrained="false" embed-xml="true" name="address"/>
+    </class>
+</hibernate-mapping>

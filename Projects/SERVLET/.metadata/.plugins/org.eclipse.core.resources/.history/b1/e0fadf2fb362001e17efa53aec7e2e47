@@ -1,0 +1,13 @@
+package infinite.OtpApp;
+
+import java.util.*;
+
+public class ArrIterate {
+
+	public static void main(String[] args) {
+		List arr = new ArrayList();
+		
+
+	}
+
+}

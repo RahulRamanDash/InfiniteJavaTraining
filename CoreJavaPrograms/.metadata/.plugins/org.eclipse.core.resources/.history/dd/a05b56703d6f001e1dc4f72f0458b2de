@@ -1,0 +1,51 @@
+package com.java.day7;
+
+class Counter {
+    private int count = 0;
+
+    public synchronized void increment() {
+        count++;
+    }
+
+    public synchronized int getCount() {
+        return count;
+    }
+}
+
+public class Prog3 {
+    public static void main(String[] args) {
+        // Create a Counter object for thread-safe counting
+        Counter counter = new Counter();
+
+        // Create the first thread to increment the counter
+        Thread t1 = new Thread(() -> {
+            for (int i = 0; i < 1000; i++) {
+                counter.increment(); // Increment the count safely
+            }
+        });
+
+        // Create the second thread to increment the counter
+        Thread t2 = new Thread(() -> {
+            for (int i = 0; i < 1000; i++) {
+                counter.increment(); // Increment the count safely
+            }
+        });
+
+        // Start the first thread
+        t1.start();
+
+        // Start the second thread
+        t2.start();
+
+        try {
+            // Wait for both threads to finish
+            t1.join();
+            t2.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        // Print the final count
+        System.out.println("Counter: " + counter.getCount());
+    }
+}

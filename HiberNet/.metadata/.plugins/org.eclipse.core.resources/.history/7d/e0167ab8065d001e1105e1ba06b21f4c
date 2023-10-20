@@ -1,0 +1,9 @@
+package com.java.hib;
+
+import java.util.List;
+
+public interface AgentDAO {
+	List<Agent> showAgentDao();
+	Agent searchAgentDao(int agentid);
+	String addAgentDao();
+}

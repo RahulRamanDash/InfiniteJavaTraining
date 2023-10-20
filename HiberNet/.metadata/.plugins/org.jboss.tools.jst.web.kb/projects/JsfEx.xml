@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kb-project>
+ <depends-on-projects/>
+ <used-by-projects/>
+ <paths>
+  <path value="D:/apache-tomcat-8.5.42/lib/tomcat-coyote.jar"/>
+  <path value="D:/apache-tomcat-8.5.42/lib/ecj-4.6.3.jar"/>
+  <path value="D:/apache-tomcat-8.5.42/lib/tomcat-util.jar"/>
+  <path value="C:/Users/rahulr/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar"/>
+  <path value="D:/apache-tomcat-8.5.42/lib/catalina-ant.jar"/>
+  <path value="D:/apache-tomcat-8.5.42/lib/jasper-el.jar"/>
+  <path value="C:/Users/rahulr/.m2/repository/org/glassfish/jersey/core/jersey-common/3.1.3/jersey-common-3.1.3.jar"/>
+  <path value="C:/Users/rahulr/.m2/repository/org/javassist/javassist/3.29.2-GA/javassist-3.29.2-GA.jar"/>
+  <path value="C:/Users/rahulr/.m2/repository/jakarta/inject/jakarta.inject-api/2.0.1/jakarta.inject-api-2.0.1.jar"/>
+  <path value="D:/apache-tomcat-8.5.42/lib/tomcat-jdbc.jar"/>
+  <path value="D:/apache-tomcat-8.5.42/lib/tomcat-util-scan.jar"/>
+  <path value="D:/apache-tomcat-8.5.42/lib/tomcat-i18n-fr.jar"/>
+  <path value="D:/apache-tomcat-8.5.42/lib/jaspic-api.jar"/>
+  <path value="D:/apache-tomcat-8.5.42/lib/tomcat-dbcp.jar"/>
+  <path value="D:/apache-tomcat-8.5.42/lib/annotations-api.jar"/>
+  <path value="D:/apache-tomcat-8.5.42/lib/servlet-api.jar"/>
+  <path value="C:/Users/rahulr/.m2/repository/org/glassfish/hk2/osgi-resource-locator/1.0.3/osgi-resource-locator-1.0.3.jar"/>
+  <path value="D:/apache-tomcat-8.5.42/lib/jasper.jar"/>
+  <path value="/JsfEx/src/main/webapp/WEB-INF/faces-config.xml">
+   <libraries>
+    <library class="faces-config">
+     <id class="model-object"
+      path="FileSystems/WEB-INF/faces-config.xml" project="JsfEx"/>
+    </library>
+   </libraries>
+  </path>
+  <path value="C:/Users/rahulr/.m2/repository/org/glassfish/hk2/external/aopalliance-repackaged/3.0.4/aopalliance-repackaged-3.0.4.jar"/>
+  <path value="C:/Users/rahulr/.m2/repository/org/glassfish/jersey/containers/jersey-container-servlet-core/3.1.3/jersey-container-servlet-core-3.1.3.jar"/>
+  <path value="C:/Users/rahulr/.m2/repository/org/glassfish/hk2/hk2-api/3.0.4/hk2-api-3.0.4.jar"/>
+  <path value="D:/apache-tomcat-8.5.42/lib/tomcat-i18n-ru.jar"/>
+  <path value="D:/apache-tomcat-8.5.42/lib/catalina-storeconfig.jar"/>
+  <path value="D:/apache-tomcat-8.5.42/lib/tomcat-i18n-ja.jar"/>
+  <path value="C:/Users/rahulr/.m2/repository/org/glassfish/jersey/inject/jersey-hk2/3.1.3/jersey-hk2-3.1.3.jar"/>
+  <path value="D:/apache-tomcat-8.5.42/lib/tomcat-i18n-es.jar"/>
+  <path value="D:/apache-tomcat-8.5.42/lib/tomcat-api.jar"/>
+  <path value="C:/Users/rahulr/.m2/repository/org/glassfish/jersey/core/jersey-client/3.1.3/jersey-client-3.1.3.jar"/>
+  <path value="D:/apache-tomcat-8.5.42/lib/catalina-tribes.jar"/>
+  <path value="D:/apache-tomcat-8.5.42/lib/catalina.jar"/>
+  <path value="D:/apache-tomcat-8.5.42/lib/el-api.jar"/>
+  <path value="D:/apache-tomcat-8.5.42/lib/websocket-api.jar"/>
+  <path value="C:/Users/rahulr/.m2/repository/com/sun/faces/jsf-impl/2.1.7/jsf-impl-2.1.7.jar">
+   <libraries>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jsf-impl-2.1.7.jar/meta-inf/html_basic.tld" project="JsfEx"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jsf-impl-2.1.7.jar/meta-inf/jsf_core.tld" project="JsfEx"/>
+    </library>
+    <library class="facelet">
+     <id class="model-object"
+      path="FileSystems/lib-jsf-impl-2.1.7.jar/meta-inf/mojarra_ext.taglib.xml" project="JsfEx"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jsf-impl-2.1.7.jar/meta-inf/mojarra_ext.tld" project="JsfEx"/>
+    </library>
+    <library class="facelet">
+     <id class="model-object"
+      path="FileSystems/lib-jsf-impl-2.1.7.jar/com/sun/faces/metadata/taglib/composite.taglib.xml" project="JsfEx"/>
+    </library>
+    <library class="facelet">
+     <id class="model-object"
+      path="FileSystems/lib-jsf-impl-2.1.7.jar/com/sun/faces/metadata/taglib/facelets_jsf_core.taglib.xml" project="JsfEx"/>
+    </library>
+    <library class="facelet">
+     <id class="model-object"
+      path="FileSystems/lib-jsf-impl-2.1.7.jar/com/sun/faces/metadata/taglib/html_basic.taglib.xml" project="JsfEx"/>
+    </library>
+    <library class="facelet">
+     <id class="model-object"
+      path="FileSystems/lib-jsf-impl-2.1.7.jar/com/sun/faces/metadata/taglib/jstl-core.taglib.xml" project="JsfEx"/>
+    </library>
+    <library class="facelet">
+     <id class="model-object"
+      path="FileSystems/lib-jsf-impl-2.1.7.jar/com/sun/faces/metadata/taglib/jstl-fn.taglib.xml" project="JsfEx"/>
+    </library>
+    <library class="facelet">
+     <id class="model-object"
+      path="FileSystems/lib-jsf-impl-2.1.7.jar/com/sun/faces/metadata/taglib/mojarra_ext.taglib.xml" project="JsfEx"/>
+    </library>
+    <library class="facelet">
+     <id class="model-object"
+      path="FileSystems/lib-jsf-impl-2.1.7.jar/com/sun/faces/metadata/taglib/ui.taglib.xml" project="JsfEx"/>
+    </library>
+   </libraries>
+  </path>
+  <path value="C:/Users/rahulr/.m2/repository/org/glassfish/jersey/core/jersey-server/3.1.3/jersey-server-3.1.3.jar"/>
+  <path value="C:/Users/rahulr/.m2/repository/jakarta/ws/rs/jakarta.ws.rs-api/3.1.0/jakarta.ws.rs-api-3.1.0.jar"/>
+  <path value="D:/apache-tomcat-8.5.42/lib/jsp-api.jar"/>
+  <path value="C:/Users/rahulr/.m2/repository/jakarta/validation/jakarta.validation-api/3.0.2/jakarta.validation-api-3.0.2.jar"/>
+  <path value="D:/apache-tomcat-8.5.42/lib/tomcat-jni.jar"/>
+  <path value="D:/apache-tomcat-8.5.42/lib/tomcat-websocket.jar"/>
+  <path value="C:/Users/rahulr/.m2/repository/org/glassfish/hk2/hk2-utils/3.0.4/hk2-utils-3.0.4.jar"/>
+  <path value="C:/Users/rahulr/.m2/repository/com/sun/faces/jsf-api/2.1.7/jsf-api-2.1.7.jar"/>
+  <path value="D:/apache-tomcat-8.5.42/lib/catalina-ha.jar"/>
+  <path value="C:/Users/rahulr/.m2/repository/org/glassfish/hk2/hk2-locator/3.0.4/hk2-locator-3.0.4.jar"/>
+ </paths>
+ <validation>
+  <core validator-id="jsf-verification">
+   <linked-resource declaration="true"
+    name="%1;%2;%3;%4;%5;%6;%7;%8;%9;%10;%11;%12;%13;%14;%15;%16;%17;%18;%19;%20;" path="%0"/>
+  </core>
+  <core validator-id="jboss.jsf.core"/>
+  <el>
+   <linked-el length="13" name="%21" offset="947" path="%22"/>
+   <linked-el length="20" name="%23" offset="393" path="%24"/>
+   <linked-el length="20" name="%23" offset="503" path="%24"/>
+   <linked-el length="30" name="%23" offset="563" path="%24"/>
+   <linked-el length="17" name="%25" offset="1357" path="%26"/>
+   <linked-el length="23" name="%27" offset="375" path="%28"/>
+   <linked-el length="26" name="%27" offset="472" path="%28"/>
+   <linked-el length="27" name="%29" offset="446" path="%30"/>
+   <linked-el length="26" name="%31" offset="413" path="%32"/>
+   <linked-el length="27" name="%31" offset="396" path="%33"/>
+   <linked-el length="20" name="%34" offset="393" path="%24"/>
+   <linked-el length="20" name="%34" offset="503" path="%24"/>
+   <linked-el length="30" name="%34" offset="563" path="%24"/>
+   <linked-el length="11" name="%35" offset="651" path="%24"/>
+   <linked-el length="15" name="%36" offset="468" path="%37"/>
+   <linked-el length="17" name="%36" offset="409" path="%38"/>
+   <linked-el length="18" name="%36" offset="505" path="%38"/>
+   <linked-el length="15" name="%36" offset="554" path="%37"/>
+   <linked-el length="16" name="%36" offset="381" path="%37"/>
+   <linked-el length="17" name="%39" offset="1357" path="%26"/>
+   <linked-el length="24" name="%40" offset="393" path="%41"/>
+   <linked-el length="22" name="%40" offset="491" path="%41"/>
+   <linked-el length="44" name="%40" offset="586" path="%41"/>
+   <linked-el length="22" name="%40" offset="512" path="%42"/>
+   <linked-el length="23" name="%40" offset="411" path="%42"/>
+   <linked-el length="13" name="%43" offset="515" path="%22"/>
+   <linked-el length="15" name="%44" offset="379" path="%45"/>
+   <linked-el length="22" name="%44" offset="483" path="%45"/>
+   <linked-el length="28" name="%46" offset="385" path="%22"/>
+   <linked-el length="12" name="%47" offset="629" path="%22"/>
+   <linked-el length="13" name="%48" offset="842" path="%22"/>
+   <linked-el length="27" name="%49" offset="446" path="%30"/>
+   <linked-el length="25" name="%49" offset="524" path="%30"/>
+   <linked-el length="15" name="%50" offset="379" path="%45"/>
+   <linked-el length="22" name="%50" offset="483" path="%45"/>
+   <linked-el length="13" name="%51" offset="515" path="%22"/>
+   <linked-el length="13" name="%51" offset="947" path="%22"/>
+   <linked-el length="12" name="%51" offset="735" path="%22"/>
+   <linked-el length="13" name="%51" offset="842" path="%22"/>
+   <linked-el length="12" name="%51" offset="629" path="%22"/>
+   <linked-el length="26" name="%52" offset="413" path="%32"/>
+   <linked-el length="27" name="%52" offset="396" path="%33"/>
+   <linked-el length="21" name="%53" offset="345" path="%54"/>
+   <linked-el length="25" name="%55" offset="524" path="%30"/>
+   <linked-el length="24" name="%56" offset="393" path="%41"/>
+   <linked-el length="22" name="%56" offset="491" path="%41"/>
+   <linked-el length="44" name="%56" offset="586" path="%41"/>
+   <linked-el length="22" name="%56" offset="512" path="%42"/>
+   <linked-el length="23" name="%56" offset="411" path="%42"/>
+   <linked-el length="30" name="%57" offset="563" path="%24"/>
+   <linked-el length="30" name="%58" offset="563" path="%24"/>
+   <linked-el length="21" name="%59" offset="345" path="%54"/>
+   <linked-el length="15" name="%60" offset="468" path="%37"/>
+   <linked-el length="17" name="%60" offset="409" path="%38"/>
+   <linked-el length="18" name="%60" offset="505" path="%38"/>
+   <linked-el length="15" name="%60" offset="554" path="%37"/>
+   <linked-el length="16" name="%60" offset="381" path="%37"/>
+   <linked-el length="12" name="%61" offset="735" path="%22"/>
+  </el>
+ </validation>
+ <aliases>
+  <alias path="/JsfEx/src/main/webapp/WEB-INF/faces-config.xml" value="%0"/>
+  <alias path="e.basic" value="%21"/>
+  <alias path="/JsfEx/src/main/java/com/java/login/Login.java" value="%23"/>
+  <alias path="greeting" value="%27"/>
+  <alias path="\JsfEx\src\main\java\com\java\jsf\Employ.java" value="%7"/>
+  <alias path="\JsfEx\src\main\java\com\java\jsf\Test.java" value="%11"/>
+  <alias path="/JsfEx/src/main/java/com/java/jsf/Calculation.java" value="%36"/>
+  <alias path="/JsfEx/src/main/webapp/Name.xhtml" value="%42"/>
+  <alias path="/JsfEx/src/main/webapp/calculationResult.xhtml" value="%37"/>
+  <alias path="/JsfEx/src/main/java/com/java/jsf/Test.java" value="%44"/>
+  <alias path="/JsfEx/src/main/webapp/helloResult.xhtml" value="%33"/>
+  <alias path="\JsfEx\src\main\java\com\java\jsf\Greeting.java" value="%20"/>
+  <alias path="employDao" value="%46"/>
+  <alias path="/JsfEx/src/main/webapp/ShowEmploy.xhtml" value="%22"/>
+  <alias path="/JsfEx/src/main/webapp/hello.xhtml" value="%54"/>
+  <alias path="/JsfEx/src/main/webapp/Login.xhtml" value="%24"/>
+  <alias path="test" value="%50"/>
+  <alias path="/JsfEx/src/main/java/com/java/jsf/HelloWorld.java" value="%53"/>
+  <alias path="hello" value="%59"/>
+  <alias path="/JsfEx/pom.xml" value="%26"/>
+  <alias path="e.dept" value="%61"/>
+  <alias path="com.java.jsf.HelloWorld" value="%1"/>
+  <alias path="com.java.jsf.Calculation" value="%4"/>
+  <alias path="jersey.version" value="%25"/>
+  <alias path="/JsfEx/src/main/webapp/greeting.xhtml" value="%28"/>
+  <alias path="checkboxBean.selected" value="%29"/>
+  <alias path="helloBean.studentName" value="%31"/>
+  <alias path="login" value="%34"/>
+  <alias path="error" value="%35"/>
+  <alias path="com.java.jsf.EmployDAO" value="%6"/>
+  <alias path="/JsfEx/src/main/webapp/nameResult.xhtml" value="%41"/>
+  <alias path="com.java.jsf.Employ" value="%8"/>
+  <alias path="\JsfEx\src\main\java\com\java\login\Login.java" value="%10"/>
+  <alias path="com.java.jsf.Greeting" value="%12"/>
+  <alias path="com.java.login.LoginDAO" value="%13"/>
+  <alias path="/JsfEx/src/main/webapp/helloInput.xhtml" value="%32"/>
+  <alias path="jersey" value="%39"/>
+  <alias path="/JsfEx/src/main/java/com/java/jsf/NameBean.java" value="%40"/>
+  <alias path="e.empno" value="%43"/>
+  <alias path="/JsfEx/src/main/webapp/checkBox.xhtml" value="%30"/>
+  <alias path="\JsfEx\src\main\java\com\java\login\LoginDAO.java" value="%17"/>
+  <alias path="com.java.jsf.Test" value="%19"/>
+  <alias path="e.name" value="%47"/>
+  <alias path="\JsfEx\src\main\java\com\java\jsf\EmployDAO.java" value="%2"/>
+  <alias path="/JsfEx/src/main/webapp/test.xhtml" value="%45"/>
+  <alias path="e.desig" value="%48"/>
+  <alias path="checkboxBean" value="%49"/>
+  <alias path="com.java.jsf.NameBean" value="%3"/>
+  <alias path="e" value="%51"/>
+  <alias path="/JsfEx/src/main/webapp/calculation.xhtml" value="%38"/>
+  <alias path="\JsfEx\src\main\java\com\java\jsf\Calculation.java" value="%5"/>
+  <alias path="helloBean" value="%52"/>
+  <alias path="com.java.login.Login" value="%9"/>
+  <alias path="checkboxBean.submit" value="%55"/>
+  <alias path="nameBean" value="%56"/>
+  <alias path="com.java.jsf.HelloBean" value="%14"/>
+  <alias path="\JsfEx\src\main\java\com\java\jsf\HelloBean.java" value="%15"/>
+  <alias path="\JsfEx\src\main\java\com\java\jsf\NameBean.java" value="%16"/>
+  <alias path="/JsfEx/src/main/java/com/java/login/LoginDAO.java" value="%57"/>
+  <alias path="loginDao" value="%58"/>
+  <alias path="\JsfEx\src\main\java\com\java\jsf\HelloWorld.java" value="%18"/>
+  <alias path="calc" value="%60"/>
+ </aliases>
+ <includes/>
+ <uris>
+  <uri value="http://java.sun.com/jsf/facelets">
+   <prefix>ui</prefix>
+  </uri>
+  <uri value="http://java.sun.com/jsf/core">
+   <prefix>f</prefix>
+  </uri>
+  <uri value="http://java.sun.com/jsf/html">
+   <prefix>h</prefix>
+  </uri>
+ </uris>
+</kb-project>

@@ -1,0 +1,11 @@
+package com.java.login;
+
+public class LoginDAO {
+	public String validate(Login login) {
+		if(login.getUserName().equals("infinite") && login.getUserPass().equals("infinite")) {
+			return "Menu.xhtml?faces-redirect=true";
+		}else {
+			return "Login.xhtml?faces-redirect=true";
+		}
+	}
+}

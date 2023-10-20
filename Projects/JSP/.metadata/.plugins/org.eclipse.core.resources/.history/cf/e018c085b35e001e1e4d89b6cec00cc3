@@ -1,0 +1,10 @@
+package com.java.complaint;
+
+import java.sql.SQLException;
+import java.util.List;
+
+public interface ComplaintDAO {
+	public List<Complaint> showComplaintsDao() throws ClassNotFoundException, SQLException;
+	public String addComplaintDao();
+	Complaint searchComplaints(int Complaint_ID) throws ClassNotFoundException, SQLException;
+}

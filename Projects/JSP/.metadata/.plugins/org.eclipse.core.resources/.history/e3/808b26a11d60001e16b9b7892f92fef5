@@ -1,0 +1,132 @@
+<%@page import="com.java.complaint.Complaint"%>
+<%@page import="com.java.complaint.ComplaintDAOImpl"%>
+<%@page import="com.java.complaint.Complaint"%>
+<%@page import="java.util.List"%>
+<%@page import="com.java.complaint.ComplaintDAO"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Manage Complaints</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #007BFF;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        nav {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #007BFF;
+            color: #fff;
+        }
+
+        /* Style links as buttons */
+        a.button {
+            text-decoration: none;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Hover effect for buttons */
+        a.button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+<%
+	ComplaintDAO dao = new ComplaintDAOImpl();
+	ComplaintDAOImpl impl = new ComplaintDAOImpl();
+	List<Complaint> complaintList = dao.showComplaintDao();
+%>
+  	<nav>
+        <a href="addcomplaint.jsp">Raise a Complaint</a>
+        <a href="showHistory.jsp">Show History</a>
+  	</nav>
+<div class="container">
+	<table border="3px">
+		<tr>
+			<th>Complaint ID</th>
+            <th>Complaint Type</th>
+            <th>Description</th>
+            <th>Complaint Date</th>
+            <th>Severity</th>
+            <th>Status</th>
+			<th>Resolve</th>
+		</tr>
+		<%
+		for(Complaint complaint : complaintList){
+			%>
+		<tr>
+			<td><%= complaint.getComplaintID() %></td>
+            <td><%= complaint.getComplaintType() %></td>
+            <td><%= complaint.getCDescription() %></td>
+			<td><%= complaint.getComplaintDate() %></td>
+			<td><%= complaint.getSeverity() %></td>
+            <td><%= complaint.getStatus() %></td>
+            <td><a href="Resolve.jsp?ComplaintID=<%= complaint.getComplaintID() %>">Resolve</a></td>
+		</tr>
+		<% 
+		}
+		%>
+	</table>
+    <br><br>
+<div class="button-container">
+    <a class="button" href="addcomplaint.jsp">Raise a Complaint</a>
+    <a class="button" href="showHistory.jsp">Show History</a>
+</div>
+</div>
+</body>
+</html>

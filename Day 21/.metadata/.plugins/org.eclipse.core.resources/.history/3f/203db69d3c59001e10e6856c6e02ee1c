@@ -1,0 +1,12 @@
+package com.java.test;
+
+import com.java.junitexam.Vendor;
+
+public class App {
+
+  public static void main(String[] args) {
+	  Vendor obj = new Vendor();
+	  System.out.println(to);
+  }
+
+}

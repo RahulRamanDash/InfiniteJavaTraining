@@ -1,0 +1,31 @@
+package com.java.day7;
+
+public class Prog4 {
+    public static void main(String[] args) {
+        // Create the first thread
+        Thread t1 = new Thread(() -> {
+            for (int i = 1; i <= 5; i++) {
+                System.out.println("Thread 1: " + i);
+            }
+        });
+
+        // Create the second thread
+        Thread t2 = new Thread(() -> {
+            for (int i = 1; i <= 5; i++) {
+                System.out.println("Thread 2: " + i);
+            }
+        });
+
+        // Set thread 1's priority to the minimum
+        t1.setPriority(Thread.MIN_PRIORITY);
+
+        // Set thread 2's priority to the maximum
+        t2.setPriority(Thread.MAX_PRIORITY);
+
+        // Start the first thread
+        t1.start();
+
+        // Start the second thread
+        t2.start();
+    }
+}

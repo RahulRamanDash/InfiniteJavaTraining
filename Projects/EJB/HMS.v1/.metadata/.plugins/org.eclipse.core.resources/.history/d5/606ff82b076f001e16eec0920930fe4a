@@ -1,0 +1,10 @@
+package com.java.hms;
+
+import java.util.List;
+
+public class PatientEjbImpl {
+	public List<PatientMaster> showPatientEjb() {
+		PatientBeanRemote remote = PatientRemoteHelper.lookupRemoteStatelessEmploy();
+		return remote.showPatient();
+		}
+}

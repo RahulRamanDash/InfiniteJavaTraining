@@ -1,0 +1,14 @@
+package com.java.complaint;
+
+import java.sql.Date;
+
+public class Complaint {
+
+	private String ComplaintID;
+	private String ComplaintType;
+	private String CDescription;
+	private Date ComplaintDate;
+	private String Severity;
+	private String Status;
+	
+}

@@ -1,0 +1,11 @@
+package com.java.lib;
+
+import java.sql.Date;
+
+public class Transreturn {
+	private String Username;
+	private int BookId;
+	private Date Fromdate;
+	
+
+}

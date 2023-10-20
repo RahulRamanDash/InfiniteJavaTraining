@@ -1,0 +1,21 @@
+package com.java.test;
+
+public class Data {
+	public String sayHello() {
+		return "Welcome to Junit Programming....";
+	}
+	public int sum(int x, int y) {
+		return x+y;
+	}
+	public int max3(int a, int b, int c) {
+		int m =0;
+		if (a<b) {
+			m=b;
+		}
+		if (m<c) {
+			m=c;
+		}
+		return m;
+	}
+
+}

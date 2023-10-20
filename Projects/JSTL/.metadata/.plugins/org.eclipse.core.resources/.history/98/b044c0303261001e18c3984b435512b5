@@ -1,0 +1,14 @@
+package com.java.lib;
+
+import java.sql.Date;
+
+import com.google.protobuf.Timestamp;
+
+public class Transreturn {
+	private String Username;
+	private int BookId;
+	private Date Fromdate;
+	private Timestamp Todate;
+	
+
+}

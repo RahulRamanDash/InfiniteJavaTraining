@@ -1,0 +1,18 @@
+package com.java.jsf;
+
+import java.util.List;
+
+import org.hibernate.Query;
+import org.hibernate.Session;
+
+public class EmployDaoImpl implements EmployDAO{
+	Session session;
+	@Override
+	public List<Employ> showEmployDao() {
+		session = SessionHelper.getConnection();
+		Query query = session.getNamedQuery("showEmploy");
+		List<Employ> employList = query.list();
+		return employList;
+	}
+	
+}

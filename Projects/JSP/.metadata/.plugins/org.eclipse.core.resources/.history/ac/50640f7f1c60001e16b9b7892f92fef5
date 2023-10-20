@@ -1,0 +1,83 @@
+<%@page import="com.java.complaint.Complaint"%>
+<%@page import="com.java.complaint.ComplaintDAOImpl"%>
+<%@page import="com.java.complaint.Complaint"%>
+<%@page import="java.util.List"%>
+<%@page import="com.java.complaint.ComplaintDAO"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Manage Complaints</title>
+  <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: center; /* Center-align content in table cells */
+        }
+
+        /* Style links as buttons */
+        a.button {
+        	text-align: center;
+            text-decoration: none;
+            padding: 10px 20px; /* Adjust padding as needed */
+            background-color: #007BFF; /* Button background color */
+            color: #FFF; /* Button text color */
+            border: none;
+            border-radius: 5px; /* Rounded corners */
+            cursor: pointer;
+            transition: background-color 0.3s ease; /* Add a smooth hover effect */
+        }
+
+        /* Hover effect for buttons */
+        a.button:hover {
+            background-color: #0056b3; /* Change the background color on hover */
+        }
+    </style>
+</head>
+<body>
+<%
+	ComplaintDAO dao = new ComplaintDAOImpl();
+	ComplaintDAOImpl impl = new ComplaintDAOImpl();
+	List<Complaint> complaintList = dao.showComplaintDao();
+%>
+	<table border="3px">
+		<tr>
+			<th>Complaint ID</th>
+            <th>Complaint Type</th>
+            <th>Description</th>
+            <th>Complaint Date</th>
+            <th>Severity</th>
+            <th>Status</th>
+			<th>Resolve</th>
+		</tr>
+		<%
+		for(Complaint complaint : complaintList){
+			%>
+		<tr>
+			<td><%= complaint.getComplaintID() %></td>
+            <td><%= complaint.getComplaintType() %></td>
+            <td><%= complaint.getCDescription() %></td>
+			<td><%= complaint.getComplaintDate() %></td>
+			<td><%= complaint.getSeverity() %></td>
+            <td><%= complaint.getStatus() %></td>
+            <td><a href="Resolve.jsp?ComplaintID=<%= complaint.getComplaintID() %>">Resolve</a></td>
+		</tr>
+		<% 
+		}
+		%>
+	</table>
+    <br><br>
+<a class="button" href="addcomplaint.jsp">Raise a Complaint</a>
+<a class="button" href="showHistory.jsp">Show History</a>
+</body>
+</html>

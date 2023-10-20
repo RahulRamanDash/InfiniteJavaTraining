@@ -1,0 +1,82 @@
+package com.java.test;
+
+import static org.junit.Assert.*;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+
+import org.junit.Test;
+
+import com.java.leave.LeaveDetails;
+import com.java.leave.LeaveStatus;
+import com.java.leave.LeaveType;
+
+public class testLeaveDetails {
+
+	@Test
+	public void testConstructor() throws ParseException {
+		LeaveDetails leavedetails = new LeaveDetails();
+		assertNotNull(leavedetails);
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+		Date lsd = sdf.parse("2023-10-10");
+		Date led = sdf.parse("2023-10-10");
+		Date cdate = new Date();
+		
+		LeaveDetails leavedetails1 = new LeaveDetails(1,1000,"Rahul",lsd,led,LeaveStatus.PENDING,LeaveType.EL,"sadi","welcome",cdate);	
+		assertEquals(1, leavedetails1.getLeaveId());
+		assertEquals(1000, leavedetails1.getEmpId());
+		assertEquals("Rahul", leavedetails1.getEmpName());
+		assertEquals(lsd, leavedetails1.getLeaveStartDate());
+		assertEquals(led, leavedetails1.getLeaveEndDate());
+		assertEquals(LeaveStatus.PENDING, leavedetails1.getLeaveStatus());
+		assertEquals(LeaveType.EL, leavedetails1.getLeaveType());
+		assertEquals("sadi", leavedetails1.getLeaveReason());
+		assertEquals("welcome", leavedetails1.getManagerComments());
+		assertEquals(cdate, leavedetails1.getAppliedOn());
+	}
+
+	
+	@Test
+	public void testGettersAndSetters() throws ParseException {
+		LeaveDetails leavedetails = new LeaveDetails();
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+		Date lsd = sdf.parse("2023-10-10");
+		Date led = sdf.parse("2023-10-10");
+		Date cdate = new Date();
+		
+		leavedetails.setLeaveId(1);
+		leavedetails.setEmpId(1000);
+		leavedetails.setEmpName("Rahul");
+		leavedetails.setLeaveStartDate(lsd);
+		leavedetails.setLeaveEndDate(led);
+		leavedetails.setLeaveStatus(LeaveStatus.PENDING);
+		leavedetails.setLeaveType(LeaveType.EL);
+		leavedetails.setLeaveReason("sadi");
+		leavedetails.setManagerComments("welcome");
+		leavedetails.setAppliedOn(cdate);
+		
+		
+		assertEquals("rahul",1, leavedetails.getLeaveId());
+		assertEquals(1000, leavedetails.getEmpId());
+		assertEquals("Rahul", leavedetails.getEmpName());
+		assertEquals(lsd, leavedetails.getLeaveStartDate());
+		assertEquals(led, leavedetails.getLeaveEndDate());
+		assertEquals(LeaveStatus.PENDING, leavedetails.getLeaveStatus());
+		assertEquals(LeaveType.EL, leavedetails.getLeaveType());
+		assertEquals("sadi", leavedetails.getLeaveReason());
+		assertEquals("welcome", leavedetails.getManagerComments());
+		assertEquals(cdate, leavedetails.getAppliedOn());
+	}
+	@Test
+	public void testToString() throws ParseException {
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+		Date lsd = sdf.parse("2023-10-10");
+		Date led = sdf.parse("2023-10-10");
+		Date cdate = new Date();
+		LeaveDetails leavedetails = new LeaveDetails(1,1000,"Rahul",lsd,led,LeaveStatus.PENDING,LeaveType.EL,"sadi","welcome",cdate);	
+		String result = "LeaveDetails [leaveId=1, empId=1000, empName=Rahul, leaveStartDate=Tue Oct 10 00:00:00 IST 2023, leaveEndDate=Tue Oct 10 00:00:00 IST 2023, leaveStatus=PENDING, leaveType=EL, leaveReason=sadi, managerComments=welcome, appliedOn="+cdate+"]";
+		assertEquals(result, leavedetails.toString());
+	}
+}

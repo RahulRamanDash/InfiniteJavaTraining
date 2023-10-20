@@ -1,0 +1,23 @@
+
+public class StaticFinal {
+	
+	int score;
+	
+	public void calculateScore(int run) {
+		if(run==4) {
+			score+=run;
+		}
+	}
+	public static void main(String[] args) {
+		StaticFinal obj = new StaticFinal();
+		obj.calculateScore(4);
+		final int finalScore = score;
+		
+		System.out.println("After one ball Score is "+score);
+		System.out.println("After The Match Score is "+finalScore);
+		
+		
+
+	}
+
+}

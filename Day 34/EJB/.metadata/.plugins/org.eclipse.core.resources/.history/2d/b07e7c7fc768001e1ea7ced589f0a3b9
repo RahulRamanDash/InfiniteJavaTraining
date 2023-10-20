@@ -1,0 +1,12 @@
+package com.java.ejb;
+
+import javax.naming.InitialContext;
+
+public class Client {
+	public static void main(String[] args) {
+		
+	HelloWorldRemote service = null;
+	service = (HelloWorldRemote)new InitialContext().lookuo("HelloWorld/remote");
+	
+	}
+}

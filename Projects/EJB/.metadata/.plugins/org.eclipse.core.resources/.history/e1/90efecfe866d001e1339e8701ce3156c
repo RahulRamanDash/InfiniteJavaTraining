@@ -1,0 +1,30 @@
+package com.java.ejb;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.util.List;
+import java.util.Map;
+
+import javax.faces.context.FacesContext;
+
+import org.hibernate.Criteria;
+
+
+public class DoctorMasterDaoImpl implements DoctorMasterDAO{
+	
+	Connection connection;
+	PreparedStatement pst;
+	
+	@Override
+	public String showDoctorDao() {
+		Map<String, Object> sessionMap =
+				FacesContext.getCurrentInstance().getExternalContext().getSessionMap();
+		sf = SessionHelper.getConnection();
+		session = sf.openSession();
+		Criteria criteria = session.createCriteria(DoctorMaster.class);
+		List<DoctorMaster> doctorList = criteria.list();
+		sessionMap.put("doctorList", doctorList);
+		return "showDoectors.jsp?faces-redirect=true";
+	}
+
+}

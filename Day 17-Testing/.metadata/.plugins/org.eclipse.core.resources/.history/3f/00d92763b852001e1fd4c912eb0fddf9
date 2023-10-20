@@ -1,0 +1,8 @@
+package com.java.test;
+
+public class Data {
+	public String sayHello() {
+		return "Welcome to Junit Programming....";
+	}
+
+}

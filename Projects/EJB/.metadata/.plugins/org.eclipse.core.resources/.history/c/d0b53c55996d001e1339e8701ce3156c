@@ -1,0 +1,5 @@
+package com.java.ejb;
+
+public interface PatientMasterDAO {
+	String addPatient(PatientMaster patient);
+}

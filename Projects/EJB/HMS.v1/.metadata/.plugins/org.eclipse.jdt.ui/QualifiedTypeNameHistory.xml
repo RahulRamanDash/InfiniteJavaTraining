@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="javax.persistence.Query"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="com.java.hms.PatientMaster"/>
+    <fullyQualifiedTypeName name="com.java.hms.PatientRemoteHelper"/>
+    <fullyQualifiedTypeName name="com.java.hms.PatientBeanRemote"/>
+    <fullyQualifiedTypeName name="com.java.hms.PatientBean"/>
+    <fullyQualifiedTypeName name="org.hibernate.Transaction"/>
+    <fullyQualifiedTypeName name="org.hibernate.SessionFactory"/>
+    <fullyQualifiedTypeName name="org.hibernate.Session"/>
+    <fullyQualifiedTypeName name="com.java.hib.PatientMasterDAO"/>
+    <fullyQualifiedTypeName name="com.java.hib.PatientMasterDaoImpl"/>
+    <fullyQualifiedTypeName name="org.hibernate.mapping.Map"/>
+    <fullyQualifiedTypeName name="java.util.Map"/>
+    <fullyQualifiedTypeName name="org.hibernate.criterion.Projection"/>
+    <fullyQualifiedTypeName name="com.java.hib.PatientMaster"/>
+</qualifiedTypeNameHistroy>

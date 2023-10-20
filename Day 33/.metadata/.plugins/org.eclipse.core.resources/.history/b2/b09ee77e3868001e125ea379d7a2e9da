@@ -1,0 +1,15 @@
+
+public class CountString {
+
+	public static void main(String[] args) {
+		String name = "Rahul Raman Dash";
+		String ch = "a";
+		int count;
+		for(int i=1;i<name.length();i++) {
+			if(name.charAt(i)) {
+				count+=1;
+			}
+		}
+	}
+
+}

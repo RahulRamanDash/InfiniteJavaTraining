@@ -1,0 +1,8 @@
+package com.java.beeans;
+
+public class NameBean {
+	private String firstName;
+	private String lastName;
+	
+
+}

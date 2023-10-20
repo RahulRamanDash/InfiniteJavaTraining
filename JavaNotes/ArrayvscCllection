@@ -1,0 +1,76 @@
+----- Collection Framework ----- 
+
+Arrays :
+Fixed in Size
+With respect to memory not recomended
+wro Performance ✔
+Only Homoginius
+Primatives we can hold
+
+Collection :
+Growable in nature
+With respect to memory recomended
+wro Performance ❌
+Both Homoginius & Hetrogenius
+We can only hold Object
+
+Collection :
+->If you want to represent a group of individual objectsas a single entity then we shoud go for collection.
+
+Collection Framework :
+->It defines several classes and interfaces which can be used as a group of objects as single entity.
+
+9 Key Interfaces of Collection Framework.
+    (1) Collection : (1.2v)
+    # It is the root interface of collection framework.
+    # There is no concert class which implements collection interface directly.
+    # It defines the most common methods which are applicable for any collection object.
+
+Collection (Interface) VS Collections (Utility Class)
+
+-> Collection is a interface which can be used to represent a group of individual objects as a single entity.
+
+-> Collections is an utility class present in java.util package to define several utility methods (like Sorting, Searching..) for Collection Objects.
+
+(2) List (Interface) :
+
+    i. ArrayList (1.2v)
+    ii. LinkedList (1.2v)
+    iii. Vector -> Stack (1.0v) (Lagacy Classes)
+
+List is a child interface of collection.
+
+# If yo want to represent a group of indivisual objects as a single entity where duplicates are allowed and insertion order preserved then we should go for list.
+
+(3) Set (1.2v): 
+    i. Hashset (1.2v)
+    ii. LinkedHashset (1.4v)
+
+# It is a child interface of collection.
+# If you want to represent a group of individual objects as a single entity where duplicates are not allowed and insertion order not preserved then we should go for set.
+
+List VS Set : 
+List :  
+Duplicates are allowed
+Insertion order preserved
+Set :
+Duplicates are Not allowed
+Insertion order Not preserved
+
+(4) SortedSet (1.2v) : 
+Set(I)(1.2v) -> SortedSet(I)(1.2v)
+# It is a child interface of set
+# If you want to represent a group of individual objects as a single entity where duplicates are not allowed but all objects should be inserted according to some sorting order then we should go for SortedSet.
+
+(5) NavigalleSet(I) : 
+
+     SortedSet(I)(1.2v) -> NavigalleSet(1.6v) -> TreeSet (1.2v)
+# It is a child interface of sorted set if defines several methods for navigation purposes.
+
+(6) Queue (I) :
+# It is a child interface of Collection.
+# If you want to represent a group of indidual objects prior to processing then we should go for Queue.
+
+All the above interfaces meant for representing a group of individual objects.
+
+If we want to represent a group of objects as key value pairs then we should go for Map interface.

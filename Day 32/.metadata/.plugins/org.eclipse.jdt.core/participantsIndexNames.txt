@@ -1,0 +1,5 @@
+INDEX VERSION 1.132
+D:\eclipse-workspace\Day 32\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1239283441.index
+\JsfEx10\src\main\java
+D:\eclipse-workspace\Day 32\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1627218038.index
+\JsfNamedQueries\src\main\java

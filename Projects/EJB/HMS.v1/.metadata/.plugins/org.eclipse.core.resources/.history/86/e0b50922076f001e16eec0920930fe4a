@@ -1,0 +1,9 @@
+package com.java.hms;
+
+import java.util.List;
+
+public class PatientEjbImpl {
+	public List<PatientMaster> showPatientEjb() {
+		
+		}
+}

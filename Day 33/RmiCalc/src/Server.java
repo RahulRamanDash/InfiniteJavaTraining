@@ -1,0 +1,21 @@
+import java.net.MalformedURLException;
+import java.rmi.Naming;
+import java.rmi.RemoteException;
+
+public class Server {
+	public static void main(String[] args) {
+		Calc obj;
+		try {
+			obj = new CalcImpl();
+			Naming.rebind("localhost", obj);
+			System.out.println("Server is Running...");
+			System.out.println("Waiting For Clients");
+			
+		} catch (RemoteException e) {
+			e.printStackTrace();
+		} catch (MalformedURLException e) {
+			e.printStackTrace();
+		}
+		
+	}
+}

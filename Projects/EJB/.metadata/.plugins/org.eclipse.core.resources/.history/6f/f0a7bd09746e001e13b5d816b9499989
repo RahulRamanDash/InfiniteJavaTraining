@@ -1,0 +1,20 @@
+package com.java.ejb;
+
+import java.sql.SQLException;
+
+public class Dummy {
+	public static void main(String[] args) {
+		PatientMasterDaoImpl dao = new PatientMasterDaoImpl();
+		PatientMaster patient = new PatientMaster();
+		patient.setPid("1");
+		try {
+			System.out.println(dao.addPatient(patient));
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+}

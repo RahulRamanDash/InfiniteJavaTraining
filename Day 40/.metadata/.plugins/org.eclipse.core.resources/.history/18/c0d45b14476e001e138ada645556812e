@@ -1,0 +1,29 @@
+package com.java.ejb;
+
+import java.util.List;
+
+import javax.ejb.LocalBean;
+import javax.ejb.Remote;
+import javax.ejb.Stateless;
+
+/**
+ * Session Bean implementation class EmployBean
+ */
+@Stateless
+@Remote(EmployBeanRemote.class)
+public class EmployBean implements EmployBeanRemote {
+
+    /**
+     * Default constructor. 
+     */
+    public EmployBean() {
+        // TODO Auto-generated constructor stub
+    }
+
+	@Override
+	public List<Employ> showEmploy() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

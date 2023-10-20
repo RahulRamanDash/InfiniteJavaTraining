@@ -1,0 +1,49 @@
+<%@page import="com.java.employdashboard.Employ"%>
+<%@page import="com.java.employdashboard.EmployDAOimpl"%>
+<%@page import="com.java.employdashboard.EmployDAO"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<%
+	int empno = Integer.parseInt(request.getParameter("empno"));
+	EmployDAO dao = new EmployDAOimpl();
+	Employ employ = dao.searchEmployDao(empno);
+%>
+<form method="get" action="UpdateEmploy.jsp">
+       <center>
+		Employ No : 
+		<input type="number" name="empno" readonly="readonly" 
+			value=<%=employ.getEmpno() %> /> <br/><br/>
+		Employ Name : 
+		<input type="text" name="name" value=<%=employ.getName() %> /> <br/><br/>
+		Gender : 
+		<select name="gender" value=<%=employ.getGender() %>>
+			<option value="male">Male</option>
+			<option value="female">Female</option>
+		</select> <br/><br/>
+		Department : 
+		<select name="dept" value=<%=employ.getDept() %> >
+			<option value="Java">Java</option>
+			<option value="Dotnet">Dotnet</option>
+			<option value="Oracle">Oracle</option>
+		</select> <br/><br/>
+		Designation : 
+		<select name="desig" value=<%=employ.getDesig() %>>
+			<option value="Programmer">Programmer</option>
+			<option value="TeamLead">TeamLead</option>
+			<option value="Manager">Manager</option>
+		</select> <br/><br/>
+		Basic : 
+		<input type="number" name="basic" value=<%=employ.getBasic() %>/>
+		<br/><br/>
+		<input type="submit" value="Update Employ" />
+	</center>
+</form>
+</body>
+</html> 

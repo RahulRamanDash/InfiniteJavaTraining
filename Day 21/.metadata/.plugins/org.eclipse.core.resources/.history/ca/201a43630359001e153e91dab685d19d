@@ -1,0 +1,8 @@
+package com.java.beeans;
+
+public class Calculation {
+
+	private int firstNo;
+	private int secondNo;
+	
+}

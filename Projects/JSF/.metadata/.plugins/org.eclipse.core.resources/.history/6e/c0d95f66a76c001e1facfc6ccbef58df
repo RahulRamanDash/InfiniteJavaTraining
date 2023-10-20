@@ -1,0 +1,17 @@
+package com.java.hms;
+
+import org.hibernate.Transaction;
+
+public class PatientMasterDaoImpl implements PatientMasterDAO{
+
+	@Override
+	public String addPatient(PatientMaster patient) {
+		sf = SessionHelper.getConnection();
+		session = sf.openSession();
+		Transaction trans = session.beginTransaction();
+		session.save();
+		trans.commit();
+	}
+	
+
+}

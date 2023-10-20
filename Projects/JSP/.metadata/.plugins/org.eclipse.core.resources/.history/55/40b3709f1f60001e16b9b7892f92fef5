@@ -1,0 +1,48 @@
+<%@page import="com.java.complaint.Resolve"%>
+<%@page import="com.java.complaint.Complaint"%>
+<%@page import="com.java.complaint.ComplaintDAOImpl"%>
+<%@page import="com.java.complaint.Complaint"%>
+<%@page import="java.util.List"%>
+<%@page import="com.java.complaint.ComplaintDAO"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<center>
+<%
+	ComplaintDAO dao = new ComplaintDAOImpl();
+	List<Resolve> historyList = dao.complaintHistoryDao();
+%>
+	<table border="3px">
+		<tr>
+			<th>ResolveID</th>
+            <th>ComplaintID</th>
+            <th>Complaint Date</th>
+            <th>Resolve Date</th>
+            <th>ResolvedBy</th>
+			<th>Comments</th>
+		</tr>
+		<%
+		for(Resolve history : historyList){
+			%>
+		<tr>
+			<td><%= history.getResolveID() %></td>
+            <td><%= history.getComplaintID() %></td>
+            <td><%= history.getComplaintDate() %></td>
+			<td><%= history.getResolveDate() %></td>
+			<td><%= history.getResolvedBy() %></td>
+            <td><%= history.getComments() %></td>
+		</tr>
+		<% 
+		}
+		%>
+			
+	</table>
+</center>
+</body>
+</html>

@@ -1,0 +1,23 @@
+package com.java.ejb;
+
+import java.sql.SQLException;
+
+import javax.naming.NamingException;
+
+public class Dummy {
+
+	public static void main(String[] args) {
+		try {
+			try {
+				System.out.println(new AgentEjbImpl().searchAgentEjb(1));
+			} catch (NamingException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+}

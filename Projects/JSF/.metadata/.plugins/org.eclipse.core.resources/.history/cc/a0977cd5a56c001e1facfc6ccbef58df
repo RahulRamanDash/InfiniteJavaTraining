@@ -1,0 +1,16 @@
+package com.java.hms;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+
+public class RoomMasterDaoImpl implements RoomMasterDAO{
+	SessionFactory sf;
+	Session session;
+	
+	@Override
+	public String showRooms() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

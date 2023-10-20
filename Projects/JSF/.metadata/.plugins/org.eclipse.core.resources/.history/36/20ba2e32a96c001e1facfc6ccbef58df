@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Oct 17, 2023, 9:33:27 AM by Hibernate Tools 3.6.2.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class dynamic-insert="false" dynamic-update="false" mutable="true" name="com.java.hms.PatientMaster" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="PATIENT_MASTER">
+        <id name="pid" type="java.lang.String">
+            <column name="PID"/>
+            <generator class="assigned"/>
+        </id>
+        <property generated="never" lazy="false" name="name" optimistic-lock="true" type="java.lang.String" unique="false">
+            <column name="NAME"/>
+        </property>
+        <property generated="never" lazy="false" name="age" optimistic-lock="true" type="int" unique="false">
+            <column name="AGE"/>
+        </property>
+        <property generated="never" lazy="false" name="weight" optimistic-lock="true" type="int" unique="false">
+            <column name="WEIGHT"/>
+        </property>
+        <property generated="never" lazy="false" name="gender" optimistic-lock="true" type="java.lang.String" unique="false">
+            <column name="GENDER"/>
+        </property>
+        <property generated="never" lazy="false" name="address" optimistic-lock="true" type="java.lang.String" unique="false">
+            <column name="ADDRESS"/>
+        </property>
+        <property generated="never" lazy="false" name="phoneNo" optimistic-lock="true" type="java.lang.String" unique="false">
+            <column name="PHONENO"/>
+        </property>
+        <property generated="never" lazy="false" name="disease" optimistic-lock="true" type="java.lang.String" unique="false">
+            <column name="DISEASE"/>
+        </property>
+        <property generated="never" lazy="false" name="doctorId" optimistic-lock="true" type="java.lang.String" unique="false">
+            <column name="DOCTOR_ID"/>
+        </property>
+    </class>
+</hibernate-mapping>

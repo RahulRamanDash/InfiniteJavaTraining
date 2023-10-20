@@ -1,0 +1,52 @@
+<%@page import="com.java.complaint.ComplaintDAOImpl"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ page import="com.java.complaint.Complaint" %>
+<%@ page import="com.java.complaint.ComplaintDAO" %>
+<%@ page import="java.util.List" %>
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="java.sql.SQLException" %>
+<%@ page import="java.sql.Timestamp" %>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Manage Complaints</title>
+</head>
+<body>
+    <h1>List of Complaints</h1>
+    <table border="1">
+        <tr>
+            <th>Complaint ID</th>
+            <th>Complaint Type</th>
+            <th>Description</th>
+            <th>Complaint Date</th>
+            <th>Severity</th>
+            <th>Status</th>
+        </tr>
+        <%
+            
+            ComplaintDAO dao = new ComplaintDAOImpl();
+            
+           
+            List<Complaint> complaints = dao.showComplaintDAO();
+
+            
+            for (Complaint complaint : complaints) {
+        %>
+                <tr>
+                    <td><%= complaint.getComplaintid() %></td>
+                    <td><%= complaint.getComplainttype() %></td>
+                    <td><%= complaint.getCdesc() %></td>
+                    <td><%= complaint.getComplaintDate() %></td>
+                    <td><%= complaint.getSeverity() %></td>
+                    <td><%= complaint.getStatus() %></td>
+                </tr>
+        <%
+            }
+        %>
+    </table>
+</body>
+</html>
+
+

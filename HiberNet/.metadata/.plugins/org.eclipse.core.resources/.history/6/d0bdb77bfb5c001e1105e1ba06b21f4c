@@ -1,0 +1,19 @@
+package com.java.hib;
+
+import java.util.List;
+
+import org.hibernate.Query;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.AnnotationConfiguration;
+import org.hibernate.cfg.Configuration;
+
+public class ShowEmployMain {
+	public static void main(String[] args) {
+		EmployDAO dao = new EmployDaoImpl();
+		List<Employ> employList = dao.showEmployDao();
+		for (Employ employ : employList) {
+			System.out.println(employ);
+		}
+	}
+}

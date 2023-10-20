@@ -1,0 +1,14 @@
+package com.java.hib;
+
+import java.util.List;
+
+public class EmployDaoImpl implements EmployDAO{
+
+	@Override
+	public List<Employ> showEmployDao() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+
+}

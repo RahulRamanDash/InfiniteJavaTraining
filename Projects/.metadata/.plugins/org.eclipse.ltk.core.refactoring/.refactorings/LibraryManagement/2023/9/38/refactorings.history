@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.java.lib.EntryptPassword&apos; to &apos;EncryptPassword&apos;&#x0D;&#x0A;- Original project: &apos;LibraryManagement&apos;&#x0D;&#x0A;- Original element: &apos;com.java.lib.EntryptPassword&apos;&#x0D;&#x0A;- Renamed element: &apos;com.java.lib.EncryptPassword&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;EntryptPassword&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.java.lib{EntryptPassword.java[EntryptPassword" matchStrategy="1" name="EncryptPassword" qualified="false" references="true" similarDeclarations="false" stamp="1695445991441" textual="false" version="1.0"/>
+</session>

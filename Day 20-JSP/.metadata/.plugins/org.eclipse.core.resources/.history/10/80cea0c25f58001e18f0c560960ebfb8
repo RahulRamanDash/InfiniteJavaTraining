@@ -1,0 +1,64 @@
+<%@page import="com.java.agentdashboard.Agent"%>
+<%@page import="com.java.agentdashboard.AgentDAOImpl"%>
+<%@page import="com.java.agentdashboard.AgentDAO"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<%
+	int empno = Integer.parseInt(request.getParameter("empno"));
+	AgentDAO dao = new AgentDAOImpl();
+	Agent agent = dao.searchAgentDao(empno);
+%>
+<form method="get" action="UpdateAgent.jsp">
+	<center>
+	Agent ID : 
+		<input type="number" name="agentid" readonly="readonly" 
+			value=<%=agent.getAgentID() %> /> <br/><br/>
+	Agent Name : 
+		<input type="text" name="name" 
+			value=<%=agent.getName() %> /> <br/><br/>
+	City : 
+	<input type="text" name="city" 
+			value=<%=agent.getCity() %> /> <br/><br/> 
+	Gender : 
+	<input type="text" name="gender" 
+		value=<%=agent.getGENDER() %> /> <br/><br/>
+
+	Marital Status : 
+	<input type="text" name="status" 
+			value=<%=agent.getMaritalStatus() %> /> <br/><br/>
+	Premium : 
+	<input type="number" name="premium" 
+			value=<%=agent.getPremium() %> /> <br/><br/>
+	<input type="submit" value="Update Agent" />
+	</center>
+</form>
+<%
+	if(request.getParameter("empno")!=null &&
+		request.getParameter("basic")!=null
+		){
+		Agent agentUpdated = new Agent();
+		agentUpdated.setEmpno(Integer.parseInt(request.getParameter("empno")));
+		agentUpdated.setName(request.getParameter("name"));
+		agentUpdated.setGender(Gender.valueOf(request.getParameter("gender")));
+		agentUpdated.setDept(request.getParameter("dept"));
+		agentUpdated.setDesig(request.getParameter("desig"));
+		agentUpdated.setBasic(Double.parseDouble(request.getParameter("basic")));
+		dao.updateAgentDao(agentUpdated);
+%>
+
+<jsp:forward page="ShowAgent.jsp"/>
+
+<%
+
+}
+
+%>
+</body>
+</html> 

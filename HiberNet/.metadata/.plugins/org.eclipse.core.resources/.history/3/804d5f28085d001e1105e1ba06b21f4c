@@ -1,0 +1,63 @@
+package com.java.hib;
+
+import java.util.List;
+
+import org.hibernate.Criteria;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.criterion.Order;
+import org.hibernate.criterion.Restrictions;
+
+public class AgentDaoImpl implements AgentDAO{
+
+	SessionFactory sf;
+	Session session;
+	
+	@Override
+	public List<Agent> showAgentDao() {
+		sf = SessionHelper.getConnection();
+		session = sf.openSession();
+		Criteria criteria = session.createCriteria(Agent.class);
+		List<Agent> agentList = criteria.list();
+		return agentList;
+	}
+
+	@Override
+	public Agent searchAgentDao(int agentid) {
+		sf = SessionHelper.getConnection();
+		session = sf.openSession();
+		Criteria criteria = session.createCriteria(Agent.class);
+		criteria.add(Restrictions.eq("AgentID", agentid));
+		Agent agent = (Agent)criteria.uniqueResult();
+		return agent;
+	}
+
+	@Override
+	public String addAgentDao(Agent agent) {
+		sf = SessionHelper.getConnection();
+		session = sf.openSession();
+		Transaction transaction = session.beginTransaction();
+		session.save(agent);
+		transaction.commit();
+		return "Data Added to Agent Table";
+	}
+
+	@Override
+	public String updateAgentDao(Agent agent) {
+		Employ employFound = searchAgentDao(agent.getAgentID());
+		sf = SessionHelper.getConnection();
+		session = sf.openSession();
+		Transaction transaction = session.beginTransaction();
+		session.save(agent);
+		transaction.commit();
+		return "Data Added to Agent Table";
+	}
+
+	@Override
+	public String deleteAgentDao(int agentid) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

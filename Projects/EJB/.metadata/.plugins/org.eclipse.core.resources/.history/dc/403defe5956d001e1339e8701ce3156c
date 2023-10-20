@@ -1,0 +1,36 @@
+package com.java.hms;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+
+public class PatientMasterDaoImpl implements PatientMasterDAO{
+
+	Connection connection;
+	PreparedStatement pst;
+	
+	public String incrimentpatientId() {
+
+	}
+	
+	@Override
+	public String addPatient(PatientMaster patient) {
+		connection = ConnectionHelper.getConnection();
+		String cmd = "INSERT INTO EMPLOY(empno,name,gender,dept,desig,basic)" +"VALUES (?,?,?,?,?,?)";
+		pst = connection.prepareStatement(cmd);
+		pst.setInt(1, patient.getPid());
+		pst.setString(2, patient.getName());
+		pst.setString(4, patient.getAge());
+		pst.setInt(4, patient.getWeight());
+		pst.setString(3, patient.getGender().toString());
+		pst.setString(4, patient.getAddress());
+		pst.setString(4, patient.getPhoneNo());
+		pst.setString(5, patient.getDisease());
+		pst.setString(6, patient.getDoctorId());
+		
+		pst.executeUpdate();
+		//return "Data Inserted To the Table";
+		return "addSuccess.jsp?faces-redirect=true";
+	}
+	
+
+}

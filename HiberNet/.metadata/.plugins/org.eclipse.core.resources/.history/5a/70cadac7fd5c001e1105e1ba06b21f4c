@@ -1,0 +1,13 @@
+package com.java.hib;
+
+import java.util.List;
+
+public class SearchEmployMain {
+	public static void main(String[] args) {
+		EmployDAO dao = new EmployDaoImpl();
+		List<Employ> employList = dao.searchEmployDao();
+		for (Employ employ : employList) {
+			System.out.println(employ);
+		}
+	}
+}

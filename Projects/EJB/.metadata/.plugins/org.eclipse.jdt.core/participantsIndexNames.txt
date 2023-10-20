@@ -1,0 +1,3 @@
+INDEX VERSION 1.132
+D:\eclipse-workspace\Projects\EJB\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3875005511.index
+\HMSClient\src\main\java

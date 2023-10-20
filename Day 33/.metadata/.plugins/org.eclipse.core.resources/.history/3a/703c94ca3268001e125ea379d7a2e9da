@@ -1,0 +1,11 @@
+
+public class StaticFinal {
+
+	public static void main(String[] args) {
+		static Intger score;
+		
+		
+
+	}
+
+}

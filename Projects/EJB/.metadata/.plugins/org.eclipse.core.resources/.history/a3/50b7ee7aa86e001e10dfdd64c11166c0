@@ -1,0 +1,28 @@
+package com.java.ejb;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.Date;
+
+public class RoomAllocationDaoImpl implements RoomAllocationDAO{
+
+	Connection connection;
+	PreparedStatement pst;
+
+	@Override
+	public String allocateRoomDao(RoomAllocation room) throws ClassNotFoundException, SQLException {
+		Date currentDate = new Date();
+		connection = ConnectionHelper.getConnection();
+		String cmd = "INSERT INTO Room_Allocation(room_no,pid,admission_date)" + "VALUES (?,?,?)";
+		pst = connection.prepareStatement(cmd);
+		pst.setString(1, room.getRoomNo());
+		pst.setString(2, room.getPid());
+		pst.setDate(3, (java.sql.Date) currentDate);
+		
+		pst.executeUpdate();
+		return "Data Inserted To the Table";
+	}
+
+
+}

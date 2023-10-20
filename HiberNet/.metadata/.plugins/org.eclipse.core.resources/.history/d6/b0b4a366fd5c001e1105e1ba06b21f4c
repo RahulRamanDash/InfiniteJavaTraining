@@ -1,0 +1,36 @@
+package com.java.hib;
+
+import java.util.List;
+
+import org.hibernate.Query;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+
+public class EmployDaoImpl implements EmployDAO{
+
+	SessionFactory sf;
+	Session session;
+	
+	@Override
+	public List<Employ> showEmployDao() {
+		sf = SessionHelper.getConnection();
+		session = sf.openSession();
+		Query query = session.createQuery("From Employ");
+		List<Employ> employList = query.list();
+		return employList;
+	}
+
+	@Override
+	public Employ searchEmployDao(int empno) {
+		sf = SessionHelper.getConnection();
+		session = sf.openSession();
+		Query query = session.createQuery("From Employ where empno="+empno);
+		List<Employ> employList = query.list();
+		if(employList.size()>0) {
+			return employList.get(0);
+		}
+		return employList;
+	}
+	
+
+}

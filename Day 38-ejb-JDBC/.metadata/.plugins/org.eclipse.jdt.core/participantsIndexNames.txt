@@ -1,0 +1,9 @@
+INDEX VERSION 1.132
+D:\eclipse-workspace\Day 38\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2246571514.index
+\EjbEmployClient\src\main\java
+D:\eclipse-workspace\Day 38\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2607204380.index
+\JsfEjbClient\src\main\java
+D:\eclipse-workspace\Day 38\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2324478885.index
+\JsfEjbClient\src\main\java
+D:\eclipse-workspace\Day 38\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3932354739.index
+\AgentClient\src\main\java

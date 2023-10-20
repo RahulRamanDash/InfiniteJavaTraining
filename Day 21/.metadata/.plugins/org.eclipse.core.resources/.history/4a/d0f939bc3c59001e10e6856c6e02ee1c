@@ -1,0 +1,22 @@
+package com.java.test;
+
+import com.java.junitexam.Vendor;
+
+public class App {
+
+  public static void main(String[] args) {
+	  Vendor leavedetails = new Vendor();
+	  leavedetails.setLeaveId(1);
+		leavedetails.setEmpId(1000);
+		leavedetails.setEmpName("Rahul");
+		leavedetails.setLeaveStartDate(lsd);
+		leavedetails.setLeaveEndDate(led);
+		leavedetails.setLeaveStatus(LeaveStatus.PENDING);
+		leavedetails.setLeaveType(LeaveType.EL);
+		leavedetails.setLeaveReason("sadi");
+		leavedetails.setManagerComments("welcome");
+		leavedetails.setAppliedOn(cdate);
+	  System.out.println(leavedetails.toString());
+  }
+
+}

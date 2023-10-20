@@ -1,0 +1,23 @@
+package com.java.jsf;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class EmployDAO {
+	
+	public List<Employ> getNames(){
+		List<Employ> names = new ArrayList<Employ>();
+		names.add("Rahul");
+		names.add("Amit");
+		names.add("Ayush");
+		return names;		
+	}
+	
+	public List<Employ> showEmploy(){
+		List<String> employList  = new ArrayList<String>();
+		employList.add(new Employ(1,"Saurav","Java","Developer",98076));
+		employList.add(new Employ(2,"Ansal","Python","Programmer",65937));
+		return employList;
+	}
+
+}

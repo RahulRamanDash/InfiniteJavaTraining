@@ -1,0 +1,22 @@
+package com.java.day4;
+import java.util.ArrayList;
+
+public class Prog1 {
+    public static void main(String[] args) {
+        ArrayList<Integer> numbers = new ArrayList<>();
+        numbers.add(1);
+        numbers.add(2);
+        numbers.add(3);
+        
+        int sum = sumArrayList(numbers);
+        System.out.println("Sum of elements in the ArrayList: " + sum);
+    }
+
+    static int sumArrayList(ArrayList<Integer> list) {
+        int sum = 0;
+        for (int num : list) {
+            sum += num;
+        }
+        return sum;
+    }
+}

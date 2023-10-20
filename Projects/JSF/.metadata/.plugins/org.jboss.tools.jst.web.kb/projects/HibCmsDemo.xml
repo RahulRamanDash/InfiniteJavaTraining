@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kb-project>
+ <depends-on-projects/>
+ <used-by-projects/>
+ <paths>
+  <path value="C:/Users/rahulr/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar"/>
+  <path value="C:/Users/rahulr/.m2/repository/org/jboss/spec/javax/transaction/jboss-transaction-api_1.2_spec/1.0.0.Final/jboss-transaction-api_1.2_spec-1.0.0.Final.jar"/>
+  <path value="C:/Users/rahulr/.m2/repository/org/glassfish/hk2/external/aopalliance-repackaged/3.0.3/aopalliance-repackaged-3.0.3.jar"/>
+  <path value="C:/Users/rahulr/.m2/repository/org/glassfish/jersey/core/jersey-common/3.1.0/jersey-common-3.1.0.jar"/>
+  <path value="/HibCmsDemo/src/main/webapp/WEB-INF/faces-config.xml">
+   <libraries>
+    <library class="faces-config">
+     <id class="model-object"
+      path="FileSystems/WEB-INF/faces-config.xml" project="HibCmsDemo"/>
+    </library>
+   </libraries>
+  </path>
+  <path value="C:/Users/rahulr/.m2/repository/jakarta/inject/jakarta.inject-api/2.0.1/jakarta.inject-api-2.0.1.jar"/>
+  <path value="C:/Users/rahulr/.m2/repository/org/glassfish/hk2/hk2-locator/3.0.3/hk2-locator-3.0.3.jar"/>
+  <path value="C:/Users/rahulr/.m2/repository/com/google/protobuf/protobuf-java/3.19.4/protobuf-java-3.19.4.jar"/>
+  <path value="C:/Users/rahulr/.m2/repository/org/hibernate/hibernate-core/4.3.5.Final/hibernate-core-4.3.5.Final.jar"/>
+  <path value="C:/Users/rahulr/.m2/repository/org/glassfish/hk2/osgi-resource-locator/1.0.3/osgi-resource-locator-1.0.3.jar"/>
+  <path value="C:/Users/rahulr/.m2/repository/antlr/antlr/2.7.7/antlr-2.7.7.jar"/>
+  <path value="C:/Users/rahulr/.m2/repository/org/primefaces/primefaces/6.1/primefaces-6.1.jar">
+   <libraries>
+    <library class="faces-config">
+     <id class="model-object"
+      path="FileSystems/lib-primefaces-6.1.jar/meta-inf/faces-config.xml" project="HibCmsDemo"/>
+    </library>
+    <library class="facelet">
+     <id class="model-object"
+      path="FileSystems/lib-primefaces-6.1.jar/meta-inf/primefaces-p.taglib.xml" project="HibCmsDemo"/>
+    </library>
+    <library class="facelet">
+     <id class="model-object"
+      path="FileSystems/lib-primefaces-6.1.jar/meta-inf/primefaces-pm.taglib.xml" project="HibCmsDemo"/>
+    </library>
+   </libraries>
+  </path>
+  <path value="C:/Users/rahulr/.m2/repository/org/hibernate/javax/persistence/hibernate-jpa-2.1-api/1.0.0.Final/hibernate-jpa-2.1-api-1.0.0.Final.jar"/>
+  <path value="C:/Users/rahulr/.m2/repository/com/mysql/mysql-connector-j/8.0.31/mysql-connector-j-8.0.31.jar"/>
+  <path value="C:/Users/rahulr/.m2/repository/org/glassfish/jersey/inject/jersey-hk2/3.1.0/jersey-hk2-3.1.0.jar"/>
+  <path value="C:/Users/rahulr/.m2/repository/org/jboss/logging/jboss-logging/3.1.3.GA/jboss-logging-3.1.3.GA.jar"/>
+  <path value="C:/Users/rahulr/.m2/repository/org/glassfish/jersey/core/jersey-client/3.1.0/jersey-client-3.1.0.jar"/>
+  <path value="C:/Users/rahulr/.m2/repository/org/jboss/jandex/1.1.0.Final/jandex-1.1.0.Final.jar"/>
+  <path value="C:/Users/rahulr/.m2/repository/org/glassfish/jersey/core/jersey-server/3.1.0/jersey-server-3.1.0.jar"/>
+  <path value="C:/Users/rahulr/.m2/repository/org/jboss/logging/jboss-logging-annotations/1.2.0.Beta1/jboss-logging-annotations-1.2.0.Beta1.jar"/>
+  <path value="C:/Users/rahulr/.m2/repository/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar"/>
+  <path value="C:/Users/rahulr/.m2/repository/org/glassfish/hk2/hk2-utils/3.0.3/hk2-utils-3.0.3.jar"/>
+  <path value="C:/Users/rahulr/.m2/repository/org/javassist/javassist/3.18.1-GA/javassist-3.18.1-GA.jar"/>
+  <path value="C:/Users/rahulr/.m2/repository/org/glassfish/jersey/containers/jersey-container-servlet-core/3.1.0/jersey-container-servlet-core-3.1.0.jar"/>
+  <path value="C:/Users/rahulr/.m2/repository/com/sun/faces/jsf-impl/2.1.7/jsf-impl-2.1.7.jar">
+   <libraries>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jsf-impl-2.1.7.jar/meta-inf/html_basic.tld" project="HibCmsDemo"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jsf-impl-2.1.7.jar/meta-inf/jsf_core.tld" project="HibCmsDemo"/>
+    </library>
+    <library class="facelet">
+     <id class="model-object"
+      path="FileSystems/lib-jsf-impl-2.1.7.jar/meta-inf/mojarra_ext.taglib.xml" project="HibCmsDemo"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jsf-impl-2.1.7.jar/meta-inf/mojarra_ext.tld" project="HibCmsDemo"/>
+    </library>
+    <library class="facelet">
+     <id class="model-object"
+      path="FileSystems/lib-jsf-impl-2.1.7.jar/com/sun/faces/metadata/taglib/composite.taglib.xml" project="HibCmsDemo"/>
+    </library>
+    <library class="facelet">
+     <id class="model-object"
+      path="FileSystems/lib-jsf-impl-2.1.7.jar/com/sun/faces/metadata/taglib/facelets_jsf_core.taglib.xml" project="HibCmsDemo"/>
+    </library>
+    <library class="facelet">
+     <id class="model-object"
+      path="FileSystems/lib-jsf-impl-2.1.7.jar/com/sun/faces/metadata/taglib/html_basic.taglib.xml" project="HibCmsDemo"/>
+    </library>
+    <library class="facelet">
+     <id class="model-object"
+      path="FileSystems/lib-jsf-impl-2.1.7.jar/com/sun/faces/metadata/taglib/jstl-core.taglib.xml" project="HibCmsDemo"/>
+    </library>
+    <library class="facelet">
+     <id class="model-object"
+      path="FileSystems/lib-jsf-impl-2.1.7.jar/com/sun/faces/metadata/taglib/jstl-fn.taglib.xml" project="HibCmsDemo"/>
+    </library>
+    <library class="facelet">
+     <id class="model-object"
+      path="FileSystems/lib-jsf-impl-2.1.7.jar/com/sun/faces/metadata/taglib/mojarra_ext.taglib.xml" project="HibCmsDemo"/>
+    </library>
+    <library class="facelet">
+     <id class="model-object"
+      path="FileSystems/lib-jsf-impl-2.1.7.jar/com/sun/faces/metadata/taglib/ui.taglib.xml" project="HibCmsDemo"/>
+    </library>
+   </libraries>
+  </path>
+  <path value="C:/Users/rahulr/.m2/repository/xml-apis/xml-apis/1.0.b2/xml-apis-1.0.b2.jar"/>
+  <path value="C:/Users/rahulr/.m2/repository/jakarta/ws/rs/jakarta.ws.rs-api/3.1.0/jakarta.ws.rs-api-3.1.0.jar"/>
+  <path value="C:/Users/rahulr/.m2/repository/org/glassfish/hk2/hk2-api/3.0.3/hk2-api-3.0.3.jar"/>
+  <path value="C:/Users/rahulr/.m2/repository/jakarta/validation/jakarta.validation-api/3.0.2/jakarta.validation-api-3.0.2.jar"/>
+  <path value="C:/Users/rahulr/.m2/repository/com/sun/faces/jsf-api/2.1.7/jsf-api-2.1.7.jar"/>
+  <path value="C:/Users/rahulr/.m2/repository/org/hibernate/common/hibernate-commons-annotations/4.0.4.Final/hibernate-commons-annotations-4.0.4.Final.jar"/>
+ </paths>
+ <validation>
+  <core validator-id="jsf-verification"/>
+  <core validator-id="jboss.jsf.core"/>
+  <el>
+   <linked-el length="35" name="%0" offset="2477" path="%1"/>
+   <linked-el length="30" name="%0" offset="532" path="%2"/>
+   <linked-el length="101" name="%3" offset="2393" path="%4"/>
+   <linked-el length="18" name="%3" offset="2299" path="%4"/>
+   <linked-el length="17" name="%5" offset="1165" path="%6"/>
+   <linked-el length="29" name="%7" offset="887" path="%8"/>
+   <linked-el length="26" name="%7" offset="501" path="%8"/>
+   <linked-el length="30" name="%7" offset="597" path="%8"/>
+   <linked-el length="26" name="%7" offset="408" path="%9"/>
+   <linked-el length="30" name="%7" offset="699" path="%8"/>
+   <linked-el length="27" name="%7" offset="795" path="%8"/>
+   <linked-el length="65" name="%7" offset="496" path="%10"/>
+   <linked-el length="24" name="%7" offset="412" path="%8"/>
+   <linked-el length="101" name="%7" offset="2393" path="%4"/>
+   <linked-el length="54" name="%7" offset="1899" path="%4"/>
+   <linked-el length="24" name="%7" offset="554" path="%4"/>
+   <linked-el length="38" name="%11" offset="1455" path="%4"/>
+   <linked-el length="37" name="%11" offset="1535" path="%4"/>
+   <linked-el length="30" name="%11" offset="1600" path="%4"/>
+   <linked-el length="101" name="%11" offset="2393" path="%4"/>
+   <linked-el length="13" name="%11" offset="1674" path="%4"/>
+   <linked-el length="19" name="%12" offset="2002" path="%4"/>
+   <linked-el length="65" name="%12" offset="496" path="%10"/>
+   <linked-el length="101" name="%12" offset="2393" path="%4"/>
+   <linked-el length="54" name="%12" offset="1899" path="%4"/>
+   <linked-el length="38" name="%12" offset="1754" path="%4"/>
+   <linked-el length="37" name="%12" offset="1834" path="%4"/>
+   <linked-el length="13" name="%13" offset="713" path="%10"/>
+   <linked-el length="19" name="%13" offset="1081" path="%10"/>
+   <linked-el length="19" name="%13" offset="1273" path="%10"/>
+   <linked-el length="19" name="%13" offset="2002" path="%4"/>
+   <linked-el length="65" name="%13" offset="496" path="%10"/>
+   <linked-el length="101" name="%13" offset="2393" path="%4"/>
+   <linked-el length="15" name="%13" offset="895" path="%10"/>
+   <linked-el length="54" name="%13" offset="1899" path="%4"/>
+   <linked-el length="38" name="%13" offset="1754" path="%4"/>
+   <linked-el length="37" name="%13" offset="1834" path="%4"/>
+   <linked-el length="27" name="%14" offset="795" path="%8"/>
+   <linked-el length="101" name="%15" offset="2393" path="%4"/>
+   <linked-el length="23" name="%16" offset="993" path="%4"/>
+   <linked-el length="49" name="%16" offset="1120" path="%4"/>
+   <linked-el length="18" name="%16" offset="1347" path="%4"/>
+   <linked-el length="34" name="%16" offset="1058" path="%4"/>
+   <linked-el length="65" name="%16" offset="692" path="%17"/>
+   <linked-el length="101" name="%16" offset="2393" path="%4"/>
+   <linked-el length="19" name="%16" offset="1213" path="%4"/>
+   <linked-el length="23" name="%18" offset="993" path="%4"/>
+   <linked-el length="49" name="%18" offset="1120" path="%4"/>
+   <linked-el length="18" name="%18" offset="1347" path="%4"/>
+   <linked-el length="34" name="%18" offset="1058" path="%4"/>
+   <linked-el length="21" name="%18" offset="1633" path="%17"/>
+   <linked-el length="65" name="%18" offset="692" path="%17"/>
+   <linked-el length="16" name="%18" offset="1268" path="%17"/>
+   <linked-el length="15" name="%18" offset="1085" path="%17"/>
+   <linked-el length="101" name="%18" offset="2393" path="%4"/>
+   <linked-el length="15" name="%18" offset="1450" path="%17"/>
+   <linked-el length="13" name="%18" offset="905" path="%17"/>
+   <linked-el length="19" name="%18" offset="1213" path="%4"/>
+   <linked-el length="17" name="%19" offset="1165" path="%6"/>
+   <linked-el length="24" name="%20" offset="2233" path="%1"/>
+   <linked-el length="30" name="%21" offset="699" path="%8"/>
+   <linked-el length="26" name="%22" offset="1644" path="%1"/>
+   <linked-el length="26" name="%22" offset="451" path="%2"/>
+   <linked-el length="35" name="%22" offset="2477" path="%1"/>
+   <linked-el length="26" name="%22" offset="373" path="%2"/>
+   <linked-el length="30" name="%22" offset="532" path="%2"/>
+   <linked-el length="25" name="%22" offset="1031" path="%1"/>
+   <linked-el length="23" name="%22" offset="1349" path="%1"/>
+   <linked-el length="22" name="%22" offset="719" path="%1"/>
+   <linked-el length="30" name="%22" offset="1935" path="%1"/>
+   <linked-el length="21" name="%23" offset="1633" path="%17"/>
+   <linked-el length="16" name="%23" offset="1268" path="%17"/>
+   <linked-el length="15" name="%23" offset="1085" path="%17"/>
+   <linked-el length="15" name="%23" offset="1450" path="%17"/>
+   <linked-el length="13" name="%23" offset="905" path="%17"/>
+   <linked-el length="26" name="%24" offset="501" path="%8"/>
+   <linked-el length="26" name="%24" offset="408" path="%9"/>
+   <linked-el length="11" name="%25" offset="2142" path="%4"/>
+   <linked-el length="101" name="%25" offset="2393" path="%4"/>
+   <linked-el length="65" name="%26" offset="496" path="%10"/>
+   <linked-el length="24" name="%26" offset="412" path="%8"/>
+   <linked-el length="101" name="%26" offset="2393" path="%4"/>
+   <linked-el length="54" name="%26" offset="1899" path="%4"/>
+   <linked-el length="24" name="%26" offset="554" path="%4"/>
+   <linked-el length="17" name="%27" offset="595" path="%2"/>
+   <linked-el length="13" name="%28" offset="713" path="%10"/>
+   <linked-el length="19" name="%28" offset="1081" path="%10"/>
+   <linked-el length="19" name="%28" offset="1273" path="%10"/>
+   <linked-el length="15" name="%28" offset="895" path="%10"/>
+   <linked-el length="12" name="%29" offset="1591" path="%30"/>
+   <linked-el length="21" name="%29" offset="867" path="%30"/>
+   <linked-el length="15" name="%29" offset="1411" path="%30"/>
+   <linked-el length="19" name="%29" offset="673" path="%30"/>
+   <linked-el length="11" name="%29" offset="1231" path="%30"/>
+   <linked-el length="13" name="%29" offset="1054" path="%30"/>
+   <linked-el length="13" name="%29" offset="1756" path="%30"/>
+   <linked-el length="49" name="%31" offset="1120" path="%4"/>
+   <linked-el length="37" name="%31" offset="739" path="%4"/>
+   <linked-el length="20" name="%31" offset="677" path="%4"/>
+   <linked-el length="22" name="%31" offset="901" path="%4"/>
+   <linked-el length="65" name="%31" offset="692" path="%17"/>
+   <linked-el length="31" name="%31" offset="804" path="%4"/>
+   <linked-el length="37" name="%31" offset="474" path="%17"/>
+   <linked-el length="42" name="%31" offset="477" path="%30"/>
+   <linked-el length="20" name="%31" offset="412" path="%17"/>
+   <linked-el length="22" name="%31" offset="636" path="%17"/>
+   <linked-el length="31" name="%31" offset="539" path="%17"/>
+   <linked-el length="35" name="%32" offset="2477" path="%1"/>
+   <linked-el length="30" name="%32" offset="532" path="%2"/>
+   <linked-el length="12" name="%33" offset="1591" path="%30"/>
+   <linked-el length="49" name="%33" offset="1120" path="%4"/>
+   <linked-el length="37" name="%33" offset="739" path="%4"/>
+   <linked-el length="20" name="%33" offset="677" path="%4"/>
+   <linked-el length="22" name="%33" offset="901" path="%4"/>
+   <linked-el length="31" name="%33" offset="804" path="%4"/>
+   <linked-el length="11" name="%33" offset="1231" path="%30"/>
+   <linked-el length="37" name="%33" offset="474" path="%17"/>
+   <linked-el length="20" name="%33" offset="412" path="%17"/>
+   <linked-el length="22" name="%33" offset="636" path="%17"/>
+   <linked-el length="31" name="%33" offset="539" path="%17"/>
+   <linked-el length="65" name="%33" offset="692" path="%17"/>
+   <linked-el length="21" name="%33" offset="867" path="%30"/>
+   <linked-el length="15" name="%33" offset="1411" path="%30"/>
+   <linked-el length="19" name="%33" offset="673" path="%30"/>
+   <linked-el length="42" name="%33" offset="477" path="%30"/>
+   <linked-el length="13" name="%33" offset="1054" path="%30"/>
+   <linked-el length="13" name="%33" offset="1756" path="%30"/>
+   <linked-el length="29" name="%34" offset="887" path="%8"/>
+   <linked-el length="30" name="%35" offset="597" path="%8"/>
+   <linked-el length="38" name="%36" offset="1455" path="%4"/>
+   <linked-el length="37" name="%36" offset="1535" path="%4"/>
+   <linked-el length="30" name="%36" offset="1600" path="%4"/>
+   <linked-el length="101" name="%36" offset="2393" path="%4"/>
+   <linked-el length="13" name="%36" offset="1674" path="%4"/>
+   <linked-el length="101" name="%37" offset="2393" path="%4"/>
+   <linked-el length="26" name="%38" offset="1644" path="%1"/>
+   <linked-el length="26" name="%38" offset="451" path="%2"/>
+   <linked-el length="35" name="%38" offset="2477" path="%1"/>
+   <linked-el length="26" name="%38" offset="373" path="%2"/>
+   <linked-el length="30" name="%38" offset="532" path="%2"/>
+   <linked-el length="25" name="%38" offset="1031" path="%1"/>
+   <linked-el length="23" name="%38" offset="1349" path="%1"/>
+   <linked-el length="22" name="%38" offset="719" path="%1"/>
+   <linked-el length="30" name="%38" offset="1935" path="%1"/>
+  </el>
+ </validation>
+ <aliases>
+  <alias path="cDao" value="%0"/>
+  <alias path="orderComments" value="%3"/>
+  <alias path="jersey.version" value="%5"/>
+  <alias path="customerInfo" value="%7"/>
+  <alias path="vDao" value="%11"/>
+  <alias
+   path="/HibCmsDemo/src/main/java/com/infinite/cms/WalletDAOImpl.java" value="%12"/>
+  <alias path="wdao" value="%13"/>
+  <alias path="customerInfo.custEmail" value="%14"/>
+  <alias path="oDao" value="%15"/>
+  <alias
+   path="/HibCmsDemo/src/main/java/com/infinite/cms/MenuDAOImpl.java" value="%16"/>
+  <alias path="menuDao" value="%18"/>
+  <alias path="jersey" value="%19"/>
+  <alias path="confirmPassword" value="%20"/>
+  <alias path="customerInfo.custPassword" value="%21"/>
+  <alias path="/HibCmsDemo/src/main/java/com/infinite/cms/Customer.java" value="%22"/>
+  <alias path="/HibCmsDemo/src/main/webapp/PlaceOrder.xhtml" value="%4"/>
+  <alias path="/HibCmsDemo/src/main/webapp/ShowRestaurant.xhtml" value="%30"/>
+  <alias path="/HibCmsDemo/src/main/java/com/infinite/cms/Menu.java" value="%23"/>
+  <alias path="customerInfo.custName" value="%24"/>
+  <alias path="/HibCmsDemo/src/main/webapp/AddCustomer.xhtml" value="%1"/>
+  <alias path="qtyOrd" value="%25"/>
+  <alias path="customerInfo.custId" value="%26"/>
+  <alias path="errorMessage" value="%27"/>
+  <alias path="/HibCmsDemo/src/main/webapp/CustomerWallet.xhtml" value="%10"/>
+  <alias path="/HibCmsDemo/src/main/webapp/RestaurantMenu.xhtml" value="%17"/>
+  <alias path="/HibCmsDemo/src/main/java/com/infinite/cms/Wallet.java" value="%28"/>
+  <alias path="/HibCmsDemo/src/main/webapp/CustomerLogin.xhtml" value="%2"/>
+  <alias path="/HibCmsDemo/src/main/webapp/CustomerInfo.xhtml" value="%8"/>
+  <alias
+   path="/HibCmsDemo/src/main/java/com/infinite/cms/Restaurant.java" value="%29"/>
+  <alias
+   path="/HibCmsDemo/src/main/java/com/infinite/cms/RestaurantDAOImpl.java" value="%31"/>
+  <alias path="/HibCmsDemo/src/main/webapp/CustomerMenu.xhtml" value="%9"/>
+  <alias
+   path="/HibCmsDemo/src/main/java/com/infinite/cms/CustomerDAOImpl.java" value="%32"/>
+  <alias path="rDao" value="%33"/>
+  <alias path="customerInfo.custPhoneNo" value="%34"/>
+  <alias path="/HibCmsDemo/pom.xml" value="%6"/>
+  <alias path="customerInfo.custUserName" value="%35"/>
+  <alias
+   path="/HibCmsDemo/src/main/java/com/infinite/cms/VendorDAOImpl.java" value="%36"/>
+  <alias
+   path="/HibCmsDemo/src/main/java/com/infinite/cms/OrdersDAOImpl.java" value="%37"/>
+  <alias path="customer" value="%38"/>
+ </aliases>
+ <includes/>
+ <uris>
+  <uri value="http://java.sun.com/jsf/facelets">
+   <prefix>ui</prefix>
+  </uri>
+  <uri value="http://java.sun.com/jsf/core">
+   <prefix>f</prefix>
+  </uri>
+  <uri value="http://java.sun.com/jsf/html">
+   <prefix>h</prefix>
+  </uri>
+  <uri value="http://primefaces.org/ui">
+   <prefix>p</prefix>
+  </uri>
+ </uris>
+</kb-project>

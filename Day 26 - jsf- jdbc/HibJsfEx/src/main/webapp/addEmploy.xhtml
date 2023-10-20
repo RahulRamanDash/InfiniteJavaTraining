@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+
+<h:head></h:head> 
+<body> 
+<center>
+		<h2>
+	<h:outputText value="Add Employ" />
+	</h2>
+	<h:form>
+	<h:outputText value="Employ No" />
+	<h:inputText value="#{employ.empno}" /><br/>
+	<h:outputText value="Employ Name" />
+	<h:inputText value="#{employ.name}" /><br/>
+	<h:outputText value="Gender" />
+	<h:inputText value="#{employ.gender}" /><br/>
+	<h:outputText value="Dept" />
+	<h:inputText value="#{employ.dept}" /><br/>
+	<h:outputText value="Desig" />
+	<h:inputText value="#{employ.desig}" /><br/>
+	<h:outputText value="Basic" />
+	<h:inputText value="#{employ.basic}" /><br/>
+	<h:commandButton action="#{eDao.addEmployDao(employ)}" value="Add" />
+	</h:form>
+</center>
+</body> 
+</html>

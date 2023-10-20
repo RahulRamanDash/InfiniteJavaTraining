@@ -1,0 +1,10 @@
+package com.java.hms;
+
+public class DoctorMaster {
+	private String drId;
+	private String drName;
+	private String dept;
+	
+	
+	
+}

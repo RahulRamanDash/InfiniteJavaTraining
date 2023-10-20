@@ -1,0 +1,11 @@
+package com.java.test;
+
+public class App {
+
+  public static void main(String[] args) {
+	  Employ emp = new Employ(1,"Rahul",Gender.MALE,"Java","ASE",99424);
+    System.out.println(emp);
+	
+  }
+
+}

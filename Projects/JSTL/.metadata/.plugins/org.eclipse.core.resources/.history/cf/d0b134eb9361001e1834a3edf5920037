@@ -1,0 +1,32 @@
+package com.java.lib;
+
+import java.sql.SQLException;
+import java.util.List;
+import java.util.Scanner;
+
+public class ShowMain {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Enter UserName : ");
+		String username = sc.next();
+		System.out.println("Enter BookID : ");
+		String id = sc.next();
+		
+		LibraryDAO dao = new LibraryDaoImpl();
+		List<Transreturn> historylist;
+		try {
+			historylist = dao.searchHistoryDao(username, id);
+			for(Transreturn history :historylist) {
+				System.out.println(history.getUsername());
+				System.out.println(history.getBookId());
+				System.out.println(history.getFromdate());
+			}
+		} catch (ClassNotFoundException | SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+}

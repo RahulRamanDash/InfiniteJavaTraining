@@ -1,0 +1,25 @@
+package com.java.ejb;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+
+public class RoomAllocationDaoImpl implements RoomAllocationDAO{
+
+	Connection connection;
+	PreparedStatement pst;
+
+	@Override
+	public String allocateRoomDao(RoomAllocation room) {
+		connection = ConnectionHelper.getConnection();
+		String cmd = "INSERT INTO Room_Allocation(room_no,pid,admission_date)" + "VALUES (?,?,?)";
+		pst = connection.prepareStatement(cmd);
+		pst.setString(1, patientId);
+		pst.setString(2, patient.getName());
+		pst.setInt(3, patient.getAge());
+		
+		pst.executeUpdate();
+		return "Data Inserted To the Table";
+	}
+
+
+}

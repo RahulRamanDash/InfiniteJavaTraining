@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="com.java.ejb.HospitalBeanRemote"/>
+    <fullyQualifiedTypeName name="com.java.ejb.DoctorBeanRemote"/>
+    <fullyQualifiedTypeName name="com.java.ejb.DoctorMaster"/>
+    <fullyQualifiedTypeName name="com.java.ejb.DoctorMasterDAO"/>
+    <fullyQualifiedTypeName name="com.java.ejb.DoctorMasterDaoImpl"/>
+    <fullyQualifiedTypeName name="java.sql.SQLException"/>
+    <fullyQualifiedTypeName name="javax.naming.NamingException"/>
+    <fullyQualifiedTypeName name="com.mysql.cj.Session"/>
+    <fullyQualifiedTypeName name="java.sql.Connection"/>
+    <fullyQualifiedTypeName name="java.util.Map"/>
+    <fullyQualifiedTypeName name="javax.faces.context.FacesContext"/>
+    <fullyQualifiedTypeName name="javax.ejb.Stateless"/>
+    <fullyQualifiedTypeName name="com.java.ejb.PatientRemoteHelper"/>
+    <fullyQualifiedTypeName name="com.java.ejb.PatientBeanRemote"/>
+    <fullyQualifiedTypeName name="java.sql.ResultSet"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="com.java.ejb.RoomMasterHelper"/>
+    <fullyQualifiedTypeName name="com.java.ejb.RoomMasterDAO"/>
+    <fullyQualifiedTypeName name="com.java.ejb.RoomMasterBeanRemote"/>
+    <fullyQualifiedTypeName name="com.java.ejb.RoomMasterDaoImpl"/>
+    <fullyQualifiedTypeName name="java.io.Serializable"/>
+    <fullyQualifiedTypeName name="com.java.ejb.PatientMasterDaoImpl"/>
+    <fullyQualifiedTypeName name="com.java.ejb.PatientMaster"/>
+    <fullyQualifiedTypeName name="javax.ejb.Remote"/>
+    <fullyQualifiedTypeName name="java.sql.Date"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
+    <fullyQualifiedTypeName name="com.java.ejb.RoomAllocationDAO"/>
+    <fullyQualifiedTypeName name="com.java.ejb.RoomAllocationDaoImpl"/>
+    <fullyQualifiedTypeName name="com.java.ejb.RoomAllocationBeanRemote"/>
+    <fullyQualifiedTypeName name="com.java.ejb.RoomAllocationHelper"/>
+    <fullyQualifiedTypeName name="com.java.ejb.RoomAllocation"/>
+</qualifiedTypeNameHistroy>

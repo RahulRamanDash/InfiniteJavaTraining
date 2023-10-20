@@ -1,0 +1,52 @@
+package com.java.login;
+
+import java.util.Scanner;
+
+public class LoginMain {
+
+		public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+			
+			int choice;
+			do {
+				System.out.println("O P T I O N S");
+				System.out.println("-------------");
+				System.out.println("1. Add Agent Details ");
+				System.out.println("2. Exit");
+				
+				choice = sc.nextInt();
+				
+				switch (choice) {
+				case 1:
+					addAgentMain();
+					break;
+				case 2:
+					System.out.println("Exiting....");
+					return;
+				default:
+					System.out.println("Enter a Valid Option...");
+					return;		
+				}
+			}while(choice!=2);
+
+	}
+
+		private static void addAgentMain() {
+			
+			HibLogin login = new HibLogin();
+			Scanner sc = new Scanner(System.in);
+		
+			System.out.println("Enter Username : ");
+			login.setUserName(sc.next());
+			System.out.println("Enter Password : ");
+			login.setPassCode(sc.next());
+		
+			LoginDAO dao = new LoginDaoImpl();
+			System.out.println(dao.addUser(login));
+			}
+		
+	
+
+
+}

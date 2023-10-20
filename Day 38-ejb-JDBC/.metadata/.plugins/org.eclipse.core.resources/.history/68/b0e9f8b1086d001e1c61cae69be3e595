@@ -1,0 +1,17 @@
+package com.java.ejb;
+
+import java.sql.SQLException;
+import java.util.List;
+
+import javax.ejb.Remote;
+
+import com.java.agent.Agent;
+
+@Remote
+public interface AgentBeanRemote {
+	List<Agent> showEmploy() throws ClassNotFoundException, SQLException;
+	Agent searchEmploy(int empno) throws ClassNotFoundException, SQLException;
+	String addEmploy(Agent employ) throws ClassNotFoundException, SQLException;
+	String deleteEmploy(int empno) throws ClassNotFoundException, SQLException;
+	String updateEmploy(Agent employ) throws ClassNotFoundException, SQLException;
+}

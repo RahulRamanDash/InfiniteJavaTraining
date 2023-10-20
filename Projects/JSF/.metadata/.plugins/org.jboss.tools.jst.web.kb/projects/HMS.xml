@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kb-project>
+ <depends-on-projects/>
+ <used-by-projects/>
+ <paths>
+  <path value="C:/Users/rahulr/.m2/repository/javax/servlet/jstl/1.2/jstl-1.2.jar">
+   <libraries>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jstl-1.2.jar/meta-inf/c-1_0-rt.tld" project="ResturantManagement"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jstl-1.2.jar/meta-inf/c-1_0.tld" project="ResturantManagement"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jstl-1.2.jar/meta-inf/c.tld" project="ResturantManagement"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jstl-1.2.jar/meta-inf/fmt-1_0-rt.tld" project="ResturantManagement"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jstl-1.2.jar/meta-inf/fmt-1_0.tld" project="ResturantManagement"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jstl-1.2.jar/meta-inf/fmt.tld" project="ResturantManagement"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jstl-1.2.jar/meta-inf/fn.tld" project="ResturantManagement"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jstl-1.2.jar/meta-inf/permittedtaglibs.tld" project="ResturantManagement"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jstl-1.2.jar/meta-inf/scriptfree.tld" project="ResturantManagement"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jstl-1.2.jar/meta-inf/sql-1_0-rt.tld" project="ResturantManagement"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jstl-1.2.jar/meta-inf/sql-1_0.tld" project="ResturantManagement"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jstl-1.2.jar/meta-inf/sql.tld" project="ResturantManagement"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jstl-1.2.jar/meta-inf/x-1_0-rt.tld" project="ResturantManagement"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jstl-1.2.jar/meta-inf/x-1_0.tld" project="ResturantManagement"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jstl-1.2.jar/meta-inf/x.tld" project="ResturantManagement"/>
+    </library>
+   </libraries>
+  </path>
+  <path value="C:/Users/rahulr/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar"/>
+  <path value="C:/Users/rahulr/.m2/repository/org/jboss/spec/javax/transaction/jboss-transaction-api_1.2_spec/1.0.0.Final/jboss-transaction-api_1.2_spec-1.0.0.Final.jar"/>
+  <path value="C:/Users/rahulr/.m2/repository/org/glassfish/jersey/core/jersey-common/3.1.3/jersey-common-3.1.3.jar"/>
+  <path value="C:/Users/rahulr/.m2/repository/jakarta/inject/jakarta.inject-api/2.0.1/jakarta.inject-api-2.0.1.jar"/>
+  <path value="C:/Users/rahulr/.m2/repository/org/hibernate/hibernate-core/4.3.5.Final/hibernate-core-4.3.5.Final.jar"/>
+  <path value="C:/Users/rahulr/.m2/repository/com/google/protobuf/protobuf-java/3.19.4/protobuf-java-3.19.4.jar"/>
+  <path value="C:/Users/rahulr/.m2/repository/org/glassfish/hk2/osgi-resource-locator/1.0.3/osgi-resource-locator-1.0.3.jar"/>
+  <path value="C:/Users/rahulr/.m2/repository/antlr/antlr/2.7.7/antlr-2.7.7.jar"/>
+  <path value="C:/Users/rahulr/.m2/repository/mysql/mysql-connector-java/8.0.30/mysql-connector-java-8.0.30.jar"/>
+  <path value="C:/Users/rahulr/.m2/repository/com/sun/faces/jsf-impl/2.2.14/jsf-impl-2.2.14.jar">
+   <libraries>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jsf-impl-2.2.14.jar/meta-inf/html_basic.tld" project="ResturantManagement"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jsf-impl-2.2.14.jar/meta-inf/jsf_core.tld" project="ResturantManagement"/>
+    </library>
+    <library class="facelet">
+     <id class="model-object"
+      path="FileSystems/lib-jsf-impl-2.2.14.jar/meta-inf/mojarra_ext.taglib.xml" project="ResturantManagement"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jsf-impl-2.2.14.jar/meta-inf/mojarra_ext.tld" project="ResturantManagement"/>
+    </library>
+    <library class="facelet">
+     <id class="model-object"
+      path="FileSystems/lib-jsf-impl-2.2.14.jar/com/sun/faces/metadata/taglib/composite.taglib.xml" project="ResturantManagement"/>
+    </library>
+    <library class="facelet">
+     <id class="model-object"
+      path="FileSystems/lib-jsf-impl-2.2.14.jar/com/sun/faces/metadata/taglib/facelets_jsf_core.taglib.xml" project="ResturantManagement"/>
+    </library>
+    <library class="facelet">
+     <id class="model-object"
+      path="FileSystems/lib-jsf-impl-2.2.14.jar/com/sun/faces/metadata/taglib/html_basic.taglib.xml" project="ResturantManagement"/>
+    </library>
+    <library class="facelet">
+     <id class="model-object"
+      path="FileSystems/lib-jsf-impl-2.2.14.jar/com/sun/faces/metadata/taglib/jstl-core.taglib.xml" project="ResturantManagement"/>
+    </library>
+    <library class="facelet">
+     <id class="model-object"
+      path="FileSystems/lib-jsf-impl-2.2.14.jar/com/sun/faces/metadata/taglib/jstl-fn.taglib.xml" project="ResturantManagement"/>
+    </library>
+    <library class="facelet">
+     <id class="model-object"
+      path="FileSystems/lib-jsf-impl-2.2.14.jar/com/sun/faces/metadata/taglib/mojarra_ext.taglib.xml" project="ResturantManagement"/>
+    </library>
+    <library class="facelet">
+     <id class="model-object"
+      path="FileSystems/lib-jsf-impl-2.2.14.jar/com/sun/faces/metadata/taglib/ui.taglib.xml" project="ResturantManagement"/>
+    </library>
+   </libraries>
+  </path>
+  <path value="C:/Users/rahulr/.m2/repository/org/hibernate/javax/persistence/hibernate-jpa-2.1-api/1.0.0.Final/hibernate-jpa-2.1-api-1.0.0.Final.jar"/>
+  <path value="C:/Users/rahulr/.m2/repository/org/glassfish/hk2/external/aopalliance-repackaged/3.0.4/aopalliance-repackaged-3.0.4.jar"/>
+  <path value="C:/Users/rahulr/.m2/repository/org/glassfish/jersey/containers/jersey-container-servlet-core/3.1.3/jersey-container-servlet-core-3.1.3.jar"/>
+  <path value="C:/Users/rahulr/.m2/repository/org/glassfish/hk2/hk2-api/3.0.4/hk2-api-3.0.4.jar"/>
+  <path value="C:/Users/rahulr/.m2/repository/org/jboss/logging/jboss-logging/3.1.3.GA/jboss-logging-3.1.3.GA.jar"/>
+  <path value="C:/Users/rahulr/.m2/repository/com/sun/faces/jsf-api/2.2.20/jsf-api-2.2.20.jar"/>
+  <path value="C:/Users/rahulr/.m2/repository/org/glassfish/jersey/inject/jersey-hk2/3.1.3/jersey-hk2-3.1.3.jar"/>
+  <path value="C:/Users/rahulr/.m2/repository/org/jboss/jandex/1.1.0.Final/jandex-1.1.0.Final.jar"/>
+  <path value="C:/Users/rahulr/.m2/repository/org/jboss/logging/jboss-logging-annotations/1.2.0.Beta1/jboss-logging-annotations-1.2.0.Beta1.jar"/>
+  <path value="C:/Users/rahulr/.m2/repository/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar"/>
+  <path value="C:/Users/rahulr/.m2/repository/org/javassist/javassist/3.18.1-GA/javassist-3.18.1-GA.jar"/>
+  <path value="C:/Users/rahulr/.m2/repository/org/glassfish/jersey/core/jersey-client/3.1.3/jersey-client-3.1.3.jar"/>
+  <path value="C:/Users/rahulr/.m2/repository/xml-apis/xml-apis/1.0.b2/xml-apis-1.0.b2.jar"/>
+  <path value="C:/Users/rahulr/.m2/repository/org/glassfish/jersey/core/jersey-server/3.1.3/jersey-server-3.1.3.jar"/>
+  <path value="C:/Users/rahulr/.m2/repository/jakarta/ws/rs/jakarta.ws.rs-api/3.1.0/jakarta.ws.rs-api-3.1.0.jar"/>
+  <path value="C:/Users/rahulr/.m2/repository/jakarta/validation/jakarta.validation-api/3.0.2/jakarta.validation-api-3.0.2.jar"/>
+  <path value="C:/Users/rahulr/.m2/repository/org/glassfish/hk2/hk2-utils/3.0.4/hk2-utils-3.0.4.jar"/>
+  <path value="/HMS/src/main/webapp/WEB-INF/faces-config.xml">
+   <libraries>
+    <library class="faces-config">
+     <id class="model-object"
+      path="FileSystems/WEB-INF/faces-config.xml" project="HMS"/>
+    </library>
+   </libraries>
+  </path>
+  <path value="C:/Users/rahulr/.m2/repository/org/hibernate/common/hibernate-commons-annotations/4.0.4.Final/hibernate-commons-annotations-4.0.4.Final.jar"/>
+  <path value="C:/Users/rahulr/.m2/repository/org/glassfish/hk2/hk2-locator/3.0.4/hk2-locator-3.0.4.jar"/>
+ </paths>
+ <validation>
+  <core validator-id="jsf-verification">
+   <linked-resource declaration="true"
+    name="%1;%2;%3;%4;%5;%6;%7;%8;%9;%10;%11;%12;" path="%0"/>
+  </core>
+  <core validator-id="jboss.jsf.core"/>
+  <el>
+   <linked-el length="12" name="%13" offset="622" path="%14"/>
+   <linked-el length="36" name="%15" offset="1292" path="%16"/>
+   <linked-el length="24" name="%17" offset="777" path="%18"/>
+   <linked-el length="24" name="%17" offset="577" path="%18"/>
+   <linked-el length="16" name="%19" offset="455" path="%14"/>
+   <linked-el length="12" name="%20" offset="953" path="%14"/>
+   <linked-el length="16" name="%20" offset="783" path="%21"/>
+   <linked-el length="14" name="%20" offset="787" path="%14"/>
+   <linked-el length="14" name="%20" offset="947" path="%21"/>
+   <linked-el length="12" name="%20" offset="622" path="%14"/>
+   <linked-el length="14" name="%20" offset="618" path="%21"/>
+   <linked-el length="17" name="%22" offset="1351" path="%23"/>
+   <linked-el length="14" name="%24" offset="787" path="%14"/>
+   <linked-el length="24" name="%25" offset="777" path="%18"/>
+   <linked-el length="24" name="%25" offset="577" path="%18"/>
+   <linked-el length="14" name="%26" offset="618" path="%21"/>
+   <linked-el length="36" name="%27" offset="1292" path="%16"/>
+   <linked-el length="16" name="%28" offset="783" path="%21"/>
+   <linked-el length="36" name="%29" offset="1292" path="%16"/>
+   <linked-el length="21" name="%29" offset="1114" path="%16"/>
+   <linked-el length="21" name="%29" offset="910" path="%16"/>
+   <linked-el length="21" name="%29" offset="1012" path="%16"/>
+   <linked-el length="17" name="%29" offset="613" path="%16"/>
+   <linked-el length="22" name="%29" offset="1219" path="%16"/>
+   <linked-el length="18" name="%29" offset="521" path="%16"/>
+   <linked-el length="20" name="%29" offset="809" path="%16"/>
+   <linked-el length="20" name="%29" offset="710" path="%16"/>
+   <linked-el length="17" name="%30" offset="1351" path="%23"/>
+   <linked-el length="36" name="%31" offset="1292" path="%16"/>
+   <linked-el length="21" name="%31" offset="1114" path="%16"/>
+   <linked-el length="21" name="%31" offset="910" path="%16"/>
+   <linked-el length="21" name="%31" offset="1012" path="%16"/>
+   <linked-el length="17" name="%31" offset="613" path="%16"/>
+   <linked-el length="22" name="%31" offset="1219" path="%16"/>
+   <linked-el length="18" name="%31" offset="521" path="%16"/>
+   <linked-el length="20" name="%31" offset="809" path="%16"/>
+   <linked-el length="20" name="%31" offset="710" path="%16"/>
+   <linked-el length="14" name="%32" offset="947" path="%21"/>
+   <linked-el length="30" name="%33" offset="367" path="%18"/>
+   <linked-el length="12" name="%34" offset="953" path="%14"/>
+   <linked-el length="14" name="%35" offset="455" path="%21"/>
+   <linked-el length="30" name="%36" offset="367" path="%18"/>
+  </el>
+ </validation>
+ <aliases>
+  <alias path="/HMS/src/main/webapp/Dashboard.jsp" value="%18"/>
+  <alias path="\HMS\src\main\java\com\java\hms\RoomMasterDaoImpl.java" value="%4"/>
+  <alias path="/HMS/src/main/webapp/WEB-INF/faces-config.xml" value="%0"/>
+  <alias path="doctorList" value="%19"/>
+  <alias path="\HMS\src\main\java\com\java\hms\DoctorMasterDaoImpl.java" value="%8"/>
+  <alias path="jersey.version" value="%22"/>
+  <alias path="roomDao" value="%25"/>
+  <alias path="\HMS\src\main\java\com\java\hms\PatientMaster.java" value="%9"/>
+  <alias path="/HMS/src/main/webapp/showRooms.jsp" value="%21"/>
+  <alias
+   path="\HMS\src\main\java\com\java\hms\PatientMasterDaoImpl.java" value="%11"/>
+  <alias path="com.java.hms.PatientMasterDaoImpl" value="%12"/>
+  <alias path="/HMS/pom.xml" value="%23"/>
+  <alias path="patient" value="%29"/>
+  <alias path="jersey" value="%30"/>
+  <alias path="/HMS/src/main/java/com/java/hms/PatientMaster.java" value="%31"/>
+  <alias path="e.status" value="%32"/>
+  <alias path="doctorDao" value="%33"/>
+  <alias path="com.java.hms.PatientMaster" value="%10"/>
+  <alias path="e.drId" value="%13"/>
+  <alias
+   path="/HMS/src/main/java/com/java/hms/PatientMasterDaoImpl.java" value="%15"/>
+  <alias path="/HMS/src/main/java/com/java/hms/RoomMasterDaoImpl.java" value="%17"/>
+  <alias path="e" value="%20"/>
+  <alias path="e.drName" value="%24"/>
+  <alias path="e.roomNo" value="%26"/>
+  <alias path="patientDao" value="%27"/>
+  <alias path="e.roomType" value="%28"/>
+  <alias path="\HMS\src\main\java\com\java\hms\RoomMaster.java" value="%1"/>
+  <alias path="\HMS\src\main\java\com\java\hms\DoctorMaster.java" value="%2"/>
+  <alias path="com.java.hms.DoctorMasterDaoImpl" value="%3"/>
+  <alias path="com.java.hms.RoomMasterDaoImpl" value="%5"/>
+  <alias path="/HMS/src/main/webapp/showDoectors.jsp" value="%14"/>
+  <alias path="com.java.hms.RoomMaster" value="%6"/>
+  <alias path="com.java.hms.DoctorMaster" value="%7"/>
+  <alias path="/HMS/src/main/webapp/addPatient.jsp" value="%16"/>
+  <alias path="e.dept" value="%34"/>
+  <alias path="roomList" value="%35"/>
+  <alias path="/HMS/src/main/java/com/java/hms/DoctorMasterDaoImpl.java" value="%36"/>
+ </aliases>
+ <includes/>
+ <uris>
+  <uri value="http://java.sun.com/jsf/core">
+   <prefix>f</prefix>
+  </uri>
+  <uri value="http://java.sun.com/jsf/html">
+   <prefix>h</prefix>
+  </uri>
+ </uris>
+</kb-project>

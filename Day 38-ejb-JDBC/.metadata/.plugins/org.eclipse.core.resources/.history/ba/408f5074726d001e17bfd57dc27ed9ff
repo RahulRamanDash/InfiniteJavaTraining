@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+<body>
+	<h:form>
+	<center>
+	<h2>
+	<h:outputText value="Agent Records" />
+	</h2>
+	<h:dataTable value="#{aDao.showAgentDao()}" var="e" border="3" align="center">
+	<h:column>
+	<f:facet name="header">Agent ID : </f:facet>
+	<h:outputText value="#{e.agentid}" />
+	</h:column>
+	<h:column>
+	<f:facet name="header">Agent Name</f:facet>
+	<h:outputText value="#{e.name}" />
+	</h:column>
+	<h:column>
+	<f:facet name="header">City</f:facet>
+	<h:outputText value="#{e.city}" />
+	</h:column>
+	<h:column>
+	<f:facet name="header">Gender</f:facet>
+	<h:outputText value="#{e.gender}" />
+	</h:column>
+	<h:column>
+	<f:facet name="header">MaritalStatus</f:facet>
+	<h:outputText value="#{e.maritalstatus}" />
+	</h:column>
+	<h:column>
+	<f:facet name="header">Premium</f:facet>
+	<h:outputText value="#{e.premium}" />
+	</h:column>
+	<h:column>
+	<f:facet name="header">Update</f:facet>
+	<h:commandButton action="#{aDao.searchAgentDao(e.agentid)}" value="Update" />
+	</h:column>
+	<h:column>
+	<f:facet name="header">Delete</f:facet>
+	<h:commandButton action="#{aDao.deleteAgentDao(e.agentid)}" value="Delete" />
+	</h:column>
+	</h:dataTable>
+	</center>
+	<center>
+	<h:commandButton action="addAgent.xhtml?faces-redirect=true" value="Add Agent" />
+	</center>
+	</h:form>
+</body>
+</html>

@@ -1,0 +1,11 @@
+package com.java.jsf;
+
+public class Test {
+	public String mcq() {
+		return "Hello From JSF Programing";
+	}
+	public String practical() {
+		return "Welcome to JSF Programing";
+	}
+
+}

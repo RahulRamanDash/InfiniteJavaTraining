@@ -1,0 +1,54 @@
+package com.java.ejb;
+
+import java.sql.SQLException;
+import java.util.List;
+
+import javax.ejb.LocalBean;
+import javax.ejb.Remote;
+import javax.ejb.Stateless;
+
+/**
+ * Session Bean implementation class AgentBean
+ */
+@Stateless
+@Remote(AgentBeanRemote.class)
+public class AgentBean implements AgentBeanRemote {
+
+    /**
+     * Default constructor. 
+     */
+    public AgentBean() {
+        // TODO Auto-generated constructor stub
+    }
+
+	@Override
+	public List<Agent> showAgent() throws ClassNotFoundException, SQLException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Agent searchAgent(int empno) throws ClassNotFoundException, SQLException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String addAgent(Agent agent) throws ClassNotFoundException, SQLException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String deleteAgent(int empno) throws ClassNotFoundException, SQLException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String updateAgent(Agent agent) throws ClassNotFoundException, SQLException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

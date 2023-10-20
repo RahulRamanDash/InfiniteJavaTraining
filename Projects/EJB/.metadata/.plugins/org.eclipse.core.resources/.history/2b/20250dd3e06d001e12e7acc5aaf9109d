@@ -1,0 +1,37 @@
+package com.java.ejb;
+
+import java.sql.SQLException;
+import java.util.List;
+import java.util.Map;
+
+import javax.faces.context.FacesContext;
+import javax.faces.event.ValueChangeEvent;
+import javax.naming.NamingException;
+
+public class RoomAllocationEjbImpl {
+	
+	private String roomType;
+
+	public String getRoomType() {
+		return roomType;
+	}
+
+	public void setRoomType(String roomType) {
+		this.roomType = roomType;
+	}
+	public void roomTypeChanged(ValueChangeEvent e) {
+		this.roomType = e.getNewValue().toString();
+		Map<String, Object> sessionMap =
+				FacesContext.getCurrentInstance().getExternalContext().getSessionMap();
+		sessionMap.put("roomType", this.roomType);
+	}
+	
+	public List<String> showRoomTypeEjb() throws NamingException, ClassNotFoundException, SQLException {
+		Map<String, Object> sessionMap =
+				FacesContext.getCurrentInstance().getExternalContext().getSessionMap();
+		RoomAllocationBeanRemote remote = RoomAllocationHelper.lookupRemoteStatelessEmploy();
+		return remote.showRoomType();
+	}
+	
+	
+}

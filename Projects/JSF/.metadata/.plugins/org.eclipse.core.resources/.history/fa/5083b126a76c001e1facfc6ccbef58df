@@ -1,0 +1,6 @@
+package com.java.hms;
+
+public class PatientMasterDaoImpl implements PatientMasterDAO{
+	
+
+}

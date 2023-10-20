@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+	<center>
+	<h:outputLabel value="Employ Table" />
+	<h:dataTable value="#{employDao.showEmploy()}" var="e" border="3">
+	<h:column>
+		<f:facet name="render">Employ No</f:facet>
+		<h:outputText value="#{e.empno}" />
+	</h:column>
+	<h:column>
+		<f:facet name="render">Employ Name</f:facet>
+		<h:outputText value="#{e.name}" />
+	</h:column>
+	<h:column>
+		<f:facet name="render">Dept</f:facet>
+		<h:outputText value="#{e.dept}" />
+	</h:column>
+	<h:column>
+		<f:facet name="render">Desig</f:facet>
+		<h:outputText value="#{e.desig}" />
+	</h:column><h:column>
+		<f:facet name="render">Basic</f:facet>
+		<h:outputText value="#{e.basic}" />
+	</h:column>
+	</h:dataTable>
+	</center>
+</html>

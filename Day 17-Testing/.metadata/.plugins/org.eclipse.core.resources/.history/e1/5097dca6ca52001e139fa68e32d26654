@@ -1,0 +1,17 @@
+package com.java.test;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+import com.java.leave.LeaveDetails;
+
+public class testLeaveDetails {
+
+	@Test
+	public void testConstructor() {
+		LeaveDetails leavedetails = new LeaveDetails();
+		assertNotNull(leavedetails);
+	}
+
+}

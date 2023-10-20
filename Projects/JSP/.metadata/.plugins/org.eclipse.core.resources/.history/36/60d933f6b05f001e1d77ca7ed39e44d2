@@ -1,0 +1,46 @@
+<%@page import="com.java.complaint.Complaint"%>
+<%@page import="com.java.complaint.ComplaintDAOImpl"%>
+<%@page import="com.java.complaint.ComplaintDAO"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+  <h1>Raise Complaint</h1>
+    <form action="addcomplaint.jsp" method="post">
+        <label for="ComplaintType">Complaint Type:</label>
+        <input type="text" name="ComplaintType"><br>
+
+        <label for="CDescription">Description:</label>
+        <input type="text" name="CDescription"><br>
+
+        <label for="severity">Severity:</label>
+        <select name="severity">
+        <option value="RESOLVED">RESOLVED</option>
+        </select>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+		<%
+		if(request.getParameter("ComplaintType")!=null && request.getParameter("CDescription")!=null){
+		    Complaint complaint = new Complaint();
+		    
+		    complaint.setComplaintType(request.getParameter("ComplaintType"));
+		    complaint.setCDescription(request.getParameter("CDescription"));
+		    complaint.setSeverity(request.getParameter("severity"));
+		    
+		    ComplaintDAO complaintDAO = new ComplaintDAOImpl();
+    		complaintDAO.addComplaintDao(complaint);
+%>
+    <jsp:forward page = "ComplaintShow.jsp"/>
+		<%
+		}
+		%>
+       
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+package com.java.login;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+
+import com.java.hib.SessionHelper;
+
+public class LoginDaoImpl implements LoginDAO{
+	SessionFactory sf;
+	Session session;
+	@Override
+	public String addUser(HibLogin login) {
+		sf = SessionHelper.getConnection();
+		session = sf.openSession();
+		Transaction transaction = session.beginTransaction();
+		session.save(login);
+		transaction.commit();		
+		return "User Added....";
+	}
+	
+	
+}

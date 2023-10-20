@@ -1,0 +1,8 @@
+package com.java.rms;
+
+public interface VenderDAO {
+	//String venderLogin();
+
+	String venderLogin(Vendor vendor);
+	
+}

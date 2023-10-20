@@ -1,0 +1,13 @@
+package com.java.hms;
+
+import java.sql.SQLException;
+import java.util.Map;
+
+import javax.faces.context.FacesContext;
+import javax.naming.NamingException;
+
+public class PatientEjbImpl {
+	public List<PatientMaster> showPatientEjb() {
+		
+		}
+}

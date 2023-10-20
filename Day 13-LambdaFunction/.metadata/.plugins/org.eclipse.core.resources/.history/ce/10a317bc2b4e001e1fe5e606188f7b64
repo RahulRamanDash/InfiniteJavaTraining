@@ -1,0 +1,9 @@
+package com.java.employ;
+
+public class Conref {
+	public static void main(String[] args) {
+	ITest obj1 = Emp::new;
+	
+	System.out.println(e);
+	}
+}

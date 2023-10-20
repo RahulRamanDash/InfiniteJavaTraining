@@ -1,0 +1,5 @@
+INDEX VERSION 1.132
+D:\eclipse-workspace\Day 37\1\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3688014059.index
+\JsfEjbClientWeb\src\main\java
+D:\eclipse-workspace\Day 37\1\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3310774066.index
+\CalculatorClient\src\main\java

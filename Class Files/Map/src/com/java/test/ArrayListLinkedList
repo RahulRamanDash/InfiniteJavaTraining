@@ -1,0 +1,60 @@
+(3)
+ArrayList:
+
+Uses an array as its underlying data structure.
+Fast random access (O(1)).
+Slower insertions/deletions in the middle (O(n)).
+Efficient for read-heavy operations.
+Lower memory usage.
+
+
+LinkedList:
+
+Uses a doubly-linked list.
+Fast insertions/deletions in the middle (O(1)).
+Slower random access (O(n)).
+Efficient for write-heavy operations.
+Higher memory usage due to node references.
+
+(4)
+ArrayList:
+
+Non-synchronized: Not thread-safe by default.
+Faster: Generally faster due to lack of synchronization.
+Efficiency: More memory-efficient compared to Vector.
+Recommended: Preferred for single-threaded applications or when synchronization is handled separately.
+
+Vector:
+
+Synchronized: Thread-safe, synchronized methods for concurrent access.
+Slower: Slightly slower due to synchronization overhead.
+Efficiency: Uses more memory compared to ArrayList because of synchronization.
+Legacy: Considered a legacy class; ArrayList is preferred in most cases for better performance.
+
+(5)
+HashSet:
+
+Stores a collection of unique values.
+No key-value pairs; only values are stored.
+Ensures uniqueness of elements.
+Suitable for removing duplicates or checking membership.
+HashMap:
+
+Stores key-value pairs.
+Keys are unique within the map.
+Allows associating values with unique keys.
+Suitable for creating dictionaries or mappings between entities.
+
+(6)
+HashMap:
+
+Not synchronized by default (not thread-safe).
+Allows one null key and multiple null values.
+Generally faster in single-threaded scenarios.
+Hashtable:
+
+Synchronized (thread-safe).
+Does not allow null keys or values.
+Suitable for multi-threaded environments but may be slower in single-threaded scenarios due to synchronization overhead.
+
+

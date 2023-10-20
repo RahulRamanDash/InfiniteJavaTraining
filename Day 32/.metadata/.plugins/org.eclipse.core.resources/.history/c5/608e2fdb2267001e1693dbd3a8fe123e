@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Oct 10, 2023, 9:31:54 AM by Hibernate Tools 3.6.2.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class dynamic-insert="false" dynamic-update="false" mutable="true" name="com.java.jsf.Employ" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="EMPLOY">
+        <id name="empno" type="int">
+            <column name="EMPNO"/>
+            <generator class="assigned"/>
+        </id>
+        <property generated="never" lazy="false" name="name" optimistic-lock="true" type="java.lang.String" unique="false">
+            <column name="NAME"/>
+        </property>
+        <property generated="never" lazy="false" name="gender" optimistic-lock="true" unique="false">
+            <column name="GENDER"/>
+            <type name="org.hibernate.type.EnumType">
+                <param name="enumClass">com.java.jsf.Gender</param>
+                <param name="type">12</param>
+            </type>
+        </property>
+        <property generated="never" lazy="false" name="dept" optimistic-lock="true" type="java.lang.String" unique="false">
+            <column name="DEPT"/>
+        </property>
+        <property generated="never" lazy="false" name="desig" optimistic-lock="true" type="java.lang.String" unique="false">
+            <column name="DESIG"/>
+        </property>
+        <property generated="never" lazy="false" name="basic" optimistic-lock="true" type="double" unique="false">
+            <column name="BASIC"/>
+        </property>
+    </class>
+    <query name="showEmploy">
+    	from Employ
+    </query>
+    <query name="ssearchEmploy">
+    	from Employ where empno=:empno
+    </query>
+</hibernate-mapping>

@@ -1,0 +1,27 @@
+package com.java.ejb;
+
+import javax.ejb.Remote;
+import javax.ejb.Stateless;
+
+/**
+ * Session Bean implementation class PatientBean
+ */
+@Stateless
+@Remote(PatientBeanRemote.class)
+public class PatientBean implements PatientBeanRemote {
+
+    /**
+     * Default constructor. 
+     */
+    public PatientBean() {
+        // TODO Auto-generated constructor stub
+    }
+
+	@Override
+	public String addPatient(PatientMaster patient) {
+		Map<String, Object> sessionMap =
+				FacesContext.getCurrentInstance().getExternalContext().getSessionMap();
+		return null;
+	}
+
+}

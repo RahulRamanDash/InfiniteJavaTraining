@@ -1,0 +1,8 @@
+package com.java.ejb;
+
+public class RoomAllocation {
+		private String roomNo;
+	    private String pid;
+	    private Date admissionDate;
+	    private Date releaseDate;
+}

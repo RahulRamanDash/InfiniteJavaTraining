@@ -1,0 +1,13 @@
+package com.java.ejb;
+
+import java.sql.SQLException;
+import java.util.List;
+
+import javax.naming.NamingException;
+
+public class PatientEjbImpl {
+	public String addPatientEjb(String did) throws NamingException, ClassNotFoundException, SQLException {
+		 PatientBeanRemote remote = PatientRemoteHelper.lookupRemoteStatelessEmploy();
+		 return "addPatient.jsp?faces-redirect=true";
+		}
+}

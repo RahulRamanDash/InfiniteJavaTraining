@@ -1,0 +1,18 @@
+package com.java.login;
+
+import java.util.Map;
+
+import javax.faces.context.FacesContext;
+
+public class LoginDAO {
+	public String validate(Login login) {
+		Map<String, Object> sessioMap =
+				FacesContext.getCurrentInstance().getExternalContext().getSessionMap();
+		if(login.getUserName().equals("infinite") && login.getUserPass().equals("infinite")) {
+			return "Menu.xhtml?faces-redirect=true";
+		}else {
+			sessioMap.put("error", "Invalid Credentials....");
+			return "Login.xhtml?faces-redirect=true";
+		}
+	}
+}

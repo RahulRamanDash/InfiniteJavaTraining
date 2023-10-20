@@ -1,0 +1,7 @@
+127.0.0.1 - - [09/Oct/2023:22:41:16 +0530] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [09/Oct/2023:22:41:19 +0530] "GET /ResturantManagement/CustomerLogin.jsf HTTP/1.1" 200 3108
+0:0:0:0:0:0:0:1 - - [09/Oct/2023:22:41:33 +0530] "POST /ResturantManagement/CustomerLogin.jsf HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [09/Oct/2023:22:41:34 +0530] "GET /ResturantManagement/Dashboard.jsf HTTP/1.1" 200 3639
+0:0:0:0:0:0:0:1 - - [09/Oct/2023:22:41:37 +0530] "POST /ResturantManagement/Dashboard.jsf HTTP/1.1" 200 4469
+0:0:0:0:0:0:0:1 - - [09/Oct/2023:22:41:42 +0530] "POST /ResturantManagement/PlaceOrder.jsf HTTP/1.1" 200 4534
+0:0:0:0:0:0:0:1 - - [09/Oct/2023:22:41:51 +0530] "POST /ResturantManagement/PlaceOrder.jsf HTTP/1.1" 200 4539

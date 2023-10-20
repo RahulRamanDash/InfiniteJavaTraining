@@ -1,0 +1,57 @@
+package com.java.login;
+
+import java.util.Scanner;
+
+public class LoginMain {
+
+		public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+			
+			int choice;
+			do {
+				System.out.println("O P T I O N S");
+				System.out.println("-------------");
+				System.out.println("1. Add Agent Details ");
+				System.out.println("2. Exit");
+				
+				choice = sc.nextInt();
+				
+				switch (choice) {
+				case 1:
+					addAgentMain();
+					break;
+				case 2:
+					System.out.println("Exiting....");
+					return;
+				default:
+					System.out.println("Enter a Valid Option...");
+					return;		
+				}
+			}while(choice!=6);
+
+	}
+
+		private static void addAgentMain() {
+			
+			Agent agent = new Agent();
+			Scanner sc = new Scanner(System.in);
+		
+			System.out.println("Enter Name");
+			agent.setName(sc.next());
+			System.out.println("Enter City");
+			agent.setCity(sc.next());
+			System.out.println("Enter Gender ");
+			agent.setGENDER(GENDER.valueOf(sc.next()));
+			System.out.println("Enter MaritalStatus");
+			agent.setMaritalStatus(sc.nextInt());
+			System.out.println("Enter Basic");
+			agent.setPremium(sc.nextDouble());
+			
+			System.out.println(dao.addAgentDao(agent));
+			}
+		
+	
+
+
+}

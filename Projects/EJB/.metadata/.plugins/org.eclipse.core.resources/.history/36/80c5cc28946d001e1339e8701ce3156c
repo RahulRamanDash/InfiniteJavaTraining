@@ -1,0 +1,34 @@
+package com.java.ejb;
+
+import java.sql.SQLException;
+import java.util.List;
+
+import javax.ejb.LocalBean;
+import javax.ejb.Remote;
+import javax.ejb.Stateless;
+
+	
+/**
+ * Session Bean implementation class HospitalBean
+ */
+@Stateless
+@Remote(DoctorBeanRemote.class)
+public class HospitalBean implements HospitalBeanRemote {
+	
+	static DoctorMasterDAO doctorDao;
+	static {
+		doctorDao = new DoctorMasterDaoImpl();
+	}
+    /**
+     * Default constructor. 
+     */
+    public HospitalBean() {
+        // TODO Auto-generated constructor stub
+    }
+    
+	@Override
+	public List<DoctorMaster> showDoctor() throws ClassNotFoundException, SQLException {
+		return doctorDao.showDoctorDao();
+	}
+
+}

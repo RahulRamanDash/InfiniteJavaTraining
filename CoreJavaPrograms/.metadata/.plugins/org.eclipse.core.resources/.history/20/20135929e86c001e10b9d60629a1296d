@@ -1,0 +1,18 @@
+package com.java.day4;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ArrayAndArrayList {
+	public static void main(String[] args) {
+		int[] arr = {1,2,3,4,5};
+		
+		
+		System.out.println(arr);
+		
+		List<String> arr1 = new ArrayList<>();
+		
+		
+	}
+
+}

@@ -1,0 +1,6 @@
+package com.javanewfetures;
+
+public abstract class IMethodRef2 {
+
+	abstract int calc(int x, int y);
+}

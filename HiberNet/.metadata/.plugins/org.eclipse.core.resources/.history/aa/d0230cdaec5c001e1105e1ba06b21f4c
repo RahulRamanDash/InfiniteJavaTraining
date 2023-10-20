@@ -1,0 +1,22 @@
+package com.java.hib;
+
+import java.util.Scanner;
+
+public class EmployInsertMain {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		Employ employ = new Employ();
+		System.out.println("Enter Employ Number   ");
+		employUpdated.setEmpno(sc.nextInt());
+		System.out.println("Enter Name  ");
+		employUpdated.setName(sc.next());
+		System.out.println("Enter Gender (MALE/FEMALE)  ");
+		employUpdated.setGender(Gender.valueOf(sc.next()));
+		System.out.println("Enter Department  ");
+		employUpdated.setDept(sc.next());
+		System.out.println("Enter Designation  ");
+		employUpdated.setDesig(sc.next());
+		System.out.println("Enter Basic  ");
+		employUpdated.setBasic(sc.nextDouble());
+	}
+}

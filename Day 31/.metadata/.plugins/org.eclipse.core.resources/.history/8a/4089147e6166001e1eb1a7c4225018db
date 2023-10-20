@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Oct 9, 2023, 9:52:20 AM by Hibernate Tools 3.6.2.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class dynamic-insert="false" dynamic-update="false" mutable="true" name="com.java.inf.Address" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="ADDRESS">
+        <id name="addressId" type="int">
+            <column name="ADDRESSID"/>
+            <generator class="assigned"/>
+        </id>
+        <property generated="never" lazy="false" name="addressLimit1" optimistic-lock="true" type="java.lang.String" unique="false">
+            <column name="ADDRESSLIMIT1"/>
+        </property>
+        <property generated="never" lazy="false" name="city" optimistic-lock="true" type="java.lang.String" unique="false">
+            <column name="CITY"/>
+        </property>
+        <property generated="never" lazy="false" name="country" optimistic-lock="true" type="java.lang.String" unique="false">
+            <column name="COUNTRY"/>
+        </property>
+        <property generated="never" lazy="false" name="pincode" optimistic-lock="true" type="int" unique="false">
+            <column name="PINCODE"/>
+        </property>
+        <one-to-one class="com.java.inf.Employee" constrained="false" embed-xml="true" name="employee"/>
+    </class>
+</hibernate-mapping>

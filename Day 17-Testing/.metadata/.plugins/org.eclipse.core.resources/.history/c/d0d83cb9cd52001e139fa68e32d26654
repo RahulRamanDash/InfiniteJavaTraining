@@ -1,0 +1,44 @@
+package com.java.test;
+
+import static org.junit.Assert.*;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+
+import org.junit.Test;
+
+import com.java.leave.LeaveDetails;
+import com.java.leave.LeaveStatus;
+import com.java.leave.LeaveType;
+
+public class testLeaveDetails {
+
+	@Test
+	public void testConstructor() throws ParseException {
+		LeaveDetails leavedetails = new LeaveDetails();
+		assertNotNull(leavedetails);
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+		Date lsd = sdf.parse("2023-10-10");
+		Date led = sdf.parse("2023-10-10");
+		Date aon = sdf.parse("2023-09-13");
+		LeaveDetails leavedetails1 = new LeaveDetails(1,1000,"Rahul",lsd,led,LeaveStatus.PENDING,LeaveType.EL,"sadi","welcome",aon);	
+		assertEquals(1, leavedetails.getLeaveId());
+		assertEquals(1000, leavedetails.getEmpId());
+		assertEquals("Rahul", leavedetails.getEmpName());
+		assertEquals(lsd, leavedetails.getLeaveStartDate());
+		assertEquals(led, leavedetails.getLeaveEndDate());
+		assertEquals(LeaveStatus.PENDING, leavedetails.getLeaveStatus());
+		assertEquals(LeaveType.EL, leavedetails.getLeaveType());
+		assertEquals("sadi", leavedetails.getLeaveReason());
+		assertEquals("welcome", leavedetails.getManagerComments());
+		assertEquals(aon, leavedetails.getAppliedOn());
+	}
+
+	
+	@Test
+	public void testGettersAndSetters() {
+		
+	}
+}

@@ -1,0 +1,8 @@
+package com.java.login;
+
+public class HibLogin {
+	private String userName;
+	private String passCode;
+	
+	
+}
