@@ -91,5 +91,25 @@ public class PatientMasterDaoImpl implements PatientMasterDAO{
 		PatientMaster patient = (PatientMaster)cr.uniqueResult();
 		return patient;
 	}
+	
+	public String validateLogin(PatientMaster patient) {
+		Map<String, Object> sessionMap =
+				FacesContext.getCurrentInstance().getExternalContext().getSessionMap();
+		String pwd = EncryptPassword.getCode(patient.getPassword());
+		sf = SessionHelper.getConnection();
+		session = sf.openSession();
+		Criteria criteria = session.createCriteria(PatientMaster.class);
+		criteria.add(Restrictions.eqOrIsNull("username", patient.getUsername()));
+		criteria.add(Restrictions.eqOrIsNull("password", pwd));
+		criteria.setProjection(Projections.rowCount());
+		long count = (long) criteria.uniqueResult();
+			if(count==1) {
+				sessionMap.put("loggedUser",patient.getUsername());
+				return "Dashboard.jsp?faces-redirect=true";
+			}else {
+				sessionMap.put("loginError", "Invalid UserName or Password...");
+				return "Invalid UserName or Password...";
+			}
+	}
 
 }

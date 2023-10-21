@@ -20,7 +20,7 @@
 
 	<h:outputText value="Password " />
 	<h:inputText id="pass" value="#{hibpatient.password}" /><br/> 
-
+	<h:commandButton action="#{patienteImpl.validateLogin(hibpatient)}" value="Login" />
 	<br/><br/>
 	<h:outputText value="#{loginError}" />
 	

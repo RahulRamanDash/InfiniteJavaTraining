@@ -12,10 +12,8 @@
     </head>
     <body>
 		<h2>
-	<h:outputText value="Validate Otp" />
+	<h:outputText value="Welcome #{loggedUser}" />
 	</h2>
-
-	</h:form>
     </body>
 </html>
 </f:view>
