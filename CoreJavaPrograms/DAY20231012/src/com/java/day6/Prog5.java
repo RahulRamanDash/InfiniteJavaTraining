@@ -44,7 +44,7 @@ class Game {
 public class Prog5 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int maxRange = 100;
+        int maxRange = 10;
         int maxAttempts = 10;
 
         Game game = new Game(maxRange, maxAttempts); // Create a new game

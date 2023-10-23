@@ -1,4 +1,6 @@
-public class ArraySum {
+package com.java.day4;
+
+public class Prog1 {
     public static void main(String[] args) {
         // Create an array of integers
         int[] numbers = {1, 2, 3, 4, 5};

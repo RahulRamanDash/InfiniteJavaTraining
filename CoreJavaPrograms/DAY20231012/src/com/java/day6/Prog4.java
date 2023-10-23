@@ -24,7 +24,8 @@ class Cart {
         items = new Product[capacity];
         itemCount = 0;
     }
-
+    
+    
     // Method to add a product to the cart
     void addItem(Product product) {
         if (itemCount < items.length) {
@@ -43,8 +44,15 @@ class Cart {
     }
     double showPrice() {
     	
-		return itemCount;
-    	
+		return itemCount;	
+    }
+    
+//    void showPriceByIndex() {
+//        for (int i = 0; i < itemCount; i++) {
+//            System.out.println(items[i].price);
+//        }
+    void showPriceByIndex(int i) {
+            System.out.println(items[i].price);
     }
 }
 
@@ -71,12 +79,32 @@ public class Prog4 {
 
         System.out.println("Customer: " + customer.name);
         System.out.println("Items in Cart:");
+        int i=1;
         for (Product item : customer.cart.items) {
             if (item != null) {
-                System.out.println(item.name);
+                System.out.println(i+") "+item.name);
+                i+=1;
             }
         }
+        System.out.println("3) Total Price");
         Scanner sc = new Scanner(System.in);
-        System.out.println("Total Price: " + customer.cart.calculateTotal());
+        //System.out.println("Total Price: " + customer.cart.calculateTotal());
+        //customer.cart.showPriceByIndex();
+        System.out.println();
+        System.out.println("Enter Your Choice : ");
+        int choice = sc.nextInt();
+        switch (choice) {
+		case 1:
+			customer.cart.showPriceByIndex(0);
+			break;
+		case 2:
+			customer.cart.showPriceByIndex(1);
+			break;
+		case 3:
+			System.out.println(customer.cart.calculateTotal());
+			break;
+		default:
+			break;
+		}
     }
 }

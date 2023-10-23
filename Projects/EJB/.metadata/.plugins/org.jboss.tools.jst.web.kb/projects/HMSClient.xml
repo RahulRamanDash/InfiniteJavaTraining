@@ -363,8 +363,6 @@
    <linked-resource declaration="true"
     name="%1;%2;%3;%4;%5;%6;%7;%8;%9;%10;%11;%12;" path="%0"/>
   </core>
-  <core validator-id="batch-verification"/>
-  <core validator-id="jboss.jsf.core"/>
   <el>
    <linked-el length="12" name="%13" offset="973" path="%14"/>
    <linked-el length="43" name="%13" offset="1213" path="%14"/>
