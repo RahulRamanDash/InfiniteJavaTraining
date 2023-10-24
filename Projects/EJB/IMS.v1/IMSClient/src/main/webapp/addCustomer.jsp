@@ -28,29 +28,29 @@ body {
 
 		<h:outputText value="LastName " />
 		<h:inputText id="lname" value="#{customer.lastName}" />
-		<br />
+		<br/>
 
 		<h:outputText value="Gender " />
-		<h:inputText id="gender" value="#{customer.gender}" />
-		<br />
+		<h:selectOneMenu value="#{customer.gender}">
+			<f:selectItem itemValue="Male" itemLabel="Male" />
+			<f:selectItem itemValue="Female" itemLabel="Female" />
+		</h:selectOneMenu>
+		<br/>
 
-		<h:outputText value="Date Of Birth " />
+		<h:outputText value="Date Of Birth (yyyy-mm-dd)" />
 		<h:inputText id="dob-id" value="#{customer.dateOfBirth}"
 			converterMessage="Please provide date of birth in yyyy-mm-dd format">
-			<f:convertDateTime pattern="yyyy-mm-dd" />
+			<f:convertDateTime pattern="yyyy-MM-dd" />
 		</h:inputText>
-		<br />
+		<br/>
 
 		<h:outputText value="UserName " />
 		<h:inputText id="uname" value="#{customer.userName}" />
-		<br />
+		<br/>
 
 		<h:outputText value="Email " />
 		<h:inputText id="email" value="#{customer.email}" />
-		<br />
-
-		<br />
-		<br />
+		<br/><br/>
 		<h:commandButton action="#{customerImpl.addCustomerDao(customer)}"
 			value="Send Otp" />
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

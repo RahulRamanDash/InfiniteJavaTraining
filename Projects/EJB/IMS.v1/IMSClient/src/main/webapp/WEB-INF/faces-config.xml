@@ -20,6 +20,11 @@
    <managed-bean-scope>request</managed-bean-scope>
 </managed-bean>
 <managed-bean>
+	<managed-bean-name>policyImpl</managed-bean-name>
+   <managed-bean-class>com.java.hib.CustomerPolicyDaoImpl</managed-bean-class>
+   <managed-bean-scope>request</managed-bean-scope>
+</managed-bean>
+<managed-bean>
 	<managed-bean-name>customer</managed-bean-name>
    <managed-bean-class>com.java.hib.CustomerDetails</managed-bean-class>
    <managed-bean-scope>request</managed-bean-scope>
@@ -27,6 +32,11 @@
 <managed-bean>
 	<managed-bean-name>auth</managed-bean-name>
    <managed-bean-class>com.java.hib.CustomerAuthorization</managed-bean-class>
+   <managed-bean-scope>request</managed-bean-scope>
+</managed-bean>
+<managed-bean>
+	<managed-bean-name>policy</managed-bean-name>
+   <managed-bean-class>com.java.hib.CustomerPolicy</managed-bean-class>
    <managed-bean-scope>request</managed-bean-scope>
 </managed-bean>
 

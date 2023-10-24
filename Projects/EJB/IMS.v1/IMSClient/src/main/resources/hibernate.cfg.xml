@@ -11,5 +11,6 @@
         <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
 		<mapping resource="com/java/hib/CustomerDetails.hbm.xml"/>
 		<mapping resource="com/java/hib/CustomerAuthorization.hbm.xml"/>
+		<mapping resource="com/java/hib/CustomerPolicy.hbm.xml"/>
     </session-factory>
 </hibernate-configuration>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Oct 24, 2023, 6:10:26 PM by Hibernate Tools 3.6.2.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class dynamic-insert="false" dynamic-update="false" mutable="true" name="com.java.hib.CustomerPolicy" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="CUSTOMER_POLICY">
+        <id name="policyId" type="int">
+            <column name="POLICYID"/>
+            <generator class="assigned"/>
+        </id>
+        <property generated="never" lazy="false" name="custId" optimistic-lock="true" type="int" unique="false">
+            <column name="CUST_ID"/>
+        </property>
+        <property generated="never" lazy="false" name="insuranceId" optimistic-lock="true" type="int" unique="false">
+            <column name="INSURANCE_ID"/>
+        </property>
+        <property generated="never" lazy="false" name="insuranceAmount" optimistic-lock="true" type="double" unique="false">
+            <column name="INSURANCEAMOUNT"/>
+        </property>
+        <property generated="never" lazy="false" name="payMode" optimistic-lock="true" unique="false">
+            <column name="PAYMODE"/>
+            <type name="org.hibernate.type.EnumType">
+                <param name="enumClass">com.java.hib.PayMode</param>
+                <param name="type">12</param>
+            </type>
+        </property>
+        <property generated="never" lazy="false" name="initialAmount" optimistic-lock="true" type="double" unique="false">
+            <column name="INITIALAMOUNT"/>
+        </property>
+        <property generated="never" lazy="false" name="registerDate" optimistic-lock="true" type="java.util.Date" unique="false">
+            <column name="REGISTERDATE"/>
+        </property>
+    </class>
+</hibernate-mapping>

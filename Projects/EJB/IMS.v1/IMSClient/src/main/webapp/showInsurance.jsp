@@ -31,6 +31,12 @@
 				</f:facet>
 				<h:outputText value="#{e.insuranceName}" />
 			</h:column>
+			<h:column>
+				<f:facet name="header">
+					<h:outputLabel value="Take Policy" />
+				</f:facet>
+				<h:commandButton action="#{policyImpl.redirectToTakePolicy(e.insuranceId)}" value="" />
+			</h:column>
 			</h:dataTable>
 		</center>
 	</h:form>

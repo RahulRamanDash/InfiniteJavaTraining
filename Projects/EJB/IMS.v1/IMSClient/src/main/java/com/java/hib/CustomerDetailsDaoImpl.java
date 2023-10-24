@@ -124,6 +124,17 @@ public class CustomerDetailsDaoImpl implements CustomerDetailsDAO {
 			return "";
 		}
 	}
+	public void setStatusInCustomerDetails() {
+		Map<String, Object> sessionMap = FacesContext.getCurrentInstance().getExternalContext().getSessionMap();
+		String loggedUser = (String) sessionMap.get("loggedUser");
+		CustomerDetails customerFound = searchCustomer(loggedUser);
+		customerFound.setStatus(Status.valueOf("Active"));
+		sf = SessionHelper.getConnection();
+		session = sf.openSession();
+		Transaction transaction = session.beginTransaction();
+		session.update(customerFound);
+		transaction.commit();
+	}
 
 	public void setStatusInAuth(int custId) {
 		CustomerAuthorization auth = searchCustomerAuthorization(custId);
@@ -151,9 +162,10 @@ public class CustomerDetailsDaoImpl implements CustomerDetailsDAO {
 		int cusId = customerFound.getCustId();
 		CustomerAuthorization authFound = searchCustomerAuthorization(cusId);
 		if (count == 1) {
-			if (authFound.getStatus().equals("Active")) {
+			if (authFound.getStatus().equals("Active")) {	
+				sessionMap.put("loggedCustId", authFound.getCustId());
 				sessionMap.put("loggedUser", customer.getUserName());
-				return "showInsurance.jsp?faces-redirect=true";
+				return "userDashboard.jsp?faces-redirect=true";
 			} else {
 				sessionMap.put("loginError", "Account is Inactive...");
 				return "";
