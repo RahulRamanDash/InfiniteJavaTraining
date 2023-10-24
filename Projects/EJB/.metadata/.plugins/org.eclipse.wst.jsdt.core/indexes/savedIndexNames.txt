@@ -1,7 +1,5 @@
-INDEX VERSION 1.4+D:\eclipse-workspace\Projects\EJB\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
-2887981674.index
-3342265488.index
-2189819548.index
-3096391337.index
-2525502078.index
-4100402041.index
+INDEX VERSION 1.4+D:\InfiniteJavaTraining\Projects\EJB\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+1301029733.index
+527137372.index
+4197111556.index
+1793380631.index

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config xmlns="http://java.sun.com/xml/ns/javaee" 
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+              xsi:schemaLocation="http://java.sun.com/xml/ns/javaee /WEB-INF/schema/web-facesconfig_2_0.xsd" 
+              version="2.0" metadata-complete="false">
+    <!-- This file must be present with our jar, even if it is empty.  Otherwise, our Java annotations won't get scanned! -->
+<managed-bean>
+	<managed-bean-name>insuranceEjbImpl</managed-bean-name>
+   <managed-bean-class>com.java.ejb.InsuranceEjbImpl</managed-bean-class>
+   <managed-bean-scope>request</managed-bean-scope>
+</managed-bean>
+<managed-bean>
+	<managed-bean-name>customerImpl</managed-bean-name>
+   <managed-bean-class>com.java.hib.CustomerDetailsDaoImpl</managed-bean-class>
+   <managed-bean-scope>request</managed-bean-scope>
+</managed-bean>
+<managed-bean>
+	<managed-bean-name>customerAuthImpl</managed-bean-name>
+   <managed-bean-class>com.java.hib.CustomerAuthorizationDaoImpl</managed-bean-class>
+   <managed-bean-scope>request</managed-bean-scope>
+</managed-bean>
+<managed-bean>
+	<managed-bean-name>customer</managed-bean-name>
+   <managed-bean-class>com.java.hib.CustomerDetails</managed-bean-class>
+   <managed-bean-scope>request</managed-bean-scope>
+</managed-bean>
+<managed-bean>
+	<managed-bean-name>auth</managed-bean-name>
+   <managed-bean-class>com.java.hib.CustomerAuthorization</managed-bean-class>
+   <managed-bean-scope>request</managed-bean-scope>
+</managed-bean>
+
+</faces-config>

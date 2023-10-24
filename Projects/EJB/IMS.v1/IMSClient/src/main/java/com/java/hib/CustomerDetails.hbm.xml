@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Oct 23, 2023, 4:40:40 PM by Hibernate Tools 3.6.2.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class dynamic-insert="false" dynamic-update="false" mutable="true" name="com.java.hib.CustomerDetails" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="CUSTOMER_DETAILS">
+        <id name="custId" type="int">
+            <column name="CUST_ID"/>
+            <generator class="assigned"/>
+        </id>
+        <property generated="never" lazy="false" name="firstName" optimistic-lock="true" type="java.lang.String" unique="false">
+            <column name="FIRSTNAME"/>
+        </property>
+        <property generated="never" lazy="false" name="lastName" optimistic-lock="true" type="java.lang.String" unique="false">
+            <column name="LASTNAME"/>
+        </property>
+        <property generated="never" lazy="false" name="gender" optimistic-lock="true" unique="false">
+            <column name="GENDER"/>
+            <type name="org.hibernate.type.EnumType">
+                <param name="enumClass">com.java.hib.Gender</param>
+                <param name="type">12</param>
+            </type>
+        </property>
+        <property generated="never" lazy="false" name="dateOfBirth" optimistic-lock="true" type="java.sql.Date" unique="false">
+            <column name="DATEOFBIRTH"/>
+        </property>
+        <property generated="never" lazy="false" name="userName" optimistic-lock="true" type="java.lang.String" unique="false">
+            <column name="USERNAME"/>
+        </property>
+        <property generated="never" lazy="false" name="passCode" optimistic-lock="true" type="java.lang.String" unique="false">
+            <column name="PASSCODE"/>
+        </property>
+        <property generated="never" lazy="false" name="status" optimistic-lock="true" unique="false">
+            <column name="STATUS"/>
+            <type name="org.hibernate.type.EnumType">
+                <param name="enumClass">com.java.hib.Status</param>
+                <param name="type">12</param>
+            </type>
+        </property>
+                <property generated="never" lazy="false" name="email" optimistic-lock="true" type="java.lang.String" unique="false">
+            <column name="Email"/>
+        </property>
+    </class>
+</hibernate-mapping>
