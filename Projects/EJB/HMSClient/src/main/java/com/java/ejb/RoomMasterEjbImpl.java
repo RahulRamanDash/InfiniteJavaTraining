@@ -45,6 +45,7 @@ public class RoomMasterEjbImpl {
 	}
 	
 	
+	
 	public List<String> showRoomTypeEjb() throws NamingException, ClassNotFoundException, SQLException {
 		RoomMasterBeanRemote remote = RoomMasterHelper.lookupRemoteStatelessEmploy();
 		return remote.showRoomType();

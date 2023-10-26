@@ -8,6 +8,7 @@
 		<item key="isRegEx" value="false"/>
 		<item key="selection" value="patient"/>
 		<list key="findhistory">
+			<item value="query "/>
 			<item value="employ"/>
 		</list>
 		<list key="replacehistory">

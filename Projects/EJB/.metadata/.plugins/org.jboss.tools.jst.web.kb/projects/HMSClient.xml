@@ -25,47 +25,47 @@
    <libraries>
     <library class="tld">
      <id class="model-object"
-      path="FileSystems/lib-jsf-impl-2.2.14.jar/meta-inf/html_basic.tld" project="HMSClient"/>
+      path="FileSystems/lib-jsf-impl-2.2.14.jar/meta-inf/html_basic.tld" project="CustomerPagination"/>
     </library>
     <library class="tld">
      <id class="model-object"
-      path="FileSystems/lib-jsf-impl-2.2.14.jar/meta-inf/jsf_core.tld" project="HMSClient"/>
+      path="FileSystems/lib-jsf-impl-2.2.14.jar/meta-inf/jsf_core.tld" project="CustomerPagination"/>
     </library>
     <library class="facelet">
      <id class="model-object"
-      path="FileSystems/lib-jsf-impl-2.2.14.jar/meta-inf/mojarra_ext.taglib.xml" project="HMSClient"/>
+      path="FileSystems/lib-jsf-impl-2.2.14.jar/meta-inf/mojarra_ext.taglib.xml" project="CustomerPagination"/>
     </library>
     <library class="tld">
      <id class="model-object"
-      path="FileSystems/lib-jsf-impl-2.2.14.jar/meta-inf/mojarra_ext.tld" project="HMSClient"/>
+      path="FileSystems/lib-jsf-impl-2.2.14.jar/meta-inf/mojarra_ext.tld" project="CustomerPagination"/>
     </library>
     <library class="facelet">
      <id class="model-object"
-      path="FileSystems/lib-jsf-impl-2.2.14.jar/com/sun/faces/metadata/taglib/composite.taglib.xml" project="HMSClient"/>
+      path="FileSystems/lib-jsf-impl-2.2.14.jar/com/sun/faces/metadata/taglib/composite.taglib.xml" project="CustomerPagination"/>
     </library>
     <library class="facelet">
      <id class="model-object"
-      path="FileSystems/lib-jsf-impl-2.2.14.jar/com/sun/faces/metadata/taglib/facelets_jsf_core.taglib.xml" project="HMSClient"/>
+      path="FileSystems/lib-jsf-impl-2.2.14.jar/com/sun/faces/metadata/taglib/facelets_jsf_core.taglib.xml" project="CustomerPagination"/>
     </library>
     <library class="facelet">
      <id class="model-object"
-      path="FileSystems/lib-jsf-impl-2.2.14.jar/com/sun/faces/metadata/taglib/html_basic.taglib.xml" project="HMSClient"/>
+      path="FileSystems/lib-jsf-impl-2.2.14.jar/com/sun/faces/metadata/taglib/html_basic.taglib.xml" project="CustomerPagination"/>
     </library>
     <library class="facelet">
      <id class="model-object"
-      path="FileSystems/lib-jsf-impl-2.2.14.jar/com/sun/faces/metadata/taglib/jstl-core.taglib.xml" project="HMSClient"/>
+      path="FileSystems/lib-jsf-impl-2.2.14.jar/com/sun/faces/metadata/taglib/jstl-core.taglib.xml" project="CustomerPagination"/>
     </library>
     <library class="facelet">
      <id class="model-object"
-      path="FileSystems/lib-jsf-impl-2.2.14.jar/com/sun/faces/metadata/taglib/jstl-fn.taglib.xml" project="HMSClient"/>
+      path="FileSystems/lib-jsf-impl-2.2.14.jar/com/sun/faces/metadata/taglib/jstl-fn.taglib.xml" project="CustomerPagination"/>
     </library>
     <library class="facelet">
      <id class="model-object"
-      path="FileSystems/lib-jsf-impl-2.2.14.jar/com/sun/faces/metadata/taglib/mojarra_ext.taglib.xml" project="HMSClient"/>
+      path="FileSystems/lib-jsf-impl-2.2.14.jar/com/sun/faces/metadata/taglib/mojarra_ext.taglib.xml" project="CustomerPagination"/>
     </library>
     <library class="facelet">
      <id class="model-object"
-      path="FileSystems/lib-jsf-impl-2.2.14.jar/com/sun/faces/metadata/taglib/ui.taglib.xml" project="HMSClient"/>
+      path="FileSystems/lib-jsf-impl-2.2.14.jar/com/sun/faces/metadata/taglib/ui.taglib.xml" project="CustomerPagination"/>
     </library>
    </libraries>
   </path>
@@ -89,63 +89,63 @@
    <libraries>
     <library class="tld">
      <id class="model-object"
-      path="FileSystems/lib-jstl-1.2.jar/meta-inf/c-1_0-rt.tld" project="HMSClient"/>
+      path="FileSystems/lib-jstl-1.2.jar/meta-inf/c-1_0-rt.tld" project="CustomerPagination"/>
     </library>
     <library class="tld">
      <id class="model-object"
-      path="FileSystems/lib-jstl-1.2.jar/meta-inf/c-1_0.tld" project="HMSClient"/>
+      path="FileSystems/lib-jstl-1.2.jar/meta-inf/c-1_0.tld" project="CustomerPagination"/>
     </library>
     <library class="tld">
      <id class="model-object"
-      path="FileSystems/lib-jstl-1.2.jar/meta-inf/c.tld" project="HMSClient"/>
+      path="FileSystems/lib-jstl-1.2.jar/meta-inf/c.tld" project="CustomerPagination"/>
     </library>
     <library class="tld">
      <id class="model-object"
-      path="FileSystems/lib-jstl-1.2.jar/meta-inf/fmt-1_0-rt.tld" project="HMSClient"/>
+      path="FileSystems/lib-jstl-1.2.jar/meta-inf/fmt-1_0-rt.tld" project="CustomerPagination"/>
     </library>
     <library class="tld">
      <id class="model-object"
-      path="FileSystems/lib-jstl-1.2.jar/meta-inf/fmt-1_0.tld" project="HMSClient"/>
+      path="FileSystems/lib-jstl-1.2.jar/meta-inf/fmt-1_0.tld" project="CustomerPagination"/>
     </library>
     <library class="tld">
      <id class="model-object"
-      path="FileSystems/lib-jstl-1.2.jar/meta-inf/fmt.tld" project="HMSClient"/>
+      path="FileSystems/lib-jstl-1.2.jar/meta-inf/fmt.tld" project="CustomerPagination"/>
     </library>
     <library class="tld">
      <id class="model-object"
-      path="FileSystems/lib-jstl-1.2.jar/meta-inf/fn.tld" project="HMSClient"/>
+      path="FileSystems/lib-jstl-1.2.jar/meta-inf/fn.tld" project="CustomerPagination"/>
     </library>
     <library class="tld">
      <id class="model-object"
-      path="FileSystems/lib-jstl-1.2.jar/meta-inf/permittedtaglibs.tld" project="HMSClient"/>
+      path="FileSystems/lib-jstl-1.2.jar/meta-inf/permittedtaglibs.tld" project="CustomerPagination"/>
     </library>
     <library class="tld">
      <id class="model-object"
-      path="FileSystems/lib-jstl-1.2.jar/meta-inf/scriptfree.tld" project="HMSClient"/>
+      path="FileSystems/lib-jstl-1.2.jar/meta-inf/scriptfree.tld" project="CustomerPagination"/>
     </library>
     <library class="tld">
      <id class="model-object"
-      path="FileSystems/lib-jstl-1.2.jar/meta-inf/sql-1_0-rt.tld" project="HMSClient"/>
+      path="FileSystems/lib-jstl-1.2.jar/meta-inf/sql-1_0-rt.tld" project="CustomerPagination"/>
     </library>
     <library class="tld">
      <id class="model-object"
-      path="FileSystems/lib-jstl-1.2.jar/meta-inf/sql-1_0.tld" project="HMSClient"/>
+      path="FileSystems/lib-jstl-1.2.jar/meta-inf/sql-1_0.tld" project="CustomerPagination"/>
     </library>
     <library class="tld">
      <id class="model-object"
-      path="FileSystems/lib-jstl-1.2.jar/meta-inf/sql.tld" project="HMSClient"/>
+      path="FileSystems/lib-jstl-1.2.jar/meta-inf/sql.tld" project="CustomerPagination"/>
     </library>
     <library class="tld">
      <id class="model-object"
-      path="FileSystems/lib-jstl-1.2.jar/meta-inf/x-1_0-rt.tld" project="HMSClient"/>
+      path="FileSystems/lib-jstl-1.2.jar/meta-inf/x-1_0-rt.tld" project="CustomerPagination"/>
     </library>
     <library class="tld">
      <id class="model-object"
-      path="FileSystems/lib-jstl-1.2.jar/meta-inf/x-1_0.tld" project="HMSClient"/>
+      path="FileSystems/lib-jstl-1.2.jar/meta-inf/x-1_0.tld" project="CustomerPagination"/>
     </library>
     <library class="tld">
      <id class="model-object"
-      path="FileSystems/lib-jstl-1.2.jar/meta-inf/x.tld" project="HMSClient"/>
+      path="FileSystems/lib-jstl-1.2.jar/meta-inf/x.tld" project="CustomerPagination"/>
     </library>
    </libraries>
   </path>
@@ -207,67 +207,67 @@
    <libraries>
     <library class="tld">
      <id class="model-object"
-      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/meta-inf/c-1_0-rt.tld" project="HMSClient"/>
+      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/meta-inf/c-1_0-rt.tld" project="CustomerPagination"/>
     </library>
     <library class="tld">
      <id class="model-object"
-      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/meta-inf/c-1_0.tld" project="HMSClient"/>
+      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/meta-inf/c-1_0.tld" project="CustomerPagination"/>
     </library>
     <library class="tld">
      <id class="model-object"
-      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/meta-inf/c-1_1.tld" project="HMSClient"/>
+      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/meta-inf/c-1_1.tld" project="CustomerPagination"/>
     </library>
     <library class="tld">
      <id class="model-object"
-      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/meta-inf/c.tld" project="HMSClient"/>
+      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/meta-inf/c.tld" project="CustomerPagination"/>
     </library>
     <library class="tld">
      <id class="model-object"
-      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/meta-inf/fmt-1_0-rt.tld" project="HMSClient"/>
+      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/meta-inf/fmt-1_0-rt.tld" project="CustomerPagination"/>
     </library>
     <library class="tld">
      <id class="model-object"
-      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/meta-inf/fmt-1_0.tld" project="HMSClient"/>
+      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/meta-inf/fmt-1_0.tld" project="CustomerPagination"/>
     </library>
     <library class="tld">
      <id class="model-object"
-      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/meta-inf/fmt.tld" project="HMSClient"/>
+      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/meta-inf/fmt.tld" project="CustomerPagination"/>
     </library>
     <library class="tld">
      <id class="model-object"
-      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/meta-inf/fn.tld" project="HMSClient"/>
+      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/meta-inf/fn.tld" project="CustomerPagination"/>
     </library>
     <library class="tld">
      <id class="model-object"
-      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/meta-inf/permittedtaglibs.tld" project="HMSClient"/>
+      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/meta-inf/permittedtaglibs.tld" project="CustomerPagination"/>
     </library>
     <library class="tld">
      <id class="model-object"
-      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/meta-inf/scriptfree.tld" project="HMSClient"/>
+      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/meta-inf/scriptfree.tld" project="CustomerPagination"/>
     </library>
     <library class="tld">
      <id class="model-object"
-      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/meta-inf/sql-1_0-rt.tld" project="HMSClient"/>
+      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/meta-inf/sql-1_0-rt.tld" project="CustomerPagination"/>
     </library>
     <library class="tld">
      <id class="model-object"
-      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/meta-inf/sql-1_0.tld" project="HMSClient"/>
+      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/meta-inf/sql-1_0.tld" project="CustomerPagination"/>
     </library>
     <library class="tld">
      <id class="model-object"
-      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/meta-inf/sql.tld" project="HMSClient"/>
+      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/meta-inf/sql.tld" project="CustomerPagination"/>
     </library>
     <library class="tld">
      <id class="model-object"
-      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/meta-inf/x-1_0-rt.tld" project="HMSClient"/>
+      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/meta-inf/x-1_0-rt.tld" project="CustomerPagination"/>
     </library>
     <library class="tld">
      <id class="model-object"
-      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/meta-inf/x-1_0.tld" project="HMSClient"/>
+      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/meta-inf/x-1_0.tld" project="CustomerPagination"/>
     </library>
     <library class="tld">
      <id class="model-object"
-      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/meta-inf/x.tld" project="HMSClient"/>
+      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/meta-inf/x.tld" project="CustomerPagination"/>
     </library>
    </libraries>
   </path>
@@ -363,58 +363,62 @@
    <linked-resource declaration="true"
     name="%1;%2;%3;%4;%5;%6;%7;%8;%9;%10;%11;%12;" path="%0"/>
   </core>
+  <core validator-id="batch-verification"/>
+  <core validator-id="jboss.jsf.core"/>
   <el>
    <linked-el length="12" name="%13" offset="973" path="%14"/>
    <linked-el length="43" name="%13" offset="1213" path="%14"/>
    <linked-el length="12" name="%13" offset="642" path="%14"/>
    <linked-el length="36" name="%13" offset="455" path="%14"/>
    <linked-el length="14" name="%13" offset="807" path="%14"/>
+   <linked-el length="30" name="%15" offset="1322" path="%16"/>
    <linked-el length="41" name="%15" offset="824" path="%16"/>
    <linked-el length="38" name="%15" offset="758" path="%16"/>
    <linked-el length="37" name="%15" offset="676" path="%16"/>
    <linked-el length="32" name="%15" offset="931" path="%16"/>
    <linked-el length="35" name="%15" offset="1023" path="%16"/>
-   <linked-el length="36" name="%15" offset="1103" path="%16"/>
-   <linked-el length="65" name="%15" offset="1167" path="%16"/>
-   <linked-el length="30" name="%15" offset="1294" path="%16"/>
-   <linked-el length="15" name="%17" offset="604" path="%16"/>
-   <linked-el length="21" name="%18" offset="910" path="%19"/>
-   <linked-el length="48" name="%18" offset="1278" path="%19"/>
-   <linked-el length="18" name="%18" offset="521" path="%19"/>
-   <linked-el length="20" name="%18" offset="809" path="%19"/>
-   <linked-el length="21" name="%18" offset="1114" path="%19"/>
-   <linked-el length="17" name="%18" offset="613" path="%19"/>
-   <linked-el length="20" name="%18" offset="710" path="%19"/>
-   <linked-el length="21" name="%18" offset="1012" path="%19"/>
+   <linked-el length="44" name="%15" offset="1067" path="%16"/>
+   <linked-el length="36" name="%15" offset="1131" path="%16"/>
+   <linked-el length="65" name="%15" offset="1195" path="%16"/>
+   <linked-el length="21" name="%17" offset="910" path="%18"/>
+   <linked-el length="48" name="%17" offset="1278" path="%18"/>
+   <linked-el length="18" name="%17" offset="521" path="%18"/>
+   <linked-el length="20" name="%17" offset="809" path="%18"/>
+   <linked-el length="21" name="%17" offset="1114" path="%18"/>
+   <linked-el length="17" name="%17" offset="613" path="%18"/>
+   <linked-el length="20" name="%17" offset="710" path="%18"/>
+   <linked-el length="21" name="%17" offset="1012" path="%18"/>
+   <linked-el length="15" name="%19" offset="604" path="%16"/>
    <linked-el length="17" name="%20" offset="1369" path="%21"/>
    <linked-el length="36" name="%22" offset="455" path="%14"/>
+   <linked-el length="30" name="%23" offset="1322" path="%16"/>
    <linked-el length="41" name="%23" offset="824" path="%16"/>
    <linked-el length="38" name="%23" offset="758" path="%16"/>
    <linked-el length="37" name="%23" offset="676" path="%16"/>
    <linked-el length="32" name="%23" offset="931" path="%16"/>
    <linked-el length="35" name="%23" offset="1023" path="%16"/>
-   <linked-el length="36" name="%23" offset="1103" path="%16"/>
-   <linked-el length="65" name="%23" offset="1167" path="%16"/>
-   <linked-el length="30" name="%23" offset="1294" path="%16"/>
-   <linked-el length="48" name="%24" offset="1278" path="%19"/>
+   <linked-el length="44" name="%23" offset="1067" path="%16"/>
+   <linked-el length="36" name="%23" offset="1131" path="%16"/>
+   <linked-el length="65" name="%23" offset="1195" path="%16"/>
+   <linked-el length="48" name="%24" offset="1278" path="%18"/>
    <linked-el length="43" name="%24" offset="1213" path="%14"/>
-   <linked-el length="21" name="%25" offset="910" path="%19"/>
-   <linked-el length="48" name="%25" offset="1278" path="%19"/>
-   <linked-el length="18" name="%25" offset="521" path="%19"/>
-   <linked-el length="20" name="%25" offset="809" path="%19"/>
-   <linked-el length="21" name="%25" offset="1114" path="%19"/>
-   <linked-el length="17" name="%25" offset="613" path="%19"/>
-   <linked-el length="20" name="%25" offset="710" path="%19"/>
-   <linked-el length="21" name="%25" offset="1012" path="%19"/>
+   <linked-el length="21" name="%25" offset="910" path="%18"/>
+   <linked-el length="48" name="%25" offset="1278" path="%18"/>
+   <linked-el length="18" name="%25" offset="521" path="%18"/>
+   <linked-el length="20" name="%25" offset="809" path="%18"/>
+   <linked-el length="21" name="%25" offset="1114" path="%18"/>
+   <linked-el length="17" name="%25" offset="613" path="%18"/>
+   <linked-el length="20" name="%25" offset="710" path="%18"/>
+   <linked-el length="21" name="%25" offset="1012" path="%18"/>
    <linked-el length="17" name="%26" offset="1369" path="%21"/>
    <linked-el length="12" name="%27" offset="973" path="%14"/>
    <linked-el length="43" name="%27" offset="1213" path="%14"/>
    <linked-el length="12" name="%27" offset="642" path="%14"/>
    <linked-el length="14" name="%27" offset="807" path="%14"/>
-   <linked-el length="48" name="%28" offset="1278" path="%19"/>
+   <linked-el length="48" name="%28" offset="1278" path="%18"/>
    <linked-el length="43" name="%28" offset="1213" path="%14"/>
-   <linked-el length="48" name="%29" offset="1278" path="%19"/>
-   <linked-el length="9" name="%29" offset="1219" path="%19"/>
+   <linked-el length="48" name="%29" offset="1278" path="%18"/>
+   <linked-el length="9" name="%29" offset="1219" path="%18"/>
   </el>
  </validation>
  <aliases>
@@ -422,10 +426,10 @@
   <alias path="/HMSClient/src/main/webapp/WEB-INF/faces-config.xml" value="%0"/>
   <alias
    path="/HMSClient/src/main/java/com/java/ejb/RoomMasterEjbImpl.java" value="%15"/>
-  <alias path="patientId" value="%17"/>
+  <alias path="patientId" value="%19"/>
   <alias path="jersey.version" value="%20"/>
   <alias path="/HMSClient/src/main/java/com/java/ejb/DoctorEjbImpl.java" value="%22"/>
-  <alias path="/HMSClient/src/main/webapp/addPatient.jsp" value="%19"/>
+  <alias path="/HMSClient/src/main/webapp/addPatient.jsp" value="%18"/>
   <alias path="com.java.ejb.PatientEjbImpl" value="%5"/>
   <alias path="/HMSClient/src/main/webapp/showDoectors.jsp" value="%14"/>
   <alias path="patient" value="%25"/>
@@ -436,7 +440,7 @@
   <alias path="dId" value="%29"/>
   <alias path="com.java.ejb.RoomMasterEjbImpl" value="%12"/>
   <alias path="com.java.ejb.DoctorMaster" value="%4"/>
-  <alias path="/HMSClient/src/main/java/com/java/ejb/PatientMaster.java" value="%18"/>
+  <alias path="/HMSClient/src/main/java/com/java/ejb/PatientMaster.java" value="%17"/>
   <alias
    path="\HMSClient\src\main\java\com\java\ejb\PatientEjbImpl.java" value="%8"/>
   <alias path="com.java.ejb.RoomAllocationEjbImpl" value="%10"/>

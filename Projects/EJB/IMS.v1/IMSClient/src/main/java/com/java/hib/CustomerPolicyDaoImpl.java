@@ -81,7 +81,7 @@ public class CustomerPolicyDaoImpl implements CustomerPolicyDAO{
 	double calculateInitialAmount (double insuranceAmount){
 		double gstRate = 0.18; // 18% GST rate
 		double gstAmount = insuranceAmount * gstRate;
-		double initialAmount = insuranceAmount - gstAmount;
+		double initialAmount = insuranceAmount + gstAmount;
 		return initialAmount;
 	}
 	

@@ -1,8 +1,0 @@
-package com.java.ejb;
-
-public class DoctorEjbImpl {
-	public List<DoctorMaster> showEmployEjb() throws NamingException, ClassNotFoundException, SQLException {
-		 DoctorBeanRemote remote = DoctorRemoteHelper.lookupRemoteStatelessEmploy();
-		 return remote.showEmploy();
-		}
-}

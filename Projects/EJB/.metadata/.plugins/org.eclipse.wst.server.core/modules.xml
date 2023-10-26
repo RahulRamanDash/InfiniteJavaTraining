@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <modules>
   <module moduleId="org.eclipse.jst.jee.server:HMSClient" serverId="WildFly 9.x"/>
+  <module moduleId="org.eclipse.jst.jee.server:CustomerPagination" serverId="WildFly 9.x"/>
   <module moduleId="org.eclipse.jst.jee.server:HMSServer" serverId="WildFly 9.x"/>
 </modules>

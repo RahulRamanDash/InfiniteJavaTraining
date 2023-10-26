@@ -35,7 +35,7 @@
 			<h:outputText id="type" value="#{roomMasterEjbImpl.roomType}" />
 			<br/><br/>
 			<h:selectOneMenu id="roomAvail" value="#{roomMasterEjbImpl.roomNo}"
-				onchange="submit()"
+				onchange="#{roomMasterEjbImpl.roomNoChanged()}"
 				valueChangeListener="#{roomMasterEjbImpl.roomNoChanged}">
 				<f:selectItems value="#{roomMasterEjbImpl.showRoomNoEjb(roomMasterEjbImpl.roomType)}" />
 			</h:selectOneMenu>

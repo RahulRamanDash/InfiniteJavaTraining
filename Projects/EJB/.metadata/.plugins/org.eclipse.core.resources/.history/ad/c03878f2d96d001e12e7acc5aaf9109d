@@ -1,7 +1,0 @@
-package com.java.ejb;
-
-import java.util.List;
-
-public interface RoomAllocationDAO {
-	List<String> showRoomTypeDao();
-}
