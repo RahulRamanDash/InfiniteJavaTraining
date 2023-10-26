@@ -12,6 +12,9 @@
         <property generated="never" lazy="false" name="insuranceId" optimistic-lock="true" type="int" unique="false">
             <column name="INSURANCE_ID"/>
         </property>
+		<property generated="never" lazy="false" name="planId" optimistic-lock="true" type="int" unique="false">
+            <column name="PLAN_ID"/>
+        </property>
         <property generated="never" lazy="false" name="insuranceAmount" optimistic-lock="true" type="double" unique="false">
             <column name="INSURANCEAMOUNT"/>
         </property>

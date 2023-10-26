@@ -30,8 +30,8 @@ body {
 		<h:inputText id="lname" value="#{insuranceId}" />
 		<br />
 		
-		<h:outputText value="Insurance Amount " />
-		<h:inputText id="uname" value="#{policy.insuranceAmount}" />
+		<h:outputText value="Plan Id " />
+		<h:inputText id="uname" value="#{planId}" />
 		<br />
 		
 		<h:outputText value="PayMode " />

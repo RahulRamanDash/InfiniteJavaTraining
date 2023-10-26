@@ -6,6 +6,7 @@ public class CustomerPolicy {
     private int policyId;
     private int custId;
     private int insuranceId;
+    private int planId;
     private double insuranceAmount;
     private PayMode payMode;
     private double initialAmount;
@@ -17,13 +18,13 @@ public class CustomerPolicy {
 		// TODO Auto-generated constructor stub
 	}
 
-	
-	public CustomerPolicy(int policyId, int custId, int insuranceId, double insuranceAmount, PayMode payMode,
-			double initialAmount, Date registerDate) {
+	public CustomerPolicy(int policyId, int custId, int insuranceId, int planId, double insuranceAmount,
+			PayMode payMode, double initialAmount, Date registerDate) {
 		super();
 		this.policyId = policyId;
 		this.custId = custId;
 		this.insuranceId = insuranceId;
+		this.planId = planId;
 		this.insuranceAmount = insuranceAmount;
 		this.payMode = payMode;
 		this.initialAmount = initialAmount;
@@ -31,12 +32,17 @@ public class CustomerPolicy {
 	}
 
 
+
+	
+
+	
 	@Override
 	public String toString() {
 		return "CustomerPolicy [policyId=" + policyId + ", custId=" + custId + ", insuranceId=" + insuranceId
-				+ ", insuranceAmount=" + insuranceAmount + ", payMode=" + payMode + ", initialAmount=" + initialAmount
-				+ ", registerDate=" + registerDate + "]";
+				+ ", planId=" + planId + ", insuranceAmount=" + insuranceAmount + ", payMode=" + payMode
+				+ ", initialAmount=" + initialAmount + ", registerDate=" + registerDate + "]";
 	}
+
 	public int getPolicyId() {
 		return policyId;
 	}
@@ -55,6 +61,13 @@ public class CustomerPolicy {
 	public void setInsuranceId(int insuranceId) {
 		this.insuranceId = insuranceId;
 	}
+	public int getPlanId() {
+		return planId;
+	}
+	public void setPlanId(int planId) {
+		this.planId = planId;
+	}
+
 	public double getInsuranceAmount() {
 		return insuranceAmount;
 	}

@@ -25,7 +25,7 @@
             <h:outputText value="Welcome #{loggedUser}" />
             </b>
              <br/>
-            <h:commandLink action="showInsurance">
+            <h:commandLink action="showInsuranceHib">
                 <h:outputLabel value="show Insurance" />
             </h:commandLink>
             <br/>

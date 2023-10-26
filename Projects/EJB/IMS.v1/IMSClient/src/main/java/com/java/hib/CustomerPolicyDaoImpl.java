@@ -17,9 +17,10 @@ public class CustomerPolicyDaoImpl implements CustomerPolicyDAO{
 	Session session;
 	
 	@Override
-	public String redirectToTakePolicy(int insuranceId) {
+	public String redirectToTakePolicy(int planId,double premiumAmount) {
 		Map<String, Object> sessionMap = FacesContext.getCurrentInstance().getExternalContext().getSessionMap();
-		sessionMap.put("insuranceId", insuranceId);
+		sessionMap.put("planId", planId);
+		sessionMap.put("premiumAmount", premiumAmount);
 		return "takePolicy.jsp?faces-redirect=true";
 	}
 	
@@ -28,15 +29,25 @@ public class CustomerPolicyDaoImpl implements CustomerPolicyDAO{
 		Map<String, Object> sessionMap = FacesContext.getCurrentInstance().getExternalContext().getSessionMap();
 		String custIdStr = (String) sessionMap.get("loggedCustId");
 		String insuranceIdStr = (String) sessionMap.get("insuranceId");
+		String planIdStr = (String) sessionMap.get("planId");
 		int custId = Integer.parseInt(custIdStr);
 		int insuranceId = Integer.parseInt(insuranceIdStr);
+		int planId = Integer.parseInt(planIdStr);
+		
 		policyNew.setCustId(custId);
 		policyNew.setInsuranceId(insuranceId);
+		policyNew.setPlanId(planId);
 		String payMode = policyNew.getPayMode().toString();
-		double insuranceAmount = policyNew.getInsuranceAmount();
-		double initialAmount = calculateInitialAmount(insuranceAmount, payMode);
+		
+		double premiumAmount = (double) sessionMap.get("premiumAmount");
+		System.out.println(premiumAmount);
+		double insuranceAmount = calculateInsuranceAmount(premiumAmount, payMode);
+		System.out.println(insuranceAmount);
+		policyNew.setInsuranceAmount(insuranceAmount);
+		
+		double initialAmount = calculateInitialAmount(insuranceAmount);
 		policyNew.setInitialAmount(initialAmount);
-
+		
 		Date date = new Date();
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         String formattedDate = sdf.format(date);
@@ -55,8 +66,8 @@ public class CustomerPolicyDaoImpl implements CustomerPolicyDAO{
 		return "userDashboard.jsp?faces-redirect=true";
 	}
 	
-
-	double calculateInitialAmount(double insuranceAmount, String PayMode){
+	
+	double calculateInsuranceAmount (double insuranceAmount, String PayMode){
 		if (PayMode.equals("MONTHLY")) {
 			return insuranceAmount/12;
 		}else if (PayMode.equals("QUARTERLY")) {
@@ -66,6 +77,12 @@ public class CustomerPolicyDaoImpl implements CustomerPolicyDAO{
 		}else {
 			return insuranceAmount;
 		}
+	}
+	double calculateInitialAmount (double insuranceAmount){
+		double gstRate = 0.18; // 18% GST rate
+		double gstAmount = insuranceAmount * gstRate;
+		double initialAmount = insuranceAmount - gstAmount;
+		return initialAmount;
 	}
 	
 	

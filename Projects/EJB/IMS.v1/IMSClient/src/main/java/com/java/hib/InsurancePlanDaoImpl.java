@@ -21,6 +21,7 @@ public class InsurancePlanDaoImpl {
 		return "showInsurancePlan.jsp?faces-redirect=true";
 	}
 	
+	
 	public List<InsurancePlan> showInsurancePlanByinsuranceId(int insuranceId) {
 		SessionFactory sf = SessionHelper.getConnection();
 		Session session = sf.openSession();

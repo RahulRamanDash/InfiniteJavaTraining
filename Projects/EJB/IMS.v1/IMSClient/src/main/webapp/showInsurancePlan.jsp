@@ -33,6 +33,12 @@
 			</h:column>
 			<h:column>
 				<f:facet name="header">
+					<h:outputLabel value="Premium Amount" />
+				</f:facet>
+				<h:outputText value="#{e.premiumAmount}" />
+			</h:column>
+			<h:column>
+				<f:facet name="header">
 					<h:outputLabel value="Coverage Amount" />
 				</f:facet>
 				<h:outputText value="#{e.coverageAmount}" />
@@ -41,10 +47,9 @@
 				<f:facet name="header">
 					<h:outputLabel value="Take Policy" />
 				</f:facet>
-				<h:commandButton action="#{policyImpl.redirectToTakePolicy(e.insuranceId)}" value="Take Policy" />
+				<h:commandButton action="#{policyImpl.redirectToTakePolicy(e.planId, e.premiumAmount)}" value="Take Policy" />
 			</h:column>
 			</h:dataTable>
-			
 		</center>
 	</h:form>
 </body>
