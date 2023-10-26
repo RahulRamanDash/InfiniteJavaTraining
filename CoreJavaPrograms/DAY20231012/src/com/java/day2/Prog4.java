@@ -1,27 +1,23 @@
 package com.java.day2;
 
-import java.util.LinkedList;
-import java.util.NoSuchElementException;
-
 public class Prog4 {
     public static void main(String[] args) {
-    	// created a linked list
-        LinkedList<String> names = new LinkedList<>();
-        
-        // Comment out the lines that add elements to get exception
-        
-        // names.add("Alice");
-        // names.add("Bob");
-        // names.add("Charlie");
+        // Declare an array of integers with a fixed size of 5
+        int[] numbers = new int[5];
 
-        try {
-        	// Attempting to remove from an empty list
-            String removedName = names.removeFirst();
-            // Print the removed element
-            System.out.println("Removed: " + removedName);
-        } catch (NoSuchElementException e) {
-        	// this will throw the exception
-            System.err.println("Exception: " + e.getMessage());
+        // Initialize the array with some values
+        numbers[0] = 10;
+        numbers[1] = 20;
+        numbers[2] = 30;
+        numbers[3] = 40;
+        numbers[4] = 50;
+
+        // Access and print the values in the array
+        System.out.println("Array elements:");
+
+        // Use a for loop to iterate through the array and print each element
+        for (int i = 0; i < numbers.length; i++) {
+            System.out.println("Element at index " + i + ": " + numbers[i]);
         }
     }
 }

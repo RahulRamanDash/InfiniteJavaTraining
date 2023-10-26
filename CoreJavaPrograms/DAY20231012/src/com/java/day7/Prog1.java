@@ -1,23 +1,49 @@
 package com.java.day7;
 
-class MyThread extends Thread {
-    public void run() {
-        for (int i = 1; i <= 5; i++) {
-            System.out.println(Thread.currentThread().getId() + " Value " + i);
-        }
+// Base class representing a person
+class Person {
+    String name;
+    int age;
+    int salary;
+
+    // Constructor for initializing name and age
+    Person(String name, int age, int salary) {
+        this.name = name;
+        this.age = age;
+        this.salary = salary;
+    }
+}
+
+// Subclass Student inheriting from Person
+class Student extends Person {
+    int rollNumber;
+    
+    // Constructor for initializing name, age, and roll number
+    Student(String name, int age, int rollNumber, double salary) {
+        // Call the superclass constructor
+        super(name, age, (int) salary);
+        this.rollNumber = rollNumber;
+        
+    }
+
+    // Method to display student information
+    void displayInfo() {
+        System.out.println("Name: " + name + ", Age: " + age + ", Roll Number: " + rollNumber +", salary: "+salary);
     }
 }
 
 public class Prog1 {
     public static void main(String[] args) {
-        // Create two MyThread objects, representing two threads
-        MyThread t1 = new MyThread();
-        MyThread t2 = new MyThread();
+        // Create an array of Student objects
+        Student[] students = {
+            new Student("Alice", 18, 101, 10000.98),
+            new Student("Bob", 19, 102, 20000.78),
+            new Student("Charlie", 20, 103, 30000.56)
+        };
 
-        // Start the first thread
-        t1.start();
-
-        // Start the second thread
-        t2.start();
+        // Loop through the array and display student information
+        for (Student student : students) {
+            student.displayInfo();
+        }
     }
 }

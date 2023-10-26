@@ -1,23 +1,22 @@
 package com.java.day2;
 
-import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Prog2 {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        // This will run for ever
-        while (true) {
-            try {
-                System.out.print("Enter a number: ");
-                int number = scanner.nextInt();
-                System.out.println("You entered: " + number);
-            // if the user enter any othor value then int then it will throw an error
-            } catch (java.util.InputMismatchException e) {
-                System.err.println("Invalid input. Please enter a number.");
-                // if the exception comes breck is used to stop the program
-                break;
-            }
-        }
-    }
-}
+	// this is the main method
+	public static void main(String[] args) {
+		// creating a list named "names"
+		 List<String> names = new ArrayList<>();
 
+	        // Add elements to the list
+	        names.add("Alice");
+	        names.add("Bob");
+	        names.add("Charlie");
+
+	        // go through the list and print elements
+	        for (String name : names) {
+	            System.out.println(name);
+	        }
+	}
+}
