@@ -22,12 +22,13 @@
                 <h:outputText value="Insurance Management System" />
             </h2>
             <b>
-            <h:outputText value="#{loggedUser}" />
+            <h:outputText value="Welcome #{loggedUser}" />
             </b>
+             <br/>
             <h:commandLink action="showInsurance">
                 <h:outputLabel value="show Insurance" />
             </h:commandLink>
-            <br />
+            <br/>
             <h:commandLink action="index">
                 <h:outputLabel value="Customer Details" />
             </h:commandLink>

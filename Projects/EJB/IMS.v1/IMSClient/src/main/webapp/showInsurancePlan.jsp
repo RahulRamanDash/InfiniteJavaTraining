@@ -15,9 +15,9 @@
 	<h:form>
 		<center>
 			<h2>
-				<h:outputText value="Insurance Records" />
+				<h:outputText value="Select Insurance Plan" />
 			</h2>
-		<h:dataTable value="#{insuranceEjbImpl.showInsuranceEjb()}" var="e"
+		<h:dataTable value="#{planImpl.showInsurancePlanByinsuranceId(insuranceId)}" var="e"
 			border="3">
 			<h:column>
 				<f:facet name="header">
@@ -27,15 +27,21 @@
 			</h:column>
 			<h:column>
 				<f:facet name="header">
-					<h:outputLabel value="Insurance Name" />
+					<h:outputLabel value="Plan Id" />
 				</f:facet>
-				<h:outputText value="#{e.insuranceName}" />
+				<h:outputText value="#{e.planId}" />
+			</h:column>
+			<h:column>
+				<f:facet name="header">
+					<h:outputLabel value="Coverage Amount" />
+				</f:facet>
+				<h:outputText value="#{e.coverageAmount}" />
 			</h:column>
 			<h:column>
 				<f:facet name="header">
 					<h:outputLabel value="Take Policy" />
 				</f:facet>
-				<h:commandButton action="#{policyImpl.redirectToTakePolicy(e.insuranceId)}" value="Show Policy" />
+				<h:commandButton action="#{policyImpl.redirectToTakePolicy(e.insuranceId)}" value="Take Policy" />
 			</h:column>
 			</h:dataTable>
 			

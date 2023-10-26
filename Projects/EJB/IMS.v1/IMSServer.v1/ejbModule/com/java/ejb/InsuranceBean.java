@@ -32,4 +32,29 @@ public class InsuranceBean implements InsuranceBeanRemote {
 	    return (List<InsuranceDetails>) query.getResultList();
 	}
 
+	@Override
+	public List<InsuranceDetails> getListOfInsurance(int firstRow, int rowCount) {
+		List<InsuranceDetails> insuranceList = null;
+        try {
+            insuranceList = entityManager.createQuery("SELECT i FROM InsuranceDetails i", InsuranceDetails.class)
+                    .setFirstResult(firstRow)
+                    .setMaxResults(rowCount)
+                    .getResultList();
+        } catch (Exception e) {
+            // Handle exceptions as needed
+        }
+        return insuranceList;
+	}
+	
+	 public int countRows() {
+	        try {
+	            Long rowCount = entityManager.createQuery("SELECT COUNT(e) FROM InsuranceDetails e", Long.class)
+	                    .getSingleResult();
+	            return rowCount.intValue();
+	        } catch (Exception e) {
+	            e.printStackTrace(); // Handle exceptions as needed
+	        }
+	        return 0;
+	    }
+
 }

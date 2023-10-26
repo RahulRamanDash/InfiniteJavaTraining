@@ -25,6 +25,11 @@
    <managed-bean-scope>request</managed-bean-scope>
 </managed-bean>
 <managed-bean>
+	<managed-bean-name>planImpl</managed-bean-name>
+   <managed-bean-class>com.java.hib.InsurancePlanDaoImpl</managed-bean-class>
+   <managed-bean-scope>request</managed-bean-scope>
+</managed-bean>
+<managed-bean>
 	<managed-bean-name>customer</managed-bean-name>
    <managed-bean-class>com.java.hib.CustomerDetails</managed-bean-class>
    <managed-bean-scope>request</managed-bean-scope>
@@ -38,6 +43,16 @@
 	<managed-bean-name>policy</managed-bean-name>
    <managed-bean-class>com.java.hib.CustomerPolicy</managed-bean-class>
    <managed-bean-scope>request</managed-bean-scope>
+</managed-bean>
+<managed-bean>
+	<managed-bean-name>paginationDao</managed-bean-name>
+    <managed-bean-class>com.java.ejb.JsfPaginationBean</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+</managed-bean>
+<managed-bean>
+	<managed-bean-name>pageDao</managed-bean-name>
+    <managed-bean-class>com.java.hib.JsfPaginationBean</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
 </managed-bean>
 
 </faces-config>
