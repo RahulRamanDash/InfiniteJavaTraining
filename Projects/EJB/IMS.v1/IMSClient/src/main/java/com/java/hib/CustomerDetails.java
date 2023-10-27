@@ -12,15 +12,15 @@ public class CustomerDetails {
 	    private String email;
 	    private String passCode;
 	    private Status status;
+	    private int admin;
 	    
 		public CustomerDetails() {
 			super();
 			// TODO Auto-generated constructor stub
 		}
 
-		
 		public CustomerDetails(int custId, String firstName, String lastName, Gender gender, Date dateOfBirth,
-				String userName, String email, String passCode, Status status) {
+				String userName, String email, String passCode, Status status, int admin) {
 			super();
 			this.custId = custId;
 			this.firstName = firstName;
@@ -31,15 +31,20 @@ public class CustomerDetails {
 			this.email = email;
 			this.passCode = passCode;
 			this.status = status;
+			this.admin = admin;
 		}
+
+
 
 
 		@Override
 		public String toString() {
 			return "CustomerDetails [custId=" + custId + ", firstName=" + firstName + ", lastName=" + lastName
 					+ ", gender=" + gender + ", dateOfBirth=" + dateOfBirth + ", userName=" + userName + ", email="
-					+ email + ", passCode=" + passCode + ", status=" + status + "]";
+					+ email + ", passCode=" + passCode + ", status=" + status + ", admin=" + admin + "]";
 		}
+
+
 
 
 		public int getCustId() {
@@ -95,6 +100,14 @@ public class CustomerDetails {
 		}
 		public void setStatus(Status status) {
 			this.status = status;
+		}
+
+		public int getAdmin() {
+			return admin;
+		}
+
+		public void setAdmin(int admin) {
+			this.admin = admin;
 		}
 	    
 	    

@@ -1,0 +1,12 @@
+package com.java.hms;
+public class PatientReport {
+    private int reportId;
+    private String pid;
+    private String testCode;
+    private String testName;
+    private String testDescription;
+    private double cost;
+    private String comments;
+
+    
+}

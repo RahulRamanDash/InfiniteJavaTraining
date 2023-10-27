@@ -20,19 +20,21 @@
         <h:form>
             <h2>
                 <h:outputText value="Insurance Management System" />
+                <br/>
+                <h:outputText value="Customer Dashboard"/>
             </h2>
+            <br/>
             <b>
             <h:outputText value="Welcome #{loggedUser}" />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <h:commandButton action="#{customerImpl.customerLogout()}" value="Logout"></h:commandButton>
             </b>
              <br/>
-            <h:commandLink action="showInsuranceHib">
-                <h:outputLabel value="show Insurance" />
-            </h:commandLink>
-            <br/>
-            <h:commandLink action="index">
-                <h:outputLabel value="Customer Details" />
-            </h:commandLink>
         </h:form>
+        <jsp:include page="CustomerMenu.jsp"/>
     </body>
     </html>
 </f:view>

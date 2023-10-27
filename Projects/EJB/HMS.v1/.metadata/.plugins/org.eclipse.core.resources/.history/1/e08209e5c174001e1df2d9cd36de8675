@@ -1,0 +1,43 @@
+package com.java.hms;
+
+import javax.naming.NamingException;
+
+public class Controller {
+	
+	private PatientReport report;
+	private PatientEjbImpl ejbImpl;
+	public PatientReport getReport() {
+		return report;
+	}
+	public void setReport(PatientReport report) {
+		this.report = report;
+	}
+	public PatientEjbImpl getEjbImpl() {
+		return ejbImpl;
+	}
+	public void setEjbImpl(PatientEjbImpl ejbImpl) {
+		this.ejbImpl = ejbImpl;
+	}
+	
+	
+	
+	public String showPatientReport() {
+		return ejbImpl.showPatientReportEjb();
+}
+	
+	public String addPatientReport() throws NamingException {
+		if (addValid()) {
+				return ejbImpl.addPatientReportEjb(report);
+		}
+		return "";
+	}
+
+	
+	
+	
+	
+	public boolean addValid() {
+		
+		
+	}
+}

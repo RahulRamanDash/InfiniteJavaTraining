@@ -84,11 +84,13 @@ public class CustomerDetailsDaoImpl implements CustomerDetailsDAO {
 	}
 
 	public CustomerDetails searchCustomer(String userName) {
+		Map<String, Object> sessionMap = FacesContext.getCurrentInstance().getExternalContext().getSessionMap();
 		SessionFactory sf = SessionHelper.getConnection();
 		Session session = sf.openSession();
 		Criteria cr = session.createCriteria(CustomerDetails.class);
 		cr.add(Restrictions.eq("userName", userName));
 		CustomerDetails customerFound = (CustomerDetails) cr.uniqueResult();
+		sessionMap.put("customerFound", customerFound);
 		return customerFound;
 	}
 
@@ -146,7 +148,7 @@ public class CustomerDetailsDaoImpl implements CustomerDetailsDAO {
 		transaction.commit();
 	}
 
-	public String validateLogin(CustomerDetails customer) {
+	public String validateCustomerLogin(CustomerDetails customer) {
 		Map<String, Object> sessionMap = FacesContext.getCurrentInstance().getExternalContext().getSessionMap();
 		String pwd = EncryptPassword.getCode(customer.getPassCode());
 		sf = SessionHelper.getConnection();
@@ -162,10 +164,16 @@ public class CustomerDetailsDaoImpl implements CustomerDetailsDAO {
 		int cusId = customerFound.getCustId();
 		CustomerAuthorization authFound = searchCustomerAuthorization(cusId);
 		if (count == 1) {
-			if (authFound.getStatus().equals("Active")) {	
+			
+			if (authFound.getStatus().equals("Active")) {
 				sessionMap.put("loggedCustId", authFound.getCustId());
 				sessionMap.put("loggedUser", customer.getUserName());
-				return "userDashboard.jsp?faces-redirect=true";
+				if (customerFound.getAdmin()==1) {					
+					return "AdminDashboard.jsp?faces-redirect=true";
+				}else {					
+					return "userDashboard.jsp?faces-redirect=true";
+				}
+				
 			} else {
 				sessionMap.put("loginError", "Account is Inactive...");
 				return "";
@@ -175,5 +183,51 @@ public class CustomerDetailsDaoImpl implements CustomerDetailsDAO {
 			return "Invalid UserName or Password...";
 		}
 	}
+//	public String validateAdminLogin(CustomerDetails customer) {
+//		Map<String, Object> sessionMap = FacesContext.getCurrentInstance().getExternalContext().getSessionMap();
+//		String pwd = EncryptPassword.getCode(customer.getPassCode());
+//		sf = SessionHelper.getConnection();
+//		session = sf.openSession();
+//		Criteria criteria = session.createCriteria(CustomerDetails.class);
+//		criteria.add(Restrictions.eqOrIsNull("userName", customer.getUserName()));
+//		criteria.add(Restrictions.eqOrIsNull("passCode", pwd));
+//		criteria.add(Restrictions.eqOrIsNull("passCode", pwd));
+//		//criteria.add(Restrictions.eqOrIsNull("admin", 1));
+//		
+//		criteria.setProjection(Projections.rowCount());
+//		long count = (long) criteria.uniqueResult();
+//		
+//		CustomerDetails customerFound = searchCustomer(customer.getUserName());
+//		int cusId = customerFound.getCustId();
+//		CustomerAuthorization authFound = searchCustomerAuthorization(cusId);
+//		if (count == 1) {
+//			if (customerFound.getAdmin()==1) {
+//				if (authFound.getStatus().equals("Active")) {	
+//					sessionMap.put("loggedCustId", authFound.getCustId());
+//					sessionMap.put("loggedUser", customer.getUserName());
+//					return "userDashboard.jsp?faces-redirect=true";
+//				} else {
+//					sessionMap.put("loginError", "Customer Login Not Allowed...");
+//					return "";
+//				}
+//			}else {
+//				sessionMap.put("loginError", "Account is Inactive...");
+//				return "";
+//			}
+//			
+//		} else {
+//			return "Invalid UserName or Password...";
+//		}
+//	}
+	public String customerLogout() {
+		Map<String, Object> sessionMap = FacesContext.getCurrentInstance().getExternalContext().getSessionMap();
+	    FacesContext.getCurrentInstance().getExternalContext().invalidateSession();
+	    String remUser = FacesContext.getCurrentInstance().getExternalContext().getRemoteUser();
+	    System.out.println(sessionMap.get("loggedUser"));
+	    return "customerLogin.jsp?faces-redirect=true";
+	    
+	}
+	
+
 
 }

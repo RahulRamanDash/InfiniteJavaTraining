@@ -1,0 +1,61 @@
+package com.java.hms;
+
+import java.util.List;
+import java.util.regex.Pattern;
+
+import javax.naming.NamingException;
+
+public class Controller {
+	
+	private PatientReport report;
+	private PatientEjbImpl patientejbImpl;
+	
+	
+	
+	
+	
+	public PatientReport getReport() {
+		return report;
+	}
+
+	public void setReport(PatientReport report) {
+		this.report = report;
+	}
+
+	public PatientEjbImpl getPatientejbImpl() {
+		return patientejbImpl;
+	}
+
+	public void setPatientejbImpl(PatientEjbImpl patientejbImpl) {
+		this.patientejbImpl = patientejbImpl;
+	}
+
+	public List<PatientReport> showPatientReport() throws NamingException {
+		return patientejbImpl.showPatientReportEjb();
+}
+	
+	public String addPatientReport() throws NamingException {
+		if (addValid()) {
+				return patientejbImpl.addPatientReportEjb(report);
+		}
+		return "";
+	}
+
+	
+	String testCode = "^T"; 
+	String testName = "^.{5,}$";
+	
+	public boolean addValid() {
+		
+		if (!Pattern.matches(testCode, report.getTestCode())) {
+			return false;
+		}
+		if (!Pattern.matches(testName, report.getTestName())){
+			return false;
+		}
+		if (report.getCost()>=50) {
+			return false;
+		}
+		return true;
+	}
+}

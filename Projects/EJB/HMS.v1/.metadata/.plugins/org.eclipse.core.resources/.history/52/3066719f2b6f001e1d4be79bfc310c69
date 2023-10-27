@@ -1,9 +1,0 @@
-package com.java.hib;
-
-public class OtpTest {
-	public static void main(String[] args) {
-		PatientMasterDaoImpl dao = new PatientMasterDaoImpl();
-		
-		System.out.println(dao.generateResetKey());
-	}
-}

@@ -1,0 +1,7 @@
+package com.java.hms;
+
+public class Controller {
+	
+	private PatientReport report;
+	private PatientEjbImpl ejbImpl;
+}

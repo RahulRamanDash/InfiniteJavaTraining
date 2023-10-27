@@ -35,8 +35,11 @@
                 <param name="type">12</param>
             </type>
         </property>
-                <property generated="never" lazy="false" name="email" optimistic-lock="true" type="java.lang.String" unique="false">
+        <property generated="never" lazy="false" name="email" optimistic-lock="true" type="java.lang.String" unique="false">
             <column name="Email"/>
+        </property>
+        <property generated="never" lazy="false" name="admin" optimistic-lock="true" type="int" unique="false">
+            <column name="ADMIN"/>
         </property>
     </class>
 </hibernate-mapping>

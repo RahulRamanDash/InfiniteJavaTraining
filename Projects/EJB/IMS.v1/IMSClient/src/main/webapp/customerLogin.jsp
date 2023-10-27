@@ -28,7 +28,7 @@ body {
 		<h:outputText value="Password " />
 		<h:inputText id="pass" value="#{customer.passCode}" />
 		<br />
-		<h:commandButton action="#{customerImpl.validateLogin(customer)}"
+		<h:commandButton action="#{customerImpl.validateCustomerLogin(customer)}"
 			value="Login" />
 		<br />
 		<br />

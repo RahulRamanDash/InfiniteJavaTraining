@@ -2,6 +2,7 @@ package com.java.hib;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.Map;
 
@@ -53,7 +54,6 @@ public class CustomerPolicyDaoImpl implements CustomerPolicyDAO{
         String formattedDate = sdf.format(date);
         System.out.println("Current Date is : "+sdf.parse(formattedDate));
         policyNew.setRegisterDate(sdf.parse(formattedDate));
-		
 		sf = SessionHelper.getConnection();
 		session = sf.openSession();
 		Transaction transaction = session.beginTransaction();
@@ -62,6 +62,13 @@ public class CustomerPolicyDaoImpl implements CustomerPolicyDAO{
 		
 		CustomerDetailsDaoImpl impl = new CustomerDetailsDaoImpl();
 		impl.setStatusInCustomerDetails();
+		
+		String loggedUser = (String) sessionMap.get("loggedUser");
+		CustomerDetails customerFound = impl.searchCustomer(loggedUser);
+		Date regDate = sdf.parse(formattedDate);
+		String email = customerFound.getEmail();
+		
+		sendSuccessMail(loggedUser, email, regDate);
 		
 		return "userDashboard.jsp?faces-redirect=true";
 	}
@@ -85,5 +92,15 @@ public class CustomerPolicyDaoImpl implements CustomerPolicyDAO{
 		return initialAmount;
 	}
 	
+	public void sendSuccessMail(String username, String email, Date regDate) {
+		 Calendar calendar = Calendar.getInstance();
+		 calendar.setTime(regDate);
+		 calendar.add(Calendar.MONTH, 1);
+		 Date dueDate = calendar.getTime();
+		
+		String body = "Thank you Mr/Miss  " + username + " for taking our policy." + "\r\n" + "Your Policy has been Activated From Dt"
+				+ regDate + "\r\n" + "Next Payment Due Date Dt " + dueDate;
+		MailSend.mailOtp(email, "Mail Send Succesfully...", body);
+	}
 	
 }

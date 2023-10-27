@@ -15,4 +15,7 @@
     <fullyQualifiedTypeName name="java.util.Map"/>
     <fullyQualifiedTypeName name="org.hibernate.criterion.Projection"/>
     <fullyQualifiedTypeName name="com.java.hib.PatientMaster"/>
+    <fullyQualifiedTypeName name="com.java.hms.PatientEjbImpl"/>
+    <fullyQualifiedTypeName name="java.util.regex.Pattern"/>
+    <fullyQualifiedTypeName name="com.java.hms.PatientReport"/>
 </qualifiedTypeNameHistroy>

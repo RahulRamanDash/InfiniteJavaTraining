@@ -1,8 +1,0 @@
-package com.java.hib;
-
-import java.sql.SQLException;
-
-public interface PatientMasterDAO {
-	String getpatientIdDao() throws ClassNotFoundException, SQLException;
-	String addPatientDao(PatientMaster patient) throws ClassNotFoundException, SQLException;
-}

@@ -32,11 +32,20 @@ public class PatientBean implements PatientBeanRemote {
 		Query query = entityManager.createQuery("SELECT e FROM PatientMaster e");
 	    return (List<PatientMaster>) query.getResultList();
 	}
+
+	@Override
+	public List<PatientReport> showPatientReport() {
+		System.out.println("Entit Manager is  " +entityManager);
+		Query query = entityManager.createQuery("SELECT e FROM PatientReport e");
+	    return (List<PatientReport>) query.getResultList();
+	}
+
+	@Override
+	public String addPatientReport(PatientReport report) {
+		entityManager.persist(report);
+		return "Patient Report Inserted...";
+	}
     
-//	@Override
-//	public String addPatient(PatientMaster patient) throws ClassNotFoundException, SQLException {
-//		return patientDao.addPatientDao(patient);
-//	}
 
 
 

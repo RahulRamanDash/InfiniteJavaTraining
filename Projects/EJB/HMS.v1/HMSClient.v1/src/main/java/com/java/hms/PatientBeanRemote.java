@@ -8,5 +8,7 @@ import javax.ejb.Remote;
 @Remote
 public interface PatientBeanRemote {
 	List<PatientMaster> showPatient();
-	//String addPatient(PatientMaster patient) throws ClassNotFoundException, SQLException;
+	List<PatientReport> showPatientReport();
+	String addPatientReport(PatientReport report);
+	
 }

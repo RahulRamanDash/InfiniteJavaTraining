@@ -13,6 +13,7 @@
     </head>
     <body>
         <h:form>
+           <jsp:include page="Menu.jsp"/>
         <center>
                 <h2><h:outputText value="Select Insurance"/></h2>
             </center>
