@@ -4,13 +4,16 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
 import java.util.Map;
 
 import javax.faces.context.FacesContext;
 
+import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
+import org.hibernate.criterion.Restrictions;
 
 public class CustomerPolicyDaoImpl implements CustomerPolicyDAO{
 	
@@ -25,17 +28,24 @@ public class CustomerPolicyDaoImpl implements CustomerPolicyDAO{
 		return "takePolicy.jsp?faces-redirect=true";
 	}
 	
+	public List<CustomerPolicy> showCustomerPolicy(int custId) {
+		SessionFactory sf = SessionHelper.getConnection();
+		Session session = sf.openSession();
+		List<InsurancePlan> cdList = null;
+			session.beginTransaction();
+			Criteria criteria = session.createCriteria(CustomerPolicy.class);
+			criteria.add(Restrictions.eqOrIsNull("custId", custId));
+		return criteria.list();
+	}
+	
 	@Override
 	public String takePolicy(CustomerPolicy policyNew) throws ParseException {
 		Map<String, Object> sessionMap = FacesContext.getCurrentInstance().getExternalContext().getSessionMap();
-		String custIdStr = (String) sessionMap.get("loggedCustId");
 		String insuranceIdStr = (String) sessionMap.get("insuranceId");
 		String planIdStr = (String) sessionMap.get("planId");
-		int custId = Integer.parseInt(custIdStr);
 		int insuranceId = Integer.parseInt(insuranceIdStr);
 		int planId = Integer.parseInt(planIdStr);
 		
-		policyNew.setCustId(custId);
 		policyNew.setInsuranceId(insuranceId);
 		policyNew.setPlanId(planId);
 		String payMode = policyNew.getPayMode().toString();
@@ -54,7 +64,9 @@ public class CustomerPolicyDaoImpl implements CustomerPolicyDAO{
         String formattedDate = sdf.format(date);
         System.out.println("Current Date is : "+sdf.parse(formattedDate));
         policyNew.setRegisterDate(sdf.parse(formattedDate));
-		sf = SessionHelper.getConnection();
+        System.out.println("cusid is : "+policyNew.getCustId());
+		System.out.println(policyNew);
+        sf = SessionHelper.getConnection();
 		session = sf.openSession();
 		Transaction transaction = session.beginTransaction();
 		session.save(policyNew);
@@ -64,11 +76,16 @@ public class CustomerPolicyDaoImpl implements CustomerPolicyDAO{
 		impl.setStatusInCustomerDetails();
 		
 		String loggedUser = (String) sessionMap.get("loggedUser");
-		CustomerDetails customerFound = impl.searchCustomer(loggedUser);
+		System.out.println(loggedUser);
+		System.out.println(policyNew.getCustId());
+		CustomerDetails customerFound = impl.searchCustomerById(policyNew.getCustId());
+		System.out.println("Cus Found : "+customerFound);
 		Date regDate = sdf.parse(formattedDate);
 		String email = customerFound.getEmail();
+		System.out.println(email);
+		String fullName = customerFound.getFirstName()+ " " + customerFound.getLastName();
 		
-		sendSuccessMail(loggedUser, email, regDate);
+		sendSuccessMail(fullName, email, regDate);
 		
 		return "userDashboard.jsp?faces-redirect=true";
 	}

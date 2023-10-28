@@ -23,7 +23,7 @@ body {
 	<h:form id="form">
 	
 		<h:outputText value="Cust Id " />
-		<h:inputText id="fname" value="#{loggedCustId}" />
+		<h:inputText id="fname" value="#{policy.custId}" />
 		<br />
 
 		<h:outputText value="Insurance Id " />

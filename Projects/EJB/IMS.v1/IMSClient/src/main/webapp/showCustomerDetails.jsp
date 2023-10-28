@@ -3,7 +3,6 @@
 
 <%@taglib prefix="f" uri="http://java.sun.com/jsf/core"%>
 <%@taglib prefix="h" uri="http://java.sun.com/jsf/html"%>
-
 <f:view>
 	<html>
 <head>
@@ -17,6 +16,7 @@ body {
 </style>
 </head>
 <body>
+        <jsp:include page="CustomerMenu.jsp"/>
 	<h2>
 		<h:outputText value="Customer Details" />
 	</h2>
@@ -46,7 +46,6 @@ body {
 		<h:outputText value="Status " />
 		<h:inputText id="status" value="#{customerFound.status}" />
 		<br/><br/>
-		<h:inputText id="status" value="#{customer.email}" />
 		
 	</h:form>
 </body>

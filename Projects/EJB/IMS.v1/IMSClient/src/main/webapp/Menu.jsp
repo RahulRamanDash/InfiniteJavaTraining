@@ -7,7 +7,7 @@
         <title>JSP Page</title>
     </head>
 <center>
-	<a href="AdminDashboard.jsp">Dashboard</a>
+	<a href="AdminDashboard.jsf">Dashboard</a>
   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
 
 	<a href="showAllCustomer.jsf">Show Customer's</a>

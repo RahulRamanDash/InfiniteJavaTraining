@@ -12,7 +12,7 @@
 
 	<a href="showCustomerDetails.jsf">Show Customer's</a>
   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-	<a href="showInsuranceHib.jsf">show Insurance</a>
+	<a href="showCustomerPolicy.jsf">My Policy</a>
 	  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
 	
 </center>

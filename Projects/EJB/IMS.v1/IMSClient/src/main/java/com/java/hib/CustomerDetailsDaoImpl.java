@@ -93,6 +93,15 @@ public class CustomerDetailsDaoImpl implements CustomerDetailsDAO {
 		sessionMap.put("customerFound", customerFound);
 		return customerFound;
 	}
+	
+	public CustomerDetails searchCustomerById(int custId) {
+		SessionFactory sf = SessionHelper.getConnection();
+		Session session = sf.openSession();
+		Criteria cr = session.createCriteria(CustomerDetails.class);
+		cr.add(Restrictions.eq("custId", custId));
+		CustomerDetails customerFound = (CustomerDetails) cr.uniqueResult();
+		return customerFound;
+	}
 
 	public CustomerAuthorization searchCustomerAuthorization(int cusId) {
 		SessionFactory sf = SessionHelper.getConnection();
