@@ -93,13 +93,17 @@ public class CustomerPolicyDaoImpl implements CustomerPolicyDAO{
 	}
 	
 	public void sendSuccessMail(String username, String email, Date regDate) {
-		 Calendar calendar = Calendar.getInstance();
-		 calendar.setTime(regDate);
-		 calendar.add(Calendar.MONTH, 1);
-		 Date dueDate = calendar.getTime();
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+ 		Calendar calendar = Calendar.getInstance();
+		calendar.setTime(regDate);
+		calendar.add(Calendar.MONTH, 1);
+		Date dueDate = calendar.getTime();
+		String regDateStr = sdf.format(regDate);
+		String dueDateStr = sdf.format(dueDate);
 		
-		String body = "Thank you Mr/Miss  " + username + " for taking our policy." + "\r\n" + "Your Policy has been Activated From Dt"
-				+ regDate + "\r\n" + "Next Payment Due Date Dt " + dueDate;
+		
+		String body = "Thank you Mr/Miss  " + username + " for taking our policy." + "\r\n" + "Your Policy has been Activated From Dt "
+				+ regDateStr + "\r\n" + "Next Payment Due Date Dt " + dueDateStr;
 		MailSend.mailOtp(email, "Mail Send Succesfully...", body);
 	}
 	
