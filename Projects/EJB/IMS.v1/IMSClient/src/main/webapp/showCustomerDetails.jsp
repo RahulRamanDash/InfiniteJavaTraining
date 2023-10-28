@@ -16,10 +16,11 @@ body {
 </style>
 </head>
 <body>
-        <jsp:include page="CustomerMenu.jsp"/>
 	<h2>
 		<h:outputText value="Customer Details" />
 	</h2>
+	<br/>
+        <jsp:include page="CustomerMenu.jsp"/>
 	<h:form id="form">
 	
 		<h:outputText value="Customer Id " />
