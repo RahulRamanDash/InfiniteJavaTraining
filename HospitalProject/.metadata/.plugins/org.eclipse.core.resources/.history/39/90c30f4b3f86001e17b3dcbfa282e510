@@ -1,0 +1,86 @@
+<%@page contentType="text/html"%>
+<%@page pageEncoding="UTF-8"%>
+
+<%@taglib prefix="f" uri="http://java.sun.com/jsf/core"%>
+<%@taglib prefix="h" uri="http://java.sun.com/jsf/html"%>
+
+<f:view>
+    <html>
+        <head>
+            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            <title>JSP Page</title>
+            <style>
+                body {
+                    font-family: Arial, sans-serif;
+                    background-color: #f4f4f4;
+                    margin: 0;
+                    padding: 0;
+                    text-align: center;
+                }
+                .form-container {
+                    max-width: 600px;
+                    margin: 0 auto;
+                    background-color: #fff;
+                    padding: 20px;
+                    border-radius: 5px;
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                    text-align: left;
+                }
+                .form-label {
+                    display: block;
+                    font-weight: bold;
+                    margin-bottom: 8px;
+                }
+
+                .form-input {
+                    width: calc(100% - 16px);
+                    padding: 8px;
+                }
+                .form-info {
+                    font-style: italic;
+                    color: #555;
+                    margin-bottom: 10px;
+                }
+                .custom-button {
+                    background-color: #4CAF50;
+                    color: white;
+                    padding: 10px 15px;
+                    border: none;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    margin-top: 15px;
+                }
+            </style>
+        </head>
+        <body>
+
+            <h:form styleClass="form-container">
+                <span class="form-info">Please review the appointment details:</span>
+
+                <span class="form-label">Appointment Id:</span>
+                <h:outputText value="#{appointmentDetail.uhid}" styleClass="form-input" />
+
+                <span class="form-label">Name:</span>
+                <h:outputText value="#{appointmentDetail.firstName} #{appointmentDetail.lastName}" styleClass="form-input" />
+
+                <span class="form-label">Dob:</span>
+                <h:outputText value="#{enrollmentFound.dob.toString().substring(0,10)}" styleClass="form-input" />
+
+                <span class="form-label">Gender:</span>
+                <h:outputText value="#{enrollmentFound.gender}" styleClass="form-input" />
+
+                <span class="form-label">Appointment Date:</span>
+                <h:outputText value="#{appointmentDetail.appointmentDate.toString().substring(0,10)}" styleClass="form-input" />
+
+                <span class="form-label">Appointment Time:</span>
+                <h:outputText value="#{appointmentDetail.appointmentTime}" styleClass="form-input" />
+                <br />
+
+                <h:commandButton action="ShowPatientAppointmentNew" value="Go Back" styleClass="custom-button" />
+                <h:commandButton action="#{appointmentImpl.confirmAppointment(appointmentDetail.appointmentId)}" value="Confirm" styleClass="custom-button" />
+                <h:commandButton action="#{appointmentImpl.cancelAppointment(appointmentDetail.appointmentId)}" value="Cancel" styleClass="custom-button" />
+                <br />
+            </h:form>
+        </body>
+    </html>
+</f:view>

@@ -38,30 +38,7 @@
 				</f:facet>
 				<h:outputText value="#{e.lastName}" />
 			</h:column>
-			<h:column>
-				<f:facet name="header">
-					<h:outputLabel value="Gender" />
-				</f:facet>
-				<h:outputText value="#{e.gender}" />
-			</h:column>
-			<h:column>
-				<f:facet name="header">
-					<h:outputLabel value="Dob" />
-				</f:facet>
-				<h:outputText value="#{e.dateOfBirth}" />
-			</h:column>
-			<h:column>
-				<f:facet name="header">
-					<h:outputLabel value="UserName" />
-				</f:facet>
-				<h:outputText value="#{e.userName}" />
-			</h:column>
-			<h:column>
-				<f:facet name="header">
-					<h:outputLabel value="Email" />
-				</f:facet>
-				<h:outputText value="#{e.email}" />
-			</h:column>
+			
 			</h:dataTable>
 			
 		</center>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Oct 30, 2023, 4:07:18 PM by Hibernate Tools 3.6.2.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class dynamic-insert="false" dynamic-update="false" mutable="true" name="com.java.hib.SimpleInterest" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="SIMPLEINTEREST">
+        <id name="id" type="int">
+            <column name="ID"/>
+            <generator class="assigned"/>
+        </id>
+        <property generated="never" lazy="false" name="pramt" optimistic-lock="true" type="double" unique="false">
+            <column name="PRAMT"/>
+        </property>
+        <property generated="never" lazy="false" name="rate" optimistic-lock="true" type="double" unique="false">
+            <column name="RATE"/>
+        </property>
+        <property generated="never" lazy="false" name="period" optimistic-lock="true" type="int" unique="false">
+            <column name="PERIOD"/>
+        </property>
+        <property generated="never" lazy="false" name="simpleInt" optimistic-lock="true" type="double" unique="false">
+            <column name="SIMPLEINT"/>
+        </property>
+    </class>
+</hibernate-mapping>

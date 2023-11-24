@@ -1,6 +1,0 @@
-package com.java.hms;
-
-
-public class RoomMasterDAO {
-	String showRooms();
-}

@@ -1,18 +1,17 @@
 package com.java.day9;
 
 class Animal{
-	String color = "White";
+	public void printColor1() {		
+		System.out.println("Black");
+	}
 }
 
 // Class Animal inherit using extends class
 class Dog extends Animal{
-	String color = "Black";
 	// Crate a method
-	void printColor() {
-		//Print the color from this Dog class
-		System.out.println(color);
+	public void printColor2() {
 		//Print the color from Animal class through super keyword
-		System.out.println(super.color);
+		System.out.println("Blue");
 	}
 }
 
@@ -21,7 +20,15 @@ public class SuperKeyword {
 		// Create a object name d
 		Dog d = new Dog();
 		// Call the method using object
-		d.printColor();
+		d.printColor2();
+		
+		Animal obj1 = new Animal();
+//		((Dog) obj1).printColor();
+		
+		
+		Animal obj = new Dog();
+		((Dog) obj).printColor2();
+		
 		
 	}
 }

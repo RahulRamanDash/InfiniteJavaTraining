@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="com.java.provider.PatientAppointmentDAO"/>
+    <fullyQualifiedTypeName name="org.hibernate.SessionFactory"/>
+    <fullyQualifiedTypeName name="org.hibernate.Session"/>
+    <fullyQualifiedTypeName name="com.java.provider.showPatientAppointmentTest"/>
+    <fullyQualifiedTypeName name="org.hibernate.mapping.Map"/>
+    <fullyQualifiedTypeName name="java.util.Map"/>
+    <fullyQualifiedTypeName name="org.hibernate.Transaction"/>
+    <fullyQualifiedTypeName name="com.java.provider.Status"/>
+    <fullyQualifiedTypeName name="com.java.provider.PatientEnrollmentDAO"/>
+    <fullyQualifiedTypeName name="com.java.provider.PatientEnrollmentDaoImpl"/>
+    <fullyQualifiedTypeName name="com.java.provider.PatientEnrollment"/>
+    <fullyQualifiedTypeName name="com.java.provider.ClaimHistory"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
+    <fullyQualifiedTypeName name="com.java.provider.PatientAppointmentDaoImpl"/>
+    <fullyQualifiedTypeName name="com.java.provider.JsfPaginationBean"/>
+    <fullyQualifiedTypeName name="java.util.regex.Pattern"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
+    <fullyQualifiedTypeName name="java.time.Instant"/>
+    <fullyQualifiedTypeName name="java.sql.Date"/>
+    <fullyQualifiedTypeName name="org.hibernate.criterion.Restrictions"/>
+    <fullyQualifiedTypeName name="org.hibernate.criterion.Order"/>
+    <fullyQualifiedTypeName name="com.java.provider.PatientAppointment"/>
+    <fullyQualifiedTypeName name="com.java.provider.PatientAppointmentBeanRemote"/>
+</qualifiedTypeNameHistroy>

@@ -57,6 +57,7 @@ public class CustomerPolicyDaoImpl implements CustomerPolicyDAO{
 		policyNew.setInsuranceAmount(insuranceAmount);
 		
 		double initialAmount = calculateInitialAmount(insuranceAmount);
+		sessionMap.put("initialAmount", initialAmount);
 		policyNew.setInitialAmount(initialAmount);
 		
 		Date date = new Date();
@@ -87,7 +88,7 @@ public class CustomerPolicyDaoImpl implements CustomerPolicyDAO{
 		
 		sendSuccessMail(fullName, email, regDate);
 		
-		return "userDashboard.jsp?faces-redirect=true";
+		return "policyAddSuccess.jsp?faces-redirect=true";
 	}
 	
 	
@@ -110,6 +111,7 @@ public class CustomerPolicyDaoImpl implements CustomerPolicyDAO{
 	}
 	
 	public void sendSuccessMail(String username, String email, Date regDate) {
+		Map<String, Object> sessionMap = FacesContext.getCurrentInstance().getExternalContext().getSessionMap();
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
  		Calendar calendar = Calendar.getInstance();
 		calendar.setTime(regDate);
@@ -118,7 +120,8 @@ public class CustomerPolicyDaoImpl implements CustomerPolicyDAO{
 		String regDateStr = sdf.format(regDate);
 		String dueDateStr = sdf.format(dueDate);
 		
-		
+		sessionMap.put("regDateStr", regDateStr);
+		sessionMap.put("dueDateStr", dueDateStr);
 		String body = "Thank you Mr/Miss  " + username + " for taking our policy." + "\r\n" + "Your Policy has been Activated From Dt "
 				+ regDateStr + "\r\n" + "Next Payment Due Date Dt " + dueDateStr;
 		MailSend.mailOtp(email, "Mail Send Succesfully...", body);

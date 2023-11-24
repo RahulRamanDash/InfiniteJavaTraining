@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Nov 1, 2023, 6:50:07 PM by Hibernate Tools 3.6.2.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class dynamic-insert="false" dynamic-update="false" mutable="true" name="com.java.provider.PatientAppointment" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="PATIENT_APPOINTMENT">
+        <id name="appointmentId" type="java.lang.String">
+            <column name="APPOINTMENTID"/>
+            <generator class="assigned"/>
+        </id>
+        <property generated="never" lazy="false" name="providerId" optimistic-lock="true" type="java.lang.String" unique="false">
+            <column name="PROVIDERID"/>
+        </property>
+        <property generated="never" lazy="false" name="uhid" optimistic-lock="true" type="java.lang.String" unique="false">
+            <column name="UHID"/>
+        </property>
+        <property generated="never" lazy="false" name="firstName" optimistic-lock="true" type="java.lang.String" unique="false">
+            <column name="FIRSTNAME"/>
+        </property>
+        <property generated="never" lazy="false" name="lastName" optimistic-lock="true" type="java.lang.String" unique="false">
+            <column name="LASTNAME"/>
+        </property>
+        <property generated="never" lazy="false" name="appointmentDate" optimistic-lock="true" type="java.util.Date" unique="false">
+            <column name="APPOINTMENTDATE"/>
+        </property>
+        <property generated="never" lazy="false" name="appointmentTime" optimistic-lock="true" type="java.lang.String" unique="false">
+            <column name="APPOINTMENTTIME"/>
+        </property>
+        <property generated="never" lazy="false" name="status" optimistic-lock="true" unique="false">
+            <column name="STATUS"/>
+            <type name="org.hibernate.type.EnumType">
+                <param name="enumClass">com.java.provider.Status</param>
+                <param name="type">12</param>
+            </type>
+        </property>
+    </class>
+</hibernate-mapping>

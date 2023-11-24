@@ -1,0 +1,416 @@
+package com.java.provider;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
+import javax.faces.context.FacesContext;
+import javax.faces.event.ValueChangeEvent;
+
+import org.hibernate.Criteria;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.criterion.Order;
+import org.hibernate.criterion.Restrictions;
+
+
+public class PatientAppointmentDaoImpl implements PatientAppointmentDAO{
+	
+	SessionFactory sf;
+	Session session;
+
+	private String searchValue;
+	
+	public String getSearchValue() {
+		return searchValue;
+	}
+	public void setSearchValue(String searchValue) {
+		this.searchValue = searchValue;
+	}
+	
+	private String searchType;
+
+	public String getSearchType() {
+		return searchType;
+	}
+	public void setSearchType(String searchType) {
+		this.searchType = searchType;
+	}
+	
+	private String searchMethod = "Contains";
+	
+	public String getSearchMethod() {
+		return searchMethod;
+	}
+	public void setSearchMethod(String searchMethod) {
+		this.searchMethod = searchMethod;
+	}
+	public void searchTypeChanged(ValueChangeEvent e) {
+		this.searchType = e.getNewValue().toString();
+		Map<String, Object> sessionMap = FacesContext.getCurrentInstance().getExternalContext().getSessionMap();
+		sessionMap.put("searchTypeStr", this.searchType);
+		
+		if(this.searchType.equals("Name")) {
+			sessionMap.put("searchLable", "Enter Name : ");			
+		}else if(this.searchType.equals("patientId")) {
+			sessionMap.put("searchLable", "Enter Patient Id : ");			
+		}else if(this.searchType.equals("Date")) {
+			sessionMap.put("searchLable", "Enter Date : ");			
+		}else if(this.searchType.equals("Time")) {
+			sessionMap.put("searchLable", "Enter Time : ");			
+		}else {
+			sessionMap.put("searchLable", "");			
+			System.out.println("Lable is set to : All");
+		}
+	}
+	
+//	static boolean orderByappointmentId;
+//	static boolean orderByproviderId;
+//	static boolean orderByuhid;
+//	static boolean orderByfirstName;
+//	static boolean orderBylastName;
+	
+	public static String orderByappointmentId = "def";
+	static String orderBypatientId = "test";
+	static String orderByfirstName = "test";
+	static String orderBylastName = "test";
+	static String orderByappointmentDate = "test";
+	static String orderByappointmentTime = "test";
+	
+	
+	public static String getOrderByappointmentId() {
+		return orderByappointmentId;
+	}
+	public static void setOrderByappointmentId(String orderByappointmentId) {
+		PatientAppointmentDaoImpl.orderByappointmentId = orderByappointmentId;
+	}
+	public String sortByAppointmentId() {
+		if(orderByappointmentId.equals("desc") || orderByappointmentId.equals("test")) {
+			orderByappointmentId = "asc";
+			
+			orderBypatientId = "test";
+			orderByfirstName = "test";
+			orderBylastName = "test";
+			orderByappointmentDate = "test";
+			orderByappointmentTime = "test";
+		}else if(orderByappointmentId.length() == 3){
+			orderByappointmentId = "desc";
+			
+			orderBypatientId = "test";
+			orderByfirstName = "test";
+			orderBylastName = "test";
+			orderByappointmentDate = "test";
+			orderByappointmentTime = "test";
+		}
+		return "ShowPatientAppointment.jsp?faces-redirect=true";
+	}
+
+	public String sortByPatientId() {
+		if(orderBypatientId.length()==4) {
+			orderBypatientId = "asc";
+			
+			orderByappointmentId = "test";
+			orderByfirstName = "test";
+			orderBylastName = "test";
+			orderByappointmentDate = "test";
+			orderByappointmentTime = "test";
+		}else if(orderBypatientId.equals("asc")){
+			orderBypatientId = "desc";
+			
+			orderByappointmentId = "test";
+			orderByfirstName = "test";
+			orderBylastName = "test";
+			orderByappointmentDate = "test";
+			orderByappointmentTime = "test";
+		}
+		return "ShowPatientAppointment.jsp?faces-redirect=true";
+	}
+	
+	public String sortByFirstName() {
+		System.out.println("orderByfirstName : "+orderByfirstName.length());
+		if(orderByfirstName.length()==4) {
+			orderByfirstName = "asc";
+			
+			orderByappointmentId = "test";
+			orderBypatientId = "test";
+			orderBylastName = "test";
+			orderByappointmentDate = "test";
+			orderByappointmentTime = "test";
+		}else if(orderByfirstName.equals("asc")){
+			orderByfirstName = "desc";
+			
+			orderByappointmentId = "test";
+			orderBypatientId = "test";
+			orderBylastName = "test";
+			orderByappointmentDate = "test";
+			orderByappointmentTime = "test";
+		}
+		return "ShowPatientAppointment.jsp?faces-redirect=true";
+	}
+	public String sortByLastName() {
+		if(orderBylastName.length()==4) {
+			orderBylastName = "asc";
+			
+			orderByappointmentId = "test";
+			orderBypatientId = "test";
+			orderByfirstName = "test";
+			orderByappointmentDate = "test";
+			orderByappointmentTime = "test";
+		}else if(orderBylastName.equals("asc")){
+			orderBylastName = "desc";
+			
+			orderByappointmentId = "test";
+			orderBypatientId = "test";
+			orderByfirstName = "test";
+			orderByappointmentDate = "test";
+			orderByappointmentTime = "test";
+		}
+		return "ShowPatientAppointment.jsp?faces-redirect=true";
+	}
+	public String sortByAppointmentDate() {
+		if(orderByappointmentDate.length()==4) {
+			orderByappointmentDate = "asc";
+			
+			orderByappointmentId = "test";
+			orderBypatientId = "test";
+			orderByfirstName = "test";
+			orderByappointmentTime = "test";
+		}else if(orderByappointmentDate.equals("asc")){
+			orderByappointmentDate = "desc";
+			
+			orderByappointmentId = "test";
+			orderBypatientId = "test";
+			orderByfirstName = "test";
+			orderByappointmentTime = "test";
+		}
+		return "ShowPatientAppointment.jsp?faces-redirect=true";
+	}
+	public String sortByAppointmentTime() {
+		if(orderByappointmentTime.length()==4) {
+			orderByappointmentTime = "asc";
+			
+			orderByappointmentId = "def";
+			orderBypatientId = "test";
+			orderByfirstName = "test";
+			orderByappointmentDate = "test";
+		}else if(orderByappointmentTime.equals("asc")){
+			orderByappointmentTime = "desc";
+			
+			orderByappointmentId = "def";
+			orderBypatientId = "test";
+			orderByfirstName = "test";
+			orderByappointmentDate = "test";
+		}
+		return "ShowPatientAppointment.jsp?faces-redirect=true";
+	}
+	
+	
+	
+	public List<String> getsearchTypes(){
+		List<String> searchTypeList= new ArrayList<>();
+		
+		searchTypeList.add("Select");
+		searchTypeList.add("patientId");
+		searchTypeList.add("Name");
+		searchTypeList.add("Date");
+		searchTypeList.add("Time");
+		return searchTypeList;
+	}
+
+	
+	public List<PatientAppointment> showDefault() {
+		SessionFactory sf = SessionHelper.getConnection();
+		Session session = sf.openSession();
+		Criteria criteria = session.createCriteria(PatientAppointment.class);
+		return criteria.list();
+	}
+	
+	@Override
+	public List<PatientAppointment> searchPatientAppointmentDao(int firstRow, int rowCount, String searchValue) throws ParseException {
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+		Map<String, Object> sessionMap = FacesContext.getCurrentInstance().getExternalContext().getSessionMap();
+		String searchTypeStr = (String) sessionMap.get("searchTypeStr");
+		String searchMethodStr = (String) sessionMap.get("searchMethod");
+		System.out.println("Method : "+searchMethod);
+		Status status = Status.valueOf("PENDING");
+		System.out.println("type : "+searchTypeStr);
+		SessionFactory sf = SessionHelper.getConnection();
+		Session session = sf.openSession();
+		Criteria criteria = session.createCriteria(PatientAppointment.class);
+		criteria.add(Restrictions.eq("providerId", "D001"));
+		criteria.add(Restrictions.eq("status", status));
+		System.out.println("search value is : "+searchValue);
+		if(searchTypeStr!=null) {
+			if(searchTypeStr.equals("Name") && searchValue.length()!=0) {
+				if(searchMethodStr.equals("StartsWith")) {
+					criteria.add(Restrictions.like("firstName", searchValue+"%"));		
+				}else {
+					criteria.add(Restrictions.like("firstName", "%"+searchValue+"%"));								
+				}
+			}else if(searchTypeStr.equals("patientId") && searchValue.length()!=0) {
+				if(searchMethodStr.equals("StartsWith")) {
+					criteria.add(Restrictions.like("uhid", searchValue+"%"));
+				}else {
+					criteria.add(Restrictions.like("uhid", "%"+searchValue+"%"));
+				}
+			}else if(searchTypeStr.equals("Date") && searchValue.length()!=0) {
+				java.util.Date search =  sdf.parse(searchValue);
+				java.sql.Date sqlDate = new java.sql.Date(search.getTime());
+				System.out.println("Sql date is : "+sqlDate);
+				if(searchMethodStr.equals("StartsWith")) {
+					criteria.add(Restrictions.like("appointmentDate", sqlDate+"%"));
+				}else {
+					criteria.add(Restrictions.like("appointmentDate", "%"+sqlDate+"%"));
+				}
+			}else if(searchTypeStr.equals("Time") && searchValue.length()!=0) {
+				if(searchMethodStr.equals("StartsWith")) {
+					criteria.add(Restrictions.like("appointmentTime", searchValue+"%"));
+				}else {
+					criteria.add(Restrictions.like("appointmentTime", "%"+searchValue+"%"));
+				}
+			}else {
+				System.out.println("all");
+		}
+	}
+		if(orderByappointmentId.equals("asc")) {
+			criteria.addOrder(Order.asc("appointmentId"));
+		}else if(orderByappointmentId.equals("desc")){
+			criteria.addOrder(Order.desc("appointmentId"));
+		}
+		else if(orderBypatientId.equals("asc")) {
+			criteria.addOrder(Order.asc("uhid"));	
+		}else if(orderBypatientId.equals("desc")){
+			criteria.addOrder(Order.desc("uhid"));
+		}
+		else if(orderByfirstName.equals("asc")) {
+			criteria.addOrder(Order.asc("firstName"));
+		}else if(orderByfirstName.equals("desc")){
+			criteria.addOrder(Order.desc("firstName"));
+		}
+		else if(orderBylastName.equals("asc")) {
+			criteria.addOrder(Order.asc("lastName"));
+		}else if(orderBylastName.equals("desc")){
+			criteria.addOrder(Order.desc("lastName"));
+		}
+		else if(orderByappointmentDate.equals("asc")) {
+			criteria.addOrder(Order.asc("appointmentDate"));
+		}else if(orderByappointmentDate.equals("desc")){
+			criteria.addOrder(Order.desc("appointmentDate"));
+		}
+		else if(orderByappointmentTime.equals("asc")) {
+			criteria.addOrder(Order.asc("appointmentTime"));
+		}else if(orderByappointmentTime.equals("desc")){
+			criteria.addOrder(Order.desc("appointmentTime"));
+		}
+		else{
+			System.out.println("done");
+		}
+		
+		criteria.setFirstResult(firstRow);
+		criteria.setMaxResults(rowCount);
+		return criteria.list();
+	}
+	
+	
+	
+	public int countRows(String searchValue) {
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+		Map<String, Object> sessionMap = FacesContext.getCurrentInstance().getExternalContext().getSessionMap();
+		String searchTypeStr = (String) sessionMap.get("searchTypeStr");
+		Status status = Status.valueOf("PENDING");
+		sf = SessionHelper.getConnection();
+		session = sf.openSession();
+		try {
+			session.beginTransaction();
+			Criteria criteria = session.createCriteria(PatientAppointment.class);
+			criteria.add(Restrictions.eq("status", status));
+			if(searchTypeStr!=null) {
+				if(searchTypeStr.equals("Name") && searchValue.length()!=0) {
+					criteria.add(Restrictions.like("firstName", "%"+searchValue+"%"));			
+				}else if(searchTypeStr.equals("patientId") && searchValue.length()!=0) {
+					criteria.add(Restrictions.like("uhid", searchValue+"%"));
+				}else if(searchTypeStr.equals("Date") && searchValue.length()!=0) {
+					java.util.Date search =  sdf.parse(searchValue);
+					java.sql.Date sqlDate = new java.sql.Date(search.getTime());
+					System.out.println("Sql date is : "+sqlDate);
+					System.out.println(search);
+					criteria.add(Restrictions.like("appointmentDate", sqlDate));
+					
+				}else if(searchTypeStr.equals("Time") && searchValue.length()!=0) {
+					criteria.add(Restrictions.like("appointmentTime", searchValue));			
+				}else {
+					System.out.println("all");
+				}
+			}
+			if (criteria != null) {
+				return criteria.list().size();
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return 0;
+	}
+	
+	
+	
+	public String redirectToAppointmentDetails(String appointmentId, String uhid) throws ParseException{
+		Map<String, Object> sessionMap = FacesContext.getCurrentInstance().getExternalContext().getSessionMap();
+		searchAppointmentDetails(appointmentId);
+
+		PatientEnrollmentDAO dao = new PatientEnrollmentDaoImpl();
+		PatientEnrollment enrollmentFound  = dao.searchPatientEnrollment(uhid);
+		sessionMap.put("enrollmentFound", enrollmentFound);
+		System.out.println("enr "+enrollmentFound);
+		return "AppointmentDetails.jsp?faces-redirect=true";
+	}
+	
+	public String redirectToUpdateAppointment(String appointmentId) throws ParseException{
+		Map<String, Object> sessionMap = FacesContext.getCurrentInstance().getExternalContext().getSessionMap();
+		PatientAppointment appointmentFound = searchAppointmentDetails(appointmentId);
+		
+		
+		sessionMap.put("appointmentFound", appointmentFound);
+		return "UpdatePatientAppointment.jsp?faces-redirect=true";
+	}
+	
+	public PatientAppointment searchAppointmentDetails(String appointmentId) throws ParseException{
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+		Map<String, Object> sessionMap = FacesContext.getCurrentInstance().getExternalContext().getSessionMap();
+		sf = SessionHelper.getConnection();
+		session = sf.openSession();
+		Criteria criteria = session.createCriteria(PatientAppointment.class);
+		criteria.add(Restrictions.eq("appointmentId", appointmentId));
+		PatientAppointment appointmentDetail =  (PatientAppointment) criteria.uniqueResult();
+		sessionMap.put("appointmentDetail", appointmentDetail);
+		return appointmentDetail;
+	}
+	
+	public String confirmAppointment(String appointmentId) throws ParseException {
+		System.out.println("APPOINTMENTID "+appointmentId);
+		PatientAppointment appointmenFound = searchAppointmentDetails(appointmentId);
+		appointmenFound.setStatus(Status.valueOf("CONFIRMED"));
+		System.out.println("APPOINTMENFOUND "+appointmenFound);
+		sf = SessionHelper.getConnection();
+		session = sf.openSession();
+		Transaction trans = session.beginTransaction();
+		session.update(appointmenFound);
+		trans.commit();
+		
+		return "ShowPatientAppointment.jsp?faces-redirect=true";
+	}
+	public String cancelAppointment(String appointmentId) throws ParseException {
+		PatientAppointment appointmenFound = searchAppointmentDetails(appointmentId);
+		appointmenFound.setStatus(Status.valueOf("CANCELED"));
+		sf = SessionHelper.getConnection();
+		session = sf.openSession();
+		Transaction trans = session.beginTransaction();
+		session.update(appointmenFound);
+		trans.commit();
+		
+		return "ShowPatientAppointment.jsp?faces-redirect=true";
+	}
+	
+}

@@ -1,0 +1,30 @@
+package com.java.day9;
+
+class Animal{
+	public void color1() {		
+		System.out.println("Black");
+	}
+}
+
+// Class Animal inherit using extends class
+class Dog extends Animal{
+	public void printColor() {
+		System.out.println("Blue");
+		super.color1();
+	}
+}
+
+public class SuperKeyword {
+	public static void main(String[] args) {
+		Dog d = new Dog();
+		d.printColor();
+		
+		Animal obj = new Dog();
+//		((Dog) obj).printColor();
+//		
+//		Animal obj1 = new Animal();
+//		((Dog) obj1).printColor();
+//		obj.color1();
+		
+	}
+}
