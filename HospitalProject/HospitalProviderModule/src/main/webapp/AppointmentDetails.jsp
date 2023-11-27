@@ -13,21 +13,24 @@
             <style>
                 body {
                     font-family: Arial, sans-serif;
-                    background-color: #f4f4f4;
-                    margin: 0;
+                    background-color: #BFD7EA;
                     padding: 0;
                     text-align: center;
                 }
+                
+                h2 {
+                	margin-top: 40px;
+                }
 
                 .form-container {
-                    max-width: 800px; /* Adjust the max-width as needed */
+                    max-width: 800px;
                     margin: 0 auto;
-                    background-color: #ffffff; /* Updated background color */
+                    background-color: #FEE9E1;
                     padding: 20px;
                     border-radius: 5px;
                     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
                     text-align: left;
-                    overflow-x: auto; /* Add this property to enable horizontal scrolling if needed */
+                    overflow-x: auto;
                     display: flex;
                     flex-direction: column;
                 }
@@ -100,9 +103,35 @@
                     align-items: center;
                     margin-top: 15px;
                 }
+                
+                .sucess-box {
+	display: none;
+	background-color: #4CAF50;
+  padding: 1px;
+  margin-bottom: 40px;
+}
+
+/* Style for the close button */
+.close-button {
+  position: relative;
+    top: -34px;
+    right: 16px;
+    color: black;
+    cursor: pointer;
+    float: right;
+}
             </style>
         </head>
         <body>
+        	<h:inputText value="#{manageMsg}" id="sucessInput" style="display: none;"/>
+<div Class="sucess-box" id="manageBox">
+    <h:messages id="manageMsg"/>
+    <span class="close-button" onclick="closeMessage()">X</span>
+</div>
+
+<h2>
+			<h:outputText value="Manage Appointment" />
+		</h2>
 
             <h:form styleClass="form-container">
                 <table>
@@ -129,13 +158,43 @@
                 </table>
 
                 <div class="button-container">
-                    <h:commandButton action="ShowPatientAppointmentNew" value="Go Back" styleClass="custom-button go-back-button" />
+                    <h:commandButton action="#{appointmentImpl.goBackToViewAppointments()}" value="Go Back" styleClass="custom-button go-back-button" />
                     <h:commandButton action="#{appointmentImpl.confirmAppointment(appointmentDetail.appointmentId)}" value="Confirm" styleClass="custom-button confirm-button"/>
                     <h:commandButton action="#{appointmentImpl.cancelAppointment(appointmentDetail.appointmentId)}" value="Cancel" styleClass="custom-button cancel-button" />
                 </div>
 
                 <br />
             </h:form>
+            
+            	<script>
+    // JavaScript function to close the message box
+  viewMsg();
+  function viewMsg() {
+    var manageBox = document.getElementById('manageBox');
+    var errorBox = document.getElementById('errorBox');
+    var sucessInput = document.getElementById('sucessInput');
+        
+    if(sucessInput.value === 'confirmed'){
+    	manageBox.style.display = 'block';
+        }
+    else if(sucessInput.value === 'canceled'){
+    	manageBox.style.display = 'block';
+    	manageBox.style.backgroundColor = "red";   
+        }
+    else{
+    	manageBox.style.display = 'none';
+        }
+
+    
+}
+    
+    function closeMessage() {
+   	  	var manageBox = document.getElementById('manageBox');
+	    manageBox.style.display = 'none';
+    }
+
+  </script>
+            
         </body>
     </html>
 </f:view>

@@ -1,19 +1,22 @@
 package com.java.provider;
 
 import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class Test {
 	public static void main(String[] args) {
-//		PatientAppointmentDAO dao = new PatientAppointmentDaoImpl();
-//		
-//		try {
-//			System.out.println(dao.showPatientAppointmentDao());
-//		} catch (ParseException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-//		
-//		PatientEnrollmentDAO dao1 = new PatientEnrollmentDaoImpl();
-//		System.out.println(dao1.searchPatientEnrollment("P001"));
+	SimpleDateFormat sdf = new SimpleDateFormat();
+	Date date = new Date();
+	String dateStr = sdf.format(date);
+	java.util.Date search;
+	try {
+		search = sdf.parse(dateStr);
+		java.sql.Date sqlDate = new java.sql.Date(search.getTime());
+		System.out.println(sqlDate);
+	} catch (ParseException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
 	}
 }

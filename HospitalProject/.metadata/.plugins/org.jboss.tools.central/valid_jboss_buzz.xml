@@ -1,9 +1,86 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><feed xmlns="http://www.w3.org/2005/Atom">
   <title>JBoss Tools Aggregated Feed</title>
   <id>https://tools.jboss.org</id>
-  <updated>2023-11-19T00:44:31Z</updated>
+  <updated>2023-11-27T00:42:02Z</updated>
   <link href="https://tools.jboss.org"/>
   <xhtml:meta content="noindex" name="robots" xmlns:xhtml="http://www.w3.org/1999/xhtml"/><entry>
+    <title>JBoss Blogs: Fastest way to sort an Array in Java</title>
+    <updated>2023-11-25T09:57:42Z</updated>
+    <id>https://www.mastertheboss.com/java/fastest-way-to-sort-an-array-in-java/</id>
+    <link href="https://www.mastertheboss.com/java/fastest-way-to-sort-an-array-in-java/" rel="alternate"/>
+    <summary type="html"/>
+  </entry>
+  <entry>
+    <title>JBoss Blogs: SmallRye Stork Unwrapped: Exploring New Features and Enhancements</title>
+    <updated>2023-11-23T00:00:00Z</updated>
+    <id>https://quarkus.io/blog/stork-latest-news/</id>
+    <link href="https://quarkus.io/blog/stork-latest-news/" rel="alternate"/>
+    <summary type="html"/>
+  </entry>
+  <entry>
+    <title>JBoss Blogs: Keycloak 23.0.0 released</title>
+    <updated>2023-11-23T00:00:00Z</updated>
+    <id>https://www.keycloak.org/2023/11/keycloak-2300-released</id>
+    <link href="https://www.keycloak.org/2023/11/keycloak-2300-released" rel="alternate"/>
+    <summary type="html"/>
+  </entry>
+  <entry>
+    <title>Quarkus: SmallRye Stork Unwrapped: Exploring New Features and Enhancements</title>
+    <updated>2023-11-23T00:00:00Z</updated>
+    <id>https://quarkus.io/blog/stork-latest-news/</id>
+    <link href="https://quarkus.io/blog/stork-latest-news/" rel="alternate"/>
+    <summary type="html"/>
+  </entry>
+  <entry>
+    <title>JBoss Blogs: WildFly Feature Development Process</title>
+    <updated>2023-11-22T00:00:00Z</updated>
+    <id>https://wildfly.org//news/2023/11/22/WildFly_Feature_Development_Process/</id>
+    <link href="https://wildfly.org//news/2023/11/22/WildFly_Feature_Development_Process/" rel="alternate"/>
+    <summary type="html"/>
+  </entry>
+  <entry>
+    <title>JBoss Blogs: How to customize WildFly using Env variables</title>
+    <updated>2023-11-21T10:03:42Z</updated>
+    <id>https://www.mastertheboss.com/jbossas/jboss-configuration/how-to-customize-wildfly-using-env-variables/</id>
+    <link href="https://www.mastertheboss.com/jbossas/jboss-configuration/how-to-customize-wildfly-using-env-variables/" rel="alternate"/>
+    <summary type="html"/>
+  </entry>
+  <entry>
+    <title>Quarkus: Quarkus 3.5.3 released - Maintenance release</title>
+    <updated>2023-11-21T00:00:00Z</updated>
+    <id>https://quarkus.io/blog/quarkus-3-5-3-released/</id>
+    <link href="https://quarkus.io/blog/quarkus-3-5-3-released/" rel="alternate"/>
+    <summary type="html"/>
+  </entry>
+  <entry>
+    <title>JBoss Blogs: Quarkus 3.5.3 released - Maintenance release</title>
+    <updated>2023-11-21T00:00:00Z</updated>
+    <id>https://quarkus.io/blog/quarkus-3-5-3-released/</id>
+    <link href="https://quarkus.io/blog/quarkus-3-5-3-released/" rel="alternate"/>
+    <summary type="html"/>
+  </entry>
+  <entry>
+    <title>JBoss Blogs: Comparing Java Records with Lombok</title>
+    <updated>2023-11-20T17:31:58Z</updated>
+    <id>https://www.mastertheboss.com/java/comparing-java-records-with-lombok/</id>
+    <link href="https://www.mastertheboss.com/java/comparing-java-records-with-lombok/" rel="alternate"/>
+    <summary type="html"/>
+  </entry>
+  <entry>
+    <title>Quarkus: Quarkus 3.2.9.Final released - Maintenance LTS release</title>
+    <updated>2023-11-20T00:00:00Z</updated>
+    <id>https://quarkus.io/blog/quarkus-3-2-9-final-released/</id>
+    <link href="https://quarkus.io/blog/quarkus-3-2-9-final-released/" rel="alternate"/>
+    <summary type="html"/>
+  </entry>
+  <entry>
+    <title>JBoss Blogs: Quarkus 3.2.9.Final released - Maintenance LTS release</title>
+    <updated>2023-11-20T00:00:00Z</updated>
+    <id>https://quarkus.io/blog/quarkus-3-2-9-final-released/</id>
+    <link href="https://quarkus.io/blog/quarkus-3-2-9-final-released/" rel="alternate"/>
+    <summary type="html"/>
+  </entry>
+  <entry>
     <title>JBoss Blogs: Writing JPA applications using Java Records</title>
     <updated>2023-11-17T18:42:28Z</updated>
     <id>https://www.mastertheboss.com/java-ee/jpa/writing-jpa-applications-using-java-records/</id>
@@ -46,6 +123,20 @@
     <summary type="html"/>
   </entry>
   <entry>
+    <title>JBoss Blogs: Change the default encoding of the audit log file in WildFly</title>
+    <updated>2023-11-16T00:00:00Z</updated>
+    <id>https://wildfly-security.github.io/wildfly-elytron/blog/specify-file-audit-log-encoding/</id>
+    <link href="https://wildfly-security.github.io/wildfly-elytron/blog/specify-file-audit-log-encoding/" rel="alternate"/>
+    <summary type="html"/>
+  </entry>
+  <entry>
+    <title>Quarkus: When Quarkus meets LangChain4j</title>
+    <updated>2023-11-15T00:00:00Z</updated>
+    <id>https://quarkus.io/blog/quarkus-meets-langchain4j/</id>
+    <link href="https://quarkus.io/blog/quarkus-meets-langchain4j/" rel="alternate"/>
+    <summary type="html"/>
+  </entry>
+  <entry>
     <title>JBoss Blogs: Identity Propagation with OpenID Connect</title>
     <updated>2023-11-15T00:00:00Z</updated>
     <id>https://wildfly-security.github.io/wildfly-elytron/blog/wildfly-oidc-identity-propagation/</id>
@@ -54,13 +145,6 @@
   </entry>
   <entry>
     <title>JBoss Blogs: When Quarkus meets LangChain4j</title>
-    <updated>2023-11-15T00:00:00Z</updated>
-    <id>https://quarkus.io/blog/quarkus-meets-langchain4j/</id>
-    <link href="https://quarkus.io/blog/quarkus-meets-langchain4j/" rel="alternate"/>
-    <summary type="html"/>
-  </entry>
-  <entry>
-    <title>Quarkus: When Quarkus meets LangChain4j</title>
     <updated>2023-11-15T00:00:00Z</updated>
     <id>https://quarkus.io/blog/quarkus-meets-langchain4j/</id>
     <link href="https://quarkus.io/blog/quarkus-meets-langchain4j/" rel="alternate"/>
@@ -109,28 +193,7 @@
     <summary type="html"/>
   </entry>
   <entry>
-    <title>JBoss Blogs: Quarkus 3.5.1 released - Maintenance release</title>
-    <updated>2023-11-09T00:00:00Z</updated>
-    <id>https://quarkus.io/blog/quarkus-3-5-1-released/</id>
-    <link href="https://quarkus.io/blog/quarkus-3-5-1-released/" rel="alternate"/>
-    <summary type="html"/>
-  </entry>
-  <entry>
-    <title>JBoss Blogs: Adding Support for Integrity Checking to an Existing Filesystem Realm</title>
-    <updated>2023-11-09T00:00:00Z</updated>
-    <id>https://wildfly-security.github.io/wildfly-elytron/blog/filesystem-integrity-elytron-tool/</id>
-    <link href="https://wildfly-security.github.io/wildfly-elytron/blog/filesystem-integrity-elytron-tool/" rel="alternate"/>
-    <summary type="html"/>
-  </entry>
-  <entry>
-    <title>JBoss Blogs: How to use Keycloak REST API</title>
-    <updated>2023-11-08T10:44:34Z</updated>
-    <id>https://www.mastertheboss.com/keycloak/how-to-use-keycloak-admin-rest-api/</id>
-    <link href="https://www.mastertheboss.com/keycloak/how-to-use-keycloak-admin-rest-api/" rel="alternate"/>
-    <summary type="html"/>
-  </entry>
-  <entry>
-    <title>JBoss Blogs: Exploring why native executables produced with Mandrel 23.1 are bigger than those produced with Mandrel 23.0</title>
+    <title>Quarkus: Exploring why native executables produced with Mandrel 23.1 are bigger than those produced with Mandrel 23.0</title>
     <updated>2023-11-08T00:00:00Z</updated>
     <id>https://quarkus.io/blog/mandrel-23-1-image-size-increase/</id>
     <link href="https://quarkus.io/blog/mandrel-23-1-image-size-increase/" rel="alternate"/>
@@ -141,34 +204,6 @@
     <updated>2023-11-08T00:00:00Z</updated>
     <id>https://quarkus.io/blog/quarkus-3-2-8-final-released/</id>
     <link href="https://quarkus.io/blog/quarkus-3-2-8-final-released/" rel="alternate"/>
-    <summary type="html"/>
-  </entry>
-  <entry>
-    <title>Quarkus: Exploring why native executables produced with Mandrel 23.1 are bigger than those produced with Mandrel 23.0</title>
-    <updated>2023-11-08T00:00:00Z</updated>
-    <id>https://quarkus.io/blog/mandrel-23-1-image-size-increase/</id>
-    <link href="https://quarkus.io/blog/mandrel-23-1-image-size-increase/" rel="alternate"/>
-    <summary type="html"/>
-  </entry>
-  <entry>
-    <title>JBoss Blogs: Quarkus 3.2.8.Final released - Maintenance release</title>
-    <updated>2023-11-08T00:00:00Z</updated>
-    <id>https://quarkus.io/blog/quarkus-3-2-8-final-released/</id>
-    <link href="https://quarkus.io/blog/quarkus-3-2-8-final-released/" rel="alternate"/>
-    <summary type="html"/>
-  </entry>
-  <entry>
-    <title>JBoss Blogs: Developing in the cloud with Eclipse Che</title>
-    <updated>2023-11-07T05:00:00Z</updated>
-    <id>https://wildfly.org//news/2023/11/07/Developping-in-the-cloud-with-Eclipse-Che/</id>
-    <link href="https://wildfly.org//news/2023/11/07/Developping-in-the-cloud-with-Eclipse-Che/" rel="alternate"/>
-    <summary type="html"/>
-  </entry>
-  <entry>
-    <title>JBoss Blogs: Q4 2023 RESTEasy Quarterly Releases</title>
-    <updated>2023-11-02T18:11:11Z</updated>
-    <id>https://resteasy.dev/2023/11/02/resteasy-releases/</id>
-    <link href="https://resteasy.dev/2023/11/02/resteasy-releases/" rel="alternate"/>
     <summary type="html"/>
   </entry>
   <entry>
@@ -186,38 +221,10 @@
     <summary type="html"/>
   </entry>
   <entry>
-    <title>JBoss Blogs: Exploring why native executables produced with Mandrel 23.0 are bigger than those produced with Mandrel 22.3</title>
-    <updated>2023-11-02T00:00:00Z</updated>
-    <id>https://quarkus.io/blog/mandrel-23-0-image-size-increase/</id>
-    <link href="https://quarkus.io/blog/mandrel-23-0-image-size-increase/" rel="alternate"/>
-    <summary type="html"/>
-  </entry>
-  <entry>
-    <title>JBoss Blogs: Redis Integration with Quarkus made simple</title>
-    <updated>2023-11-01T12:19:39Z</updated>
-    <id>https://www.mastertheboss.com/soa-cloud/quarkus/accessing-redis-from-a-quarkus-application/</id>
-    <link href="https://www.mastertheboss.com/soa-cloud/quarkus/accessing-redis-from-a-quarkus-application/" rel="alternate"/>
-    <summary type="html"/>
-  </entry>
-  <entry>
-    <title>Quarkus: Quarkus 3.5.0 released - Java 21, OIDC enhancements</title>
-    <updated>2023-10-25T00:00:00Z</updated>
-    <id>https://quarkus.io/blog/quarkus-3-5-0-released/</id>
-    <link href="https://quarkus.io/blog/quarkus-3-5-0-released/" rel="alternate"/>
-    <summary type="html"/>
-  </entry>
-  <entry>
-    <title>Quarkus: Addressing CVE-2023-44487: An Overview and Quarkus Solution</title>
-    <updated>2023-10-20T00:00:00Z</updated>
-    <id>https://quarkus.io/blog/cve-2023-44487/</id>
-    <link href="https://quarkus.io/blog/cve-2023-44487/" rel="alternate"/>
-    <summary type="html"/>
-  </entry>
-  <entry>
-    <title>Quarkus: Compiling virtual thread applications into native executables</title>
-    <updated>2023-10-19T00:00:00Z</updated>
-    <id>https://quarkus.io/blog/virtual-threads-5/</id>
-    <link href="https://quarkus.io/blog/virtual-threads-5/" rel="alternate"/>
+    <title>Red Hat Developer: How custom SELinux policies secure servers and containers</title>
+    <updated>2023-10-10T07:00:00Z</updated>
+    <id>d6e91ea0-1d78-423b-a69e-d1fcca624933</id>
+    <link href="https://developers.redhat.com/articles/2023/10/10/how-custom-selinux-policies-secure-servers-and-containers" rel="alternate"/>
     <summary type="html"/>
   </entry>
   <entry>
@@ -228,10 +235,10 @@
     <summary type="html"/>
   </entry>
   <entry>
-    <title>Red Hat Developer: How custom SELinux policies secure servers and containers</title>
-    <updated>2023-10-10T07:00:00Z</updated>
-    <id>d6e91ea0-1d78-423b-a69e-d1fcca624933</id>
-    <link href="https://developers.redhat.com/articles/2023/10/10/how-custom-selinux-policies-secure-servers-and-containers" rel="alternate"/>
+    <title>Red Hat Developer: An MIR-based JIT prototype for Ruby</title>
+    <updated>2023-10-09T07:00:00Z</updated>
+    <id>d1945731-4f23-412d-9e73-1617566944e0</id>
+    <link href="https://developers.redhat.com/articles/2023/10/09/mir-based-jit-prototype-ruby" rel="alternate"/>
     <summary type="html"/>
   </entry>
   <entry>
@@ -239,13 +246,6 @@
     <updated>2023-10-09T07:00:00Z</updated>
     <id>13a0b0fc-74fe-4f0a-9a6a-5c3d3a10edd0</id>
     <link href="https://developers.redhat.com/articles/2023/10/09/load-balancing-threading-and-scaling-nodejs" rel="alternate"/>
-    <summary type="html"/>
-  </entry>
-  <entry>
-    <title>Red Hat Developer: An MIR-based JIT prototype for Ruby</title>
-    <updated>2023-10-09T07:00:00Z</updated>
-    <id>d1945731-4f23-412d-9e73-1617566944e0</id>
-    <link href="https://developers.redhat.com/articles/2023/10/09/mir-based-jit-prototype-ruby" rel="alternate"/>
     <summary type="html"/>
   </entry>
   <entry>
@@ -627,17 +627,17 @@
     <summary type="html"/>
   </entry>
   <entry>
-    <title>JBoss Tools: JBoss Tools and Red Hat CodeReady Studio for Eclipse 2021-09 security fix release for Apache Log4j CVE-2021-45105 and CVE-2021-44832</title>
-    <updated>2022-01-13T00:00:00Z</updated>
-    <id>https://tools.jboss.org/blog/12.21.2.ga.html</id>
-    <link href="https://tools.jboss.org/blog/12.21.2.ga.html" rel="alternate"/>
-    <summary type="html"/>
-  </entry>
-  <entry>
     <title>JBoss Blogs: This Week in JBoss - January 13th 2022</title>
     <updated>2022-01-13T00:00:00Z</updated>
     <id>https://www.jboss.org/posts/weekly-2022-01-13.html</id>
     <link href="https://www.jboss.org/posts/weekly-2022-01-13.html" rel="alternate"/>
+    <summary type="html"/>
+  </entry>
+  <entry>
+    <title>JBoss Tools: JBoss Tools and Red Hat CodeReady Studio for Eclipse 2021-09 security fix release for Apache Log4j CVE-2021-45105 and CVE-2021-44832</title>
+    <updated>2022-01-13T00:00:00Z</updated>
+    <id>https://tools.jboss.org/blog/12.21.2.ga.html</id>
+    <link href="https://tools.jboss.org/blog/12.21.2.ga.html" rel="alternate"/>
     <summary type="html"/>
   </entry>
   <entry>

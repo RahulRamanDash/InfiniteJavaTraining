@@ -16,8 +16,10 @@
       box-sizing: border-box;
     }
     body {
+      margin-top: 30px;
+      text-align: center;
       font-family: "Inter", sans-serif;
-      background-color: #f0f0f0;
+      background-color: #BFD7EA;
     }
     .formbold-mb-5 {
       margin-bottom: 20px;
@@ -36,7 +38,7 @@
       margin: 0 auto;
       max-width: 550px;
       width: 100%;
-      background-color: #f0f0f0;
+      background-color: #BFD7EA;
     }
     .formbold-form-label {
       display: block;
@@ -163,23 +165,46 @@
         width: 50%;
       }
     }
+    
+.sucess-box {
+	display: none;
+	background-color: #4CAF50;
+    margin-top: -23px;
+  padding: 10px;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+/* Style for the close button */
+.close-button {
+  position: relative;
+    top: -26px;
+    right: 16px;
+    color: black;
+    cursor: pointer;
+    float: right;
+}
+    
 </style>
+
 </head>
 <body>
-		
-		
+	<h:inputText value="#{sucessMsg}" id="sucessInput" style="display: none;"/>
+<div Class="sucess-box" id="sucessBox">
+    <h:messages id="successMsg" style="padding: 10px"/>
+    <span class="close-button" onclick="closeMessage()">X</span>
+</div>
+<h2>Update Patient Appointment</h2>		
 			<div class="formbold-main-wrapper">
     <!-- Author: FormBold Team -->
     <!-- Learn More: https://formbold.com -->
     <div class="formbold-form-wrapper">
 	<h:form>
-	
-	 
         <div class="flex flex-wrap formbold--mx-3">
           <div class="w-full sm:w-half formbold-px-3">
             <div class="formbold-mb-5">
                 <label for="fName" class="formbold-form-label"> Appointment Id </label>
-            <h:inputText value="#{editAppointment.appointmentId}" style="width: 100%;
+            <h:inputText value="#{editAppointment.appointmentId}" readonly="true" style="width: 100%;
       padding: 12px 24px;
       border-radius: 6px;
       border: 1px solid #e0e0e0;
@@ -194,7 +219,7 @@
           <div class="w-full sm:w-half formbold-px-3">
             <div class="formbold-mb-5">
               <label for="lName" class="formbold-form-label"> Patient Id </label>
-             <h:inputText value="#{editAppointment.uhid}" style="width: 100%;
+             <h:inputText value="#{editAppointment.uhid}" readonly="true" style="width: 100%;
       padding: 12px 24px;
       border-radius: 6px;
       border: 1px solid #e0e0e0;
@@ -212,7 +237,7 @@
           <div class="w-full sm:w-half formbold-px-3">
             <div class="formbold-mb-5">
               <label for="fName" class="formbold-form-label"> First Name </label>
-              <h:inputText value="#{editAppointment.firstName}" style="width: 100%;
+              <h:inputText value="#{editAppointment.firstName}" readonly="true" style="width: 100%;
       padding: 12px 24px;
       border-radius: 6px;
       border: 1px solid #e0e0e0;
@@ -227,7 +252,7 @@
           <div class="w-full sm:w-half formbold-px-3">
             <div class="formbold-mb-5">
               <label for="lName" class="formbold-form-label"> Last Name </label>
-              <h:inputText value="#{editAppointment.lastName}" style="width: 100%;
+              <h:inputText value="#{editAppointment.lastName}" readonly="true" style="width: 100%;
       padding: 12px 24px;
       border-radius: 6px;
       border: 1px solid #e0e0e0;
@@ -279,15 +304,36 @@
 
         <div>
         </div>
-        <div class="button-container">
-         <h:commandButton action="ShowPatientAppointmentNew" value="Go Back" styleClass="custom-button go-back-button" />
-         <h:commandButton action="#{ejbImpl.updateEmployEjb(editAppointment)}" value="Update" styleClass="custom-button update-button"/>
-                </div>
-	</h:form>      
+	<div class="button-container">
+         <h:commandButton action="#{ejbImpl.goBackToManageAppointments}" value="Go Back" styleClass="custom-button go-back-button" onclick="closeMessage();"/>
+         <h:commandButton action="#{ejbImpl.updateEmployEjb(editAppointment)}" value="Update" styleClass="custom-button update-button" onclick="viewMsg();"/>
+	</div>
+	</h:form>
     </div>
   </div>
 
-	
+	<script>
+    // JavaScript function to close the message box
+  viewMsg();
+  function viewMsg() {
+    var sucessBox = document.getElementById('sucessBox');
+    var sucessInput = document.getElementById('sucessInput');
+        
+    if(sucessInput.value === 'sucess'){
+   		sucessBox.style.display = 'block';
+        }
+    else{
+   		sucessBox.style.display = 'none';
+        }
+}
+    
+    function closeMessage() {
+   	  	var sucessBox = document.getElementById('sucessBox');
+   		sucessBox.style.display = 'none';
+    }
+
+    setTimeout(closeMessage, 10000);
+  </script>
 	
 </body>
 	</html>

@@ -1,0 +1,15 @@
+package com.java.provider;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class Test {
+	public static void main(String[] args) {
+		SimpleDateFormat sdf = new SimpleDateFormat();
+	Date date = new Date();
+	sdf.format(date);
+	java.util.Date search =  sdf.parse(date);
+	java.sql.Date sqlDate = new java.sql.Date(search.getTime());
+	System.out.println(date);
+	}
+}

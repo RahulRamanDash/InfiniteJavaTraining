@@ -51,12 +51,11 @@ public class JsfPaginationBean {
 		if (cdList == null) {
 			loadPatientAppointment(searchValue, searchMethod);
 		}
-		System.out.println("Size is : "+cdList.size());
 		if(cdList.size()!=0) {		
-			sessionMap.put("notFoundErr", " ");						
+			sessionMap.put("notFoundErr", " ");	
 			return cdList;
 		}else {
-			sessionMap.put("notFoundErr", "Record Not Found");			
+			sessionMap.put("notFoundErr", "Record Not Found");
 			return null;
 		}
 //		return "ShowPatientAppointmentNew.jsp?faces-redirect=true";

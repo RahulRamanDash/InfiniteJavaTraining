@@ -1,0 +1,340 @@
+<%@page contentType="text/html"%>
+<%@page pageEncoding="UTF-8"%>
+
+<%@taglib prefix="f" uri="http://java.sun.com/jsf/core"%>
+<%@taglib prefix="h" uri="http://java.sun.com/jsf/html"%>
+
+<f:view>
+	<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>JSP Page</title>
+<style>
+	 * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      margin-top: 30px;
+      text-align: center;
+      font-family: "Inter", sans-serif;
+      background-color: #BFD7EA;
+    }
+    .formbold-mb-5 {
+      margin-bottom: 20px;
+    }
+    .formbold-pt-3 {
+      padding-top: 12px;
+    }
+    .formbold-main-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 48px;
+    }
+  
+    .formbold-form-wrapper {
+      margin: 0 auto;
+      max-width: 550px;
+      width: 100%;
+      background-color: #BFD7EA;
+    }
+    .formbold-form-label {
+      display: block;
+      font-weight: 500;
+      font-size: 16px;
+      color: #07074d;
+      margin-bottom: 12px;
+    }
+    .formbold-form-label-2 {
+      font-weight: 600;
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+  
+    .formbold-form-input {
+      width: 100%;
+      padding: 12px 24px;
+      border-radius: 6px;
+      border: 1px solid #e0e0e0;
+      background: white;
+      font-weight: 500;
+      font-size: 16px;
+      color: #6b7280;
+      outline: none;
+      resize: none;
+    }
+    #inputtest{
+    
+    	width: 100%;
+      padding: 12px 24px;
+      border-radius: 6px;
+      border: 1px solid #e0e0e0;
+      background: white;
+      font-weight: 500;
+      font-size: 16px;
+      color: #6b7280;
+      outline: none;
+      resize: none;
+    }
+    
+    .formbold-form-input:focus {
+      border-color: #6a64f1;
+      box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+    }
+  
+    #formbold-btn {
+      text-align: center;
+      font-size: 16px;
+      border-radius: 6px;
+      padding: 14px 32px;
+      border: none;
+      font-weight: 600;
+      background-color: #6a64f1;
+      color: white;
+      cursor: pointer;
+    }
+    .formbold-btn:hover {
+      box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+    }
+  
+    .formbold--mx-3 {
+      margin-left: -12px;
+      margin-right: -12px;
+    }
+    .formbold-px-3 {
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+    .flex {
+      display: flex;
+    }
+    .flex-wrap {
+      flex-wrap: wrap;
+    }
+    .w-full {
+      width: 100%;
+    }
+    .formbold-radio {
+      width: 20px;
+      height: 20px;
+    }
+    .formbold-radio-label {
+      font-weight: 500;
+      font-size: 16px;
+      padding-left: 12px;
+      color: #070707;
+      padding-right: 20px;
+    }
+      /* Go Back button styles */
+       .custom-button {
+                    color: white;
+                    padding: 10px 15px;
+                    border: none;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    margin-top: 15px;
+                    transition: background-color 0.3s; /* Add smooth transition */
+                }
+                .go-back-button {
+                    background-color: #3498db; /* Default background color */
+                }
+
+                .go-back-button:hover {
+                    background-color: #2980b9; /* Hover background color */
+                }
+                                .update-button {
+                	margin-left: 10px;
+                    background-color: #2ecc71; /* Default background color */
+                }
+
+                .update-button:hover {
+                    background-color: #27ae60; /* Hover background color */
+                }
+                 .button-container {
+                    display: flex;
+                    justify-content: center;
+                    padding: 10px;
+                    align-items: center;
+                    margin-top: 15px;
+                }
+    
+    @media (min-width: 540px) {
+      .sm\:w-half {
+        width: 50%;
+      }
+    }
+    
+.sucess-box {
+	display: none;
+	background-color: #4CAF50;
+    margin-top: -23px;
+  padding: 10px;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+/* Style for the close button */
+.close-button {
+  position: relative;
+    top: -26px;
+    right: 16px;
+    color: black;
+    cursor: pointer;
+    float: right;
+}
+    
+</style>
+
+</head>
+<body>
+	<h:inputText value="#{sucessMsg}" id="sucessInput" style="display: none;=-]/]>
+<div Class="sucess-box" id="sucessBox">
+    <h:messages id="successMsg" style="padding: 10px"/>
+    <span class="close-button" onclick="closeMessage()">X</span>
+</div>
+<h2>Update Patient Appointment</h2>		
+			<div class="formbold-main-wrapper">
+    <!-- Author: FormBold Team -->
+    <!-- Learn More: https://formbold.com -->
+    <div class="formbold-form-wrapper">
+	<h:form>
+        <div class="flex flex-wrap formbold--mx-3">
+          <div class="w-full sm:w-half formbold-px-3">
+            <div class="formbold-mb-5">
+                <label for="fName" class="formbold-form-label"> Appointment Id </label>
+            <h:inputText value="#{editAppointment.appointmentId}" readonly="readonly" style="width: 100%;
+      padding: 12px 24px;
+      border-radius: 6px;
+      border: 1px solid #e0e0e0;
+      background: white;
+      font-weight: 500;
+      font-size: 16px;
+      color: #6b7280;
+      outline: none;
+      resize: none;" />
+            </div>
+          </div>
+          <div class="w-full sm:w-half formbold-px-3">
+            <div class="formbold-mb-5">
+              <label for="lName" class="formbold-form-label"> Patient Id </label>
+             <h:inputText value="#{editAppointment.uhid}" readonly="readonly" style="width: 100%;
+      padding: 12px 24px;
+      border-radius: 6px;
+      border: 1px solid #e0e0e0;
+      background: white;
+      font-weight: 500;
+      font-size: 16px;
+      color: #6b7280;
+      outline: none;
+      resize: none;"/>
+            </div>
+          </div>
+        </div>
+	
+        <div class="flex flex-wrap formbold--mx-3">
+          <div class="w-full sm:w-half formbold-px-3">
+            <div class="formbold-mb-5">
+              <label for="fName" class="formbold-form-label"> First Name </label>
+              <h:inputText value="#{editAppointment.firstName}" readonly="readonly" style="width: 100%;
+      padding: 12px 24px;
+      border-radius: 6px;
+      border: 1px solid #e0e0e0;
+      background: white;
+      font-weight: 500;
+      font-size: 16px;
+      color: #6b7280;
+      outline: none;
+      resize: none;" />
+            </div>
+          </div>
+          <div class="w-full sm:w-half formbold-px-3">
+            <div class="formbold-mb-5">
+              <label for="lName" class="formbold-form-label"> Last Name </label>
+              <h:inputText value="#{editAppointment.lastName}" readonly="readonly" style="width: 100%;
+      padding: 12px 24px;
+      border-radius: 6px;
+      border: 1px solid #e0e0e0;
+      background: white;
+      font-weight: 500;
+      font-size: 16px;
+      color: #6b7280;
+      outline: none;
+      resize: none;"/>
+            </div>
+          </div>
+        </div>
+  
+        <div class="flex flex-wrap formbold--mx-3">
+          <div class="w-full sm:w-half formbold-px-3">
+            <div class="formbold-mb-5 w-full">
+              <label for="date" class="formbold-form-label"> Appointment Date </label>
+              <h:inputText id="dob-id" value="#{editAppointment.appointmentDate}" converterMessage="Please provide date of birth in dd/mm/yyyy format" style="width: 100%;
+      padding: 12px 24px;
+      border-radius: 6px;
+      border: 1px solid #e0e0e0;
+      background: white;
+      font-weight: 500;
+      font-size: 16px;
+      color: #6b7280;
+      outline: none;
+      resize: none;">  
+		<f:convertDateTime pattern="yyyy/MM/dd" />  
+		</h:inputText>
+            </div>
+          </div>
+          <div class="w-full sm:w-half formbold-px-3">
+            <div class="formbold-mb-5">
+              <label for="time" class="formbold-form-label"> Appointment Time </label>
+              <h:inputText value="#{editAppointment.appointmentTime}" style="width: 100%;
+      item-align: center;
+      padding: 12px 24px;
+      border-radius: 6px;
+      border: 1px solid #e0e0e0;
+      background: white;
+      font-weight: 500;
+      font-size: 16px;
+      color: #6b7280;
+      outline: none;
+      resize: none;" />
+            </div>
+          </div>
+        </div>
+
+        <div>
+        </div>
+	<div class="button-container">
+         <h:commandButton action="#{ejbImpl.goBackToManageAppointments}" value="Go Back" styleClass="custom-button go-back-button" onclick="closeMessage();"/>
+         <h:commandButton action="#{ejbImpl.updateEmployEjb(editAppointment)}" value="Update" styleClass="custom-button update-button" onclick="viewMsg();"/>
+	</div>
+	</h:form>
+    </div>
+  </div>
+
+	<script>
+    // JavaScript function to close the message box
+  viewMsg();
+  function viewMsg() {
+    var sucessBox = document.getElementById('sucessBox');
+    var sucessInput = document.getElementById('sucessInput');
+        
+    if(sucessInput.value === 'sucess'){
+   		sucessBox.style.display = 'block';
+        }
+    else{
+   		sucessBox.style.display = 'none';
+        }
+}
+    
+    function closeMessage() {
+   	  	var sucessBox = document.getElementById('sucessBox');
+   		sucessBox.style.display = 'none';
+    }
+    
+    setTimeout(closeMessage, 5000);
+  </script>
+	
+</body>
+	</html>
+</f:view>
